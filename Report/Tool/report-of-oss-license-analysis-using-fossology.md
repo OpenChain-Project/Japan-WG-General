@@ -8,11 +8,8 @@
 Note: Only the following environment has been verified.
 
 
-component version
 | component        | version  |
-
-|:------------|:-------------
-
+|:------------|:-------------|
 | license-coverage-grader | 41baaa4 |
 |  |  |
 |  |  |

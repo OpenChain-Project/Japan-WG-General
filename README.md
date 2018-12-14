@@ -31,7 +31,7 @@ or
 
 * write your change or comment on Issue list
 
---- Japanese --
+--- 
 
 ## OpenChain Japan Work Groupの作業成果物を共有するサイトです
 

@@ -10,6 +10,10 @@ General Repo for Japan WG
   * https://github.com/OpenChain-Project/Onboarding-JWG/blob/master/About_Japan-wg/About_JapanWG.md
 
 
+## 組織間でのライセンス情報授受に関するガイドライン作成活動
+
+* https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
+
 ## 貢献（Contribution）の方法
 
 * 自分の手元にクローンを作り、変更案を作成する
@@ -30,6 +34,12 @@ General Repo for Japan WG
 The brief explanation of Japan WG is here:(Japanese language only)
 
 * https://github.com/OpenChain-Project/Onboarding-JWG/blob/master/About_Japan-wg/About_JapanWG.md
+
+
+## Activity of making a guideline for exchanging license information between organizations
+
+* https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
+
 
 ## Contribution
 

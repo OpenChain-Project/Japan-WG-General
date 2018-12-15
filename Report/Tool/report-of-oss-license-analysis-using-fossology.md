@@ -7,6 +7,16 @@ https://qiita.com/machida-yuki/items/8738961fa3133296d4c7
 
 ---
 
+## About this report
+
+SPDX(Software Package Data Exchane) is an open standard for communicating software bill of material infomation (including components, licenses, copyrights, and security references).
+
+FOSSology is a tool for scanning software source code and generating SPDX.
+
+This report gives an example procedure to analyze source code using FOSSology. 
+
+---
+
 ## Operating environment
 
 Note: Only the following environment has been verified.
@@ -73,7 +83,7 @@ This report chooses "findutils" as input source code.
   * https://ftp.gnu.org/pub/gnu/findutils/findutils-4.2.31.tar.gz
 
 
-Accessing the FOSSology demo server via web browser.
+Access the FOSSology demo server via web browser.
 
 Username: testuser , Password: test
 
@@ -82,33 +92,47 @@ Username: testuser , Password: test
 
 After successful login, the following screen image will appear.
 
-Note: File names in uploads in test-incoming may differ fro this image.
+Note: The uploaded file name in "test-incoming" may differ from this image.
 
 ![screen image 2](img/fossology/image-2.png)
 
 
+Select source code file for uploading.
 
+"Upload" -> "From URL"
 
-
+The following screen image will apear.
 
 ![screen image 3](img/fossology/image-3.png)
 
+Enter the URL at "Enter the URL to the file or directory: " 
 
+Push the "upload" button at the bottom of the page.
 
+Analysis will automatically start, after uploading the source code file. 
 
 
 ![screen image 4](img/fossology/image-4.png)
 
+Generating SPDX file.
 
+Select "Browse" tab. 
 
+"Upload Name and Description"
+
+From "-- select action --" section, select "Export SPDX tag value".
 
 
 ![screen image 5](img/fossology/image-5.png)
 
-
+SPDX file will be generated, and file download will automatically start.
 
 
 ![screen image 6](img/fossology/image-6.png)
+
+
+The downloaded file has the name "SPDX2TV_findutils-4.2.31.tar.gz_1541999637.spdx".
+In this report, to make simple, the file name is changed to "findutils-4.2.31.spdx".
 
 
 ### Generating license list for each file

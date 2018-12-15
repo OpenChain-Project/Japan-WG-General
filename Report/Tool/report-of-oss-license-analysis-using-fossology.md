@@ -11,7 +11,7 @@ https://qiita.com/machida-yuki/items/8738961fa3133296d4c7
 
 Note: Only the following environment has been verified.
 
-| component        | version  |
+| Component        | Version  |
 |:------------|:-------------|
 | license-coverage-grader | 41baaa4 |
 | Python | 2.7.12 |
@@ -21,7 +21,7 @@ Note: Only the following environment has been verified.
 | Git | 2.17.1 |
 | Google Chrome | 70.0.3538.77  |
 | LibreOffice | 6.0.3.2 |
-| Ubuntu Desktop 日本語 Remix	 |  18.04 |
+| Ubuntu Desktop Japanese Remix	 |  18.04 |
 
 ---
 
@@ -82,6 +82,7 @@ Username: testuser , Password: test
 
 After successful login, the following screen image will appear.
 
+Note: File names in uploads in test-incoming may differ fro this image.
 
 ![screen image 2](img/fossology/image-2.png)
 

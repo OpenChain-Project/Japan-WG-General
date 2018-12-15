@@ -90,6 +90,14 @@ $ python -s <path to the directory of license-coverage-grader>/license-coverage-
 
 ## Note
 
+This report uses FOSSology demo server for beginners to try easily. 
+
+If you need more detail information about FOSSology environment, please visit FOSSology site.
+
+* FOSSology environment
+  * https://github.com/fossology/fossology/blob/master/README.md
+
+
 ---
 
 ## Resouces

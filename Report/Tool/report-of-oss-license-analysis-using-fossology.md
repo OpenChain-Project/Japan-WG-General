@@ -1,6 +1,6 @@
 # OSS license analysis using FOSSology to verify license in each file
 
-## written by Yuki Machida (translated by Hiro Fukuchi)
+## reported by Yuki Machida (translated by Hiro Fukuchi)
 
 original (Japanese): 
 https://qiita.com/machida-yuki/items/8738961fa3133296d4c7
@@ -33,17 +33,17 @@ Basic setting of enviroment is completed.
 ### installing license-converage-grader
 
 
-
+```
 $ sudo apt update
 $ sudo apt install git python-pip
 $ sudo -EH pip install --upgrade pip
+```
 
-
-
+```
 $ git clone https://github.com/spdx/license-coverage-grader.git
 $ cd license-coverage-grader/
 $ sudo -EH pip install --editable .
-
+```
 
 ### Analyzing source code, generating SDPX file
 
@@ -52,8 +52,9 @@ $ sudo -EH pip install --editable .
 ### generating license list for each file
 
 
+```
 $ python -s <path to the directory of license-coverage-grader>/license-coverage-grader/spdx_scanner.py findutils-4.2.31.spdx > findutils-4.2.31.csv
-
+```
 
 
 ### verifying licenses

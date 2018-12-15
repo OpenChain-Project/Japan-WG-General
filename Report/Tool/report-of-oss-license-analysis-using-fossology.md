@@ -73,7 +73,41 @@ This report chooses "findutils" as input source code.
   * https://ftp.gnu.org/pub/gnu/findutils/findutils-4.2.31.tar.gz
 
 
+Accessing the FOSSology demo server via web browser.
 
+Username: testuser , Password: test
+
+
+![login screen](img/fossology/image-1.png)
+
+After successful login, the following screen image will appear.
+
+
+![screen image 2](img/fossology/image-2.png)
+
+
+
+
+
+
+![screen image 3](img/fossology/image-3.png)
+
+
+
+
+
+![screen image 4](img/fossology/image-4.png)
+
+
+
+
+
+![screen image 5](img/fossology/image-5.png)
+
+
+
+
+![screen image 6](img/fossology/image-6.png)
 
 
 ### Generating license list for each file
@@ -84,13 +118,32 @@ $ python -s <path to the directory of license-coverage-grader>/license-coverage-
 ```
 
 
+
+
+![screen image 7](img/fossology/image-7.png)
+
+
 ### Verifying licenses
+
+
+
+
+![screen image 8](img/fossology/image-8.png)
+
+
+
+
+![screen image 9](img/fossology/image-9.png)
+
 
 ---
 
 ## Note
 
-This report uses FOSSology demo server for beginners to try easily. 
+The author provides "ASIS" information and no warranty for trying the content of this report. 
+
+This report uses FOSSology demo server, for beginners can try easily. 
+Input files are transfered outside organization, so that files contain internal informaion or have large file size are not adequate for this test. In such cases, it is better to build an internal environment.
 
 If you need more detail information about FOSSology environment, please visit FOSSology site.
 
@@ -100,7 +153,7 @@ If you need more detail information about FOSSology environment, please visit FO
 
 ---
 
-## Resouces
+## Resources
 
 * OpenChain Project
   * https://www.openchainproject.org/

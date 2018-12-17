@@ -93,13 +93,13 @@ Access the FOSSology demo server via web browser.
 Username: testuser , Password: test
 
 
-![login screen](img/fossology/image-1.png)
+<img src="img/fossology/image-1.png" width=50%>
 
 After successful login, the following screen image will appear.
 
 Note: The uploaded file name in "test-incoming" may differ from this image.
 
-![screen image 2](img/fossology/image-2.png)
+<img src="img/fossology/image-2.png" width=50%>
 
 
 Select source code file for uploading.
@@ -108,7 +108,7 @@ Select source code file for uploading.
 
 The following screen image will apear.
 
-![screen image 3](img/fossology/image-3.png)
+<img src="img/fossology/image-3.png" width=50%>
 
 Enter the URL at "Enter the URL to the file or directory: " 
 
@@ -117,7 +117,8 @@ Push the "upload" button at the bottom of the page.
 Analysis will automatically start, after uploading the source code file. 
 
 
-![screen image 4](img/fossology/image-4.png)
+<img src="img/fossology/image-4.png" width=50%>
+
 
 Generating SPDX file.
 
@@ -128,12 +129,13 @@ Select "Browse" tab.
 From "-- select action --" section, select "Export SPDX tag value".
 
 
-![screen image 5](img/fossology/image-5.png)
+<img src="img/fossology/image-5.png" width=50%>
+
 
 SPDX file will be generated, and file download will automatically start.
 
 
-![screen image 6](img/fossology/image-6.png)
+<img src="img/fossology/image-6.png" width=50%>
 
 
 The downloaded file has the name "SPDX2TV_findutils-4.2.31.tar.gz_1541999637.spdx".
@@ -153,7 +155,7 @@ When "LibreOffice" asks the format, the default setting can be used.
 Push "OK" button. 
 
 
-![screen image 7](img/fossology/image-7.png)
+<img src="img/fossology/image-7.png" width=50%>
 
 
 ### Verifying licenses
@@ -162,14 +164,15 @@ To analyze CSV file, we use filter.
 
 "Data" -> "Auto filter" 
 
-![screen image 8](img/fossology/image-8.png)
+<img src="img/fossology/image-8.png" width=50%>
+
 
 In the first example, we verify the license in "COPYING" file in "findutils-4.2.31.csv". 
 Push "▼" in the collumn A. Enter "COPYING" in the search window of the standard filter. 
 "GPL-2.0" appears in the collumn B. We can verify the license as "GPL-2.0".
 
 
-![screen image 9](img/fossology/image-9.png)
+<img src="img/fossology/image-9.png" width=50%>
 
 
 In the second example, we verify the license of "find.c" file. 
@@ -229,6 +232,3 @@ If you need more detail information about FOSSology environment, please visit FO
   
 * SPDX License List
   * https://spdx.org/licenses/
-
-
-

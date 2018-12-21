@@ -21,6 +21,11 @@ General Repo for Japan WG
 
 * https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
 
+* An Example of Minimum License Information List (Automotive)
+  * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-automotive.md
+* An Example of Minimum License Information List (IT)
+  * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-IT.md
+
 ## Reports 
 
 * Report of Studies into Business Workflows and Defined Roles for Software Development
@@ -62,6 +67,11 @@ or
 ## 組織間でのライセンス情報授受に関するガイドライン作成活動
 
 * https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
+
+* OSSライセンス情報リストの例 (Automotive)
+  * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-automotive.md
+* OSSライセンス情報リストの例 (IT)
+  * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-IT.md
 
 ## 報告
 

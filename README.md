@@ -26,7 +26,7 @@ General Repo for Japan WG
 * An Example of Minimum License Information List (IT)
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-IT.md
 
-* Big Picture (Concept) about Exchanging License Information in the Supply Chain 
+* Concept(Big Picture) about Exchanging License Information in the Supply Chain 
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/BigPicture-ExchangeLicenseInfo-20181210.pdf
 
 ## Reports 
@@ -76,7 +76,7 @@ or
 * OSSライセンス情報リストの例 (IT)
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/License-Info-list-IT.md
 
-* OSSライセンス情報授受の全体像  
+* OSSライセンス情報授受の概念図 
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/BigPicture-ExchangeLicenseInfo-20181210.pdf
 
 

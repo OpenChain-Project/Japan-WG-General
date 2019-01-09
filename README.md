@@ -42,7 +42,7 @@ General Repo for Japan WG
 * Tooling
   * sw360 (translated by Yoshitake Kobayashi)
     * https://github.com/sw360/sw360slides/blob/master/sw360slides-collection-JPN.pptx
-  * OSS Tooling for Open Source Compliense. Let's try SW360 (Japanese language) by Kouki Hama
+  * OSS Tooling for Open Source Compliance. Let's try SW360 (Japanese language) by Kouki Hama
     * https://elinux.org/images/3/31/SW360-JapanTechnicalJamboree67-2.pdf
 
 
@@ -102,7 +102,7 @@ or
 * Tooling
   * sw360 (translated by Yoshitake Kobayashi)
     * https://github.com/sw360/sw360slides/blob/master/sw360slides-collection-JPN.pptx
-  * OSS Tooling for Open Source Compliense. Let's try SW360 by Kouki Hama
+  * OSS Tooling for Open Source Compliance. Let's try SW360 by Kouki Hama
     * https://elinux.org/images/3/31/SW360-JapanTechnicalJamboree67-2.pdf
 
 ## SPDX仕様　翻訳

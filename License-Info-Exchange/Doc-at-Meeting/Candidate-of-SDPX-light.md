@@ -109,7 +109,7 @@ P: There was a proposal, but is not selected as the candidate.
 |2.10	|Creator Comment	|作成者コメント	|	||
 |2.11	|Document Comment	|文書コメント	|	||
 |	|	+ SPDX情報の生成日時|	| P	||
-|	|	 SPDX情報の生成手段|	| P	||
+|	|	+ SPDX情報の生成手段|	| P	||
 |3.	|Package Information	|パッケージ情報	|||	
 |3.1	|Package Name	|パッケージ名	| Yes |	|
 |3.2	|Package SPDX Identifier	|パッケージSPDX識別子	|	||
@@ -136,7 +136,7 @@ P: There was a proposal, but is not selected as the candidate.
 |3.22	|External Reference Comment	|外部参照コメント	|	||
 |	|	+ OSSライセンスのURL|	|　P	|OSSライセンスに言及しているURL(ライセンスの検証用)|
 |	|	+ ライセンスファイルそのもの|	| P	|SPDX未登録の場合の確認用|
-|	|	+ オリジナルからの改変の有無|	| P	|V-up版への入れ替え可否|
+|	|	+ オリジナルからの改変の有無|	| Yes	|V-up版への入れ替え可否|
 |	|	+ 特許に関する特記事項の有無|	| P	||
 |	|	+ ライセンス条件|	| P	|ソース開示の要否等 (ライセンスに関する義務の確認用)|
 |4.	|File Information	|ファイル情報	| ||	

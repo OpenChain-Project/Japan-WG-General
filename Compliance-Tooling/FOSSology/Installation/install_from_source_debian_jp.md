@@ -1,5 +1,7 @@
 # FOSSology をソースコードからインストールする手順
 
+This document explains how to install FOSSology from source code. Please refer to https://github.com/fossology/fossology/wiki/Install-from-Source for the original information in English from FOSSology project.
+
 FOSSology (https://www.fossology.org/) には、  
   
 (1)Dockerを使う  

@@ -2,7 +2,7 @@
 
 ## reported by Yuki Machida (translated by Hiro Fukuchi)
 
-original (Japanese): 
+original (in Japanese): 
 https://qiita.com/machida-yuki/items/8738961fa3133296d4c7
 
 ---
@@ -23,8 +23,6 @@ This report gives an example procedure to analyze licenses in an SPDX file gener
 
 Note: Only the following environment has been used.
 
-(This report is originally written for Japanese readers, so that we use Japanese environment.) 
-
 
 | Component        | Version  |
 |:------------|:-------------|
@@ -36,7 +34,7 @@ Note: Only the following environment has been used.
 | Git | 2.17.1 |
 | Google Chrome | 70.0.3538.77  |
 | LibreOffice | 6.0.3.2 |
-| Ubuntu Desktop Japanese Remix	 |  18.04 |
+| Ubuntu Desktop |  18.04 |
 
 ---
 

@@ -94,7 +94,7 @@ P: There was a proposal, but is not selected as the candidate.
 |9.	|Review Information 	|	|	||
 
 
-|SPDX節番号	| SPDXの項目 | 説明 | SPDX light | コメント(目的など)|
+|SPDX節番号	| SPDX項目 | SPDX項目の説明 | SPDX light | コメント(目的など)|
 |:------|:-----------|:-----|:-----|:------------------|
 |2.	|Document Creation Information	|文書作成情報	|||	
 |2.1	|SPDX Version	|SPDXバージョン		| ||
@@ -111,24 +111,25 @@ P: There was a proposal, but is not selected as the candidate.
 |	|	+ SPDX情報の生成日時|	| P	||
 |	|	+ SPDX情報の生成手段|	| P	||
 |3.	|Package Information	|パッケージ情報	|||	
-|3.1	|Package Name	|パッケージ名	| Yes |	|
+|3.1	|Package Name	|パッケージ名	| Yes |作者によって付けられたソフトウェアの名前を識別するために必要です。名前からソフトウェアの機能がわかることが多く、ライセンスや修正情報の調査を行う場合の参考になります。|
 |3.2	|Package SPDX Identifier	|パッケージSPDX識別子	|	||
-|3.3	|Package Version	|パッケージ バージョン	| Yes |	|
-|3.4	|Package File Name	|パッケージ ファイル名	| Yes	|パッケージの特定用|
+|3.3	|Package Version	|パッケージ バージョン	| Yes |使用しているソフトウェアのバージョンを特定するために必要です。同じソフトウェアでもバージョンによってライセンスや著作権情報が異なる場合があります。|
+|3.4	|Package File Name	|パッケージ ファイル名	| Yes	|パッケージを特定するために必要です。同じファイルを取得する際に使います。|
 |3.5	|Package Supplier	|パッケージ提供者	|	||
 |3.6	|Package Originator	|パッケージ原作者	| P	||
-|3.7	|Package Download Location 	|パッケージ ダウンロード位置	| Yes |	|
+|3.7	|Package Download Location 	|パッケージ ダウンロード位置	| Yes |	ソースコードの調査を行う場合に、使用しているものと同じソースコードを取得するために必要。3.5のPackage File Nameと組み合わせて使用する。|
 |3.8	|Files Analyzed	|解析したファイル	|	||
 |3.9	|Package Verification Code	|パッケージ検証コード	|	||
 |3.10	|Package Checksum	|パッケージ チェックサム	|	||
-|3.11	|Package Home Page	|パッケージ ホーム ページ	| Yes	|OSSの内容, 修正情報等の確認用|
+|3.11	|Package Home Page	|パッケージ ホーム ページ	| Yes	|ソフト内容、修正情報などを確認できるようにしておくために必要です。
+プロジェクトの活動状況を調査する場合にも利用します。ソースコードからライセンスや著作権情報を得られない場合の手掛かりになります。|
 |3.12	|Source Information	|ソース情報	| P	|ソースコード or バイナリの識別|
-|3.13	|Concluded License	|結論されたライセンス	| Yes	||
+|3.13	|Concluded License	|結論されたライセンス	| Yes	|Concluded License…複数ライセンスの場合にどのライセンスを適用するかを使用者が決定した結果。最初に使うと決めた人がまず定義する。サプライチェーンの途中で判断が変わる場合は変更すれば良い。最終利用者が判断できない場合があるため、供給者側で判断する。Declared License…作者が定めたライセンス。使用可能なライセンスかどうかを判断するために必要。|
 |	|	+ 当該ライセンスのファイル一覧|	| P	|複数ライセンスを持つ場合の識別用 File情報の利用でも可|
 |3.14	|All Licenses Information from Files	|ファイルからの全ライセンス情報	| P	|全てのファイルからライセンスが抽出されていることが重要|
-|3.15	|Declared License	|宣言されたライセンス	| Yes	||
-|3.16	|Comments on License	|ライセンスへのコメント	 | Yes	|使用の可否の判断用|
-|3.17	|Copyright Text	|著作権テキスト	| Yes	||
+|3.15	|Declared License	|宣言されたライセンス	| Yes	|Concluded License…複数ライセンスの場合にどのライセンスを適用するかを使用者が決定した結果。最初に使うと決めた人がまず定義する。サプライチェーンの途中で判断が変わる場合は変更すれば良い。最終利用者が判断できない場合があるため、供給者側で判断する。Declared License…作者が定めたライセンス。使用可能なライセンスかどうかを判断するために必要。|
+|3.16	|Comments on License	|ライセンスへのコメント	 | Yes	|ライセンスを結論づけた時の記録や、補足事項を記載する。ソフトウェアの組み合わせによっては使用の可否判断が変わるため、複数のライセンスから一つを選択した場合などは記載が必要。|
+|3.17	|Copyright Text	|著作権テキスト	| Yes	|コピーライト表記が必要なライセンスのための情報。ライセンス文にコピーライトが書かれていない場合は抽出しておく必要がある。|
 |3.18	|Package Summary Description	|パッケージ要約記述	| P	|OSSのリスク(品質, ライセンス, 特許)確認用|
 |3.19	|Package Detailed Description	|パッケージ要約記述	| P	|OSSのリスク(品質, ライセンス, 特許)確認用|
 |3.20	|Package Comment	|パッケージ コメント	| P	|オリジナルからの改変の有無を個々で記述(SK)|
@@ -167,11 +168,11 @@ P: There was a proposal, but is not selected as the candidate.
 |5.9	|Snippet Comment	|コード断片コメント	|	||
 |5.10	|Snippet Name	|コード断片名	|	||
 |6.	|Other Licensing Information Detected	|検出された他ライセンス情報	||	||
-|6.1	|License Identifier	|ライセンス識別子	| Yes	|Dualライセンス等の場合に選択したライセンスを記述|
-|6.2	|Extracted Text	|抽出されたテキスト	| Yes	|Dualライセンス等の場合に選択したライセンスを記述|
-|6.3	|License Name	|ライセンス名	| Yes	|Dualライセンス等の場合に選択したライセンスを記述|
+|6.1	|License Identifier	|ライセンス識別子	| Yes	|SPDXで定義されていないライセンスの場合に、その情報を記述する。|
+|6.2	|Extracted Text	|抽出されたテキスト	| Yes	|SPDXで定義されていないライセンスの場合に、その情報を記述する。|
+|6.3	|License Name	|ライセンス名	| Yes	|SPDXで定義されていないライセンスの場合に、その情報を記述する。|
 |6.4	|License Cross Reference	|ライセンス相互参照	|	||
-|6.5	|License Comment	|ライセンス コメント	| Yes	|Dualライセンス等の場合に選択したライセンスを記述|
+|6.5	|License Comment	|ライセンス コメント	| Yes	|SPDXで定義されていないライセンスの場合に、その情報を記述する。|
 |7.	|Relationships between SPDX Elements	|SPDX要素間の関係	|	||
 |7.1	|Relationship	|関係	| P	|GPL等の場合、OSSと他のプログラムとの連携の有無|
 |7.2	|Relationship Comment	|関係コメント	|	||

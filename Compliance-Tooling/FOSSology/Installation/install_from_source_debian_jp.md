@@ -13,12 +13,12 @@ FOSSology (https://www.fossology.org/) には、
 ## 目次
 
 1. テスト環境
-2. ソースコードの取得
-3. 前提ソフトウェアのインストール
-4. FOSSologyのビルドとインストール
-5.  インストール後の設定
-6. Post-installスクリプトの実行
-7. FOSSologyスケジューラの起動
+1. ソースコードの取得
+1. 前提ソフトウェアのインストール
+1. FOSSologyのビルドとインストール
+1.  インストール後の設定
+1. Post-installスクリプトの実行
+1. FOSSologyスケジューラの起動
 
 ## 1. テスト環境
 
@@ -28,7 +28,7 @@ FOSSology (https://www.fossology.org/) には、
 
 |Item |Description |
 |--- | --- |
-|OS |Debian GNU/Linux 9.6 (stretch)|
+|OS |Debian GNU/Linux 9.6 (stretch) <br> Ubuntu 18.04.1 LTS (Bionic Beaver)|
 |Network |Broadband access to the Internet|
 |CPU |Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz|
 |RAM |4GB|
@@ -91,12 +91,12 @@ $ sudo make install
 
 この項目に記載の内容は、以下を参考にしている。  
 https://github.com/fossology/fossology/wiki/Configuration-and-Tuning  
-ただし、上記サイトの "Adjusting the Kernel" の項目については、PostgreSQL 9.3 およびそれ以降のバージョンでは設定不要である。  
+ただし、上記サイトの "Adjusting the Kernel" の項目については、PostgreSQL 9.3 およびそれ以降のバージョンでは設定不要なので、本文書では取り扱わない。  
 https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.3
 
 ### 5.1 PostgreSQLのチューニング
 
-/etc/postgresql/9.6/main/postgresql.conf を編集する。今回のテスト環境では以下の各行を次のように変更した。インストールするシステムのRAM容量に応じて適宜調整するとよい。
+/etc/postgresql/VERSION/main/postgresql.conf を編集する。今回のテスト環境では以下の各行を次のように変更した。インストールするシステムのRAM容量に応じて適宜調整するとよい。
 ```
 shared_buffers = 1GB                    # システムのRAMが1GB以上の場合はRAMの1/4〜
 effective_cache_size = 2GB              # RAMの1/2〜3/4
@@ -111,7 +111,7 @@ autovacuum = on
 
 ### 5.2 PHPの設定
 
-今回のテスト環境では、/etc/php/7.0/apache2/php.ini の以下の各行を次のように変更した。
+今回のテスト環境では、/etc/php/VERSION/apache2/php.ini の以下の各行を次のように変更した。
 
 ```
 max_execution_time = 300
@@ -122,7 +122,7 @@ upload_max_filesize = 2048M
 
 ### 5.3 Apache の設定
 
-/etc/apache2/sites-available にある 000-default.conf を、FOSSologyのものに置き換える。必要になったら元に戻せるよう、元のファイルは適宜保存するとよい。000-default.conf のファイル名は Debian の場合であり、ディストリビューションによって異なる。
+/etc/apache2/sites-available にある 000-default.conf を、FOSSologyのものに置き換える。必要になったら元に戻せるよう、元のファイルは適宜保存するとよい。本項目の記載内容は Debian 9 および Ubuntu 18.04 の場合であり、ディストリビューションによって異なる可能性がある。特に CentOS では、Apache の設定ファイルの構成が Debian/Ubuntu と大幅に異なるので、本項の設定方法については未確認である。
 
 ```
 $ cd /etc/apache2/sites-available
@@ -139,6 +139,8 @@ $ sudo apache2ctl graceful
 を実行して Apache を再起動する。
 
 ## 6. Post-installスクリプトの実行
+
+＊ Ubuntu の場合は、この手順の前にシステムを一度再起動する。
 
 インストール後の設定を自動で行うスクリプトが用意されているので、それを実行する。データベースの作成などが行われる。
 ```
@@ -169,6 +171,10 @@ $ sudo apt install insserv
 ```
 ```
 $ sudo insserv fossology
+```
+Ubuntu の場合は、systemctl コマンドを使う。
+```
+$ sudo systemctl enable fossology
 ```
 最後にシステム全体を再起動して、FOSSologyが立ち上がることを確認する。
 

@@ -21,7 +21,7 @@ General Repo for Japan WG
 
 * https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
 
-* Candidate of "SPDX light(tentative)"
+* Candidate of "SPDX lite(tentative)"
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/Candidate-of-SDPX-light.md
 
 * An Example of Minimum License Information List (Automotive)
@@ -89,7 +89,7 @@ or
 
 * https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange
 
-* "SPDX light(暫定)"候補リスト
+* "SPDX lite(暫定)"候補リスト
   * https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/Doc-at-Meeting/Candidate-of-SDPX-light.md
 
 

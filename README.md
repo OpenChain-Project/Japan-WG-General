@@ -57,7 +57,7 @@ General Repo for Japan WG
 * SPDX 2.1 unofficial Japanese translation
   * https://github.com/hfukuchi/SPDX_specification/tree/master/chapters
 
-## Unofficial Japanese Translation "Open Source Compliance in the Enterprize" written by Ibrahim Haddad
+## Unofficial Japanese Translation "Open Source Compliance in the Enterprise" written by Ibrahim Haddad
 * https://github.com/lf-j/OpenSourceComplianceHandbook-Translation/blob/master/review/J_Open_Source_Compliance_in_the_Enterprise_2019-0204.pdf
 
 ## Contribution
@@ -128,7 +128,7 @@ or
 * SPDX 2.1 非公式日本語訳
   * https://github.com/hfukuchi/SPDX_specification/tree/master/chapters
 
-## 非公式日本語訳 "Open Source Compliance in the Enterprize" written by Ibrahim Haddad
+## 非公式日本語訳 "Open Source Compliance in the Enterprise" written by Ibrahim Haddad
 * https://github.com/lf-j/OpenSourceComplianceHandbook-Translation/blob/master/review/J_Open_Source_Compliance_in_the_Enterprise_2019-0204.pdf
 
 ## 貢献（Contribution）の方法

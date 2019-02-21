@@ -22,20 +22,20 @@ P: There was a proposal, but is not selected as the candidate.
 |	|	+ SPDX info. creator |	| P	||
 |3.	|Package Information	|	| ||	
 |3.1	|Package Name	|	| Yes |To identify software	|
-|3.2	|Package SPDX Identifier	|	|	||
+|3.2	|Package SPDX Identifier	|	| Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
 |3.3	|Package Version	|	| Yes |To identify specific version	|
 |3.4	|Package File Name	|	| Yes	|To identify specific package|
 |3.5	|Package Supplier	|	|	||
 |3.6	|Package Originator	|	| P	||
 |3.7	|Package Download Location 	|	| Yes |To get the identical software	|
-|3.8	|Files Analyzed	|	|	||
-|3.9	|Package Verification Code	|	|	||
+|3.8	|Files Analyzed	|	|	Yes | In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
+|3.9	|Package Verification Code	|	|	| It is mandatory in SPDX. But, in SPDX Lite, this is not needed if 3.8 is set to "false". |
 |3.10	|Package Checksum	|	|	||
 |3.11	|Package Home Page	|	| Yes	|To verify relevant information|
 |3.12	|Source Information	|	| P	|To specify source code or binary|
 |3.13	|Concluded License	|	| Yes	||
 |	| +	License file list || P	|To specify a license when muliple licenses exist |
-|3.14	|All Licenses Information from Files	|	| P	|To specify all license |
+|3.14	|All Licenses Information from Files	|	| P	|To specify all license. It is mandatory in SPDX. But, in SPDX Lite, this is not needed if 3.8 is set to "false".|
 |3.15	|Declared License	|	| Yes	||
 |3.16	|Comments on License	|	| Yes	|To verify additional conditions|
 |3.17	|Copyright Text	|	| Yes	||
@@ -112,20 +112,20 @@ P: There was a proposal, but is not selected as the candidate.
 |	|	+ SPDX情報の生成手段|	| P	||
 |3.	|Package Information	|パッケージ情報	|||	
 |3.1	|Package Name	|パッケージ名	| Yes |作者によって付けられたソフトウェアの名前を識別するために必要です。名前からソフトウェアの機能がわかることが多く、ライセンスや修正情報の調査を行う場合の参考になります。|
-|3.2	|Package SPDX Identifier	|パッケージSPDX識別子	|	||
+|3.2	|Package SPDX Identifier	|パッケージSPDX識別子	|	Yes | SPDX仕様との互換性確保。SPDXチームからのフィードバック。|
 |3.3	|Package Version	|パッケージ バージョン	| Yes |使用しているソフトウェアのバージョンを特定するために必要です。同じソフトウェアでもバージョンによってライセンスや著作権情報が異なる場合があります。|
 |3.4	|Package File Name	|パッケージ ファイル名	| Yes	|パッケージを特定するために必要です。同じファイルを取得する際に使います。|
 |3.5	|Package Supplier	|パッケージ提供者	|	||
 |3.6	|Package Originator	|パッケージ原作者	| P	||
 |3.7	|Package Download Location 	|パッケージ ダウンロード位置	| Yes |	ソースコードの調査を行う場合に、使用しているものと同じソースコードを取得するために必要。3.5のPackage File Nameと組み合わせて使用する。|
-|3.8	|Files Analyzed	|解析したファイル	|	||
-|3.9	|Package Verification Code	|パッケージ検証コード	|	||
+|3.8	|Files Analyzed	|解析したファイル	| Yes	| ”false“にセット。SPDX仕様との互換性確保。SPDXチームからのフィードバック。|
+|3.9	|Package Verification Code	|パッケージ検証コード	|	| SPDX仕様では必須。3.8がFalseにセットされているときは記載不要。|
 |3.10	|Package Checksum	|パッケージ チェックサム	|	||
 |3.11	|Package Home Page	|パッケージ ホーム ページ	| Yes	|ソフト内容、修正情報などを確認できるようにしておくために必要です。プロジェクトの活動状況を調査する場合にも利用します。ソースコードからライセンスや著作権情報を得られない場合の手掛かりになります。|
 |3.12	|Source Information	|ソース情報	| P	|ソースコード or バイナリの識別|
 |3.13	|Concluded License	|結論されたライセンス	| Yes	|Concluded License…複数ライセンスの場合にどのライセンスを適用するかを使用者が決定した結果。最初に使うと決めた人がまず定義する。サプライチェーンの途中で判断が変わる場合は変更すれば良い。最終利用者が判断できない場合があるため、供給者側で判断する。Declared License…作者が定めたライセンス。使用可能なライセンスかどうかを判断するために必要。|
 |	|	+ 当該ライセンスのファイル一覧|	| P	|複数ライセンスを持つ場合の識別用 File情報の利用でも可|
-|3.14	|All Licenses Information from Files	|ファイルからの全ライセンス情報	| P	|全てのファイルからライセンスが抽出されていることが重要|
+|3.14	|All Licenses Information from Files	|ファイルからの全ライセンス情報	| P	|全てのファイルからライセンスが抽出されていることが重要。SPDX仕様では必須。3.8がFalseにセットされているときは記載不要。|
 |3.15	|Declared License	|宣言されたライセンス	| Yes	|Concluded License…複数ライセンスの場合にどのライセンスを適用するかを使用者が決定した結果。最初に使うと決めた人がまず定義する。サプライチェーンの途中で判断が変わる場合は変更すれば良い。最終利用者が判断できない場合があるため、供給者側で判断する。Declared License…作者が定めたライセンス。使用可能なライセンスかどうかを判断するために必要。|
 |3.16	|Comments on License	|ライセンスへのコメント	 | Yes	|ライセンスを結論づけた時の記録や、補足事項を記載する。ソフトウェアの組み合わせによっては使用の可否判断が変わるため、複数のライセンスから一つを選択した場合などは記載が必要。|
 |3.17	|Copyright Text	|著作権テキスト	| Yes	|コピーライト表記が必要なライセンスのための情報。ライセンス文にコピーライトが書かれていない場合は抽出しておく必要がある。|

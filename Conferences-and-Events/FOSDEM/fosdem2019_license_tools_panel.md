@@ -2,7 +2,7 @@
 
 - This is an unofficial transcript from “Making Sense of so many License Compliance Tools” panel discussion held on Feb. 2nd, 2019 at [FOSDEM 2019](https://fosdem.org/2019/).
 
-- This transcript is licensed under the Creative Commons Attribution 2.0 Belgium Licence, which is the same license as [the original video](https://fosdem.org/2019/schedule/event/license_tools_panel/) is licensed.
+- This transcript is licensed under the [Creative Commons Attribution 2.0 Belgium Licence](https://creativecommons.org/licenses/by/2.0/be/deed.en), under which [the original video](https://fosdem.org/2019/schedule/event/license_tools_panel/) is also licensed.
 
 - The time stamps are in HH:MM:SS:FF format where HH, MM, SS, and FF are hour, minute, second, and [CDDA](https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio) frame, respectively.
 
@@ -23,7 +23,7 @@ Philippe Ombredanne: My name is Philippe Ombredanne. And I’m both the maintain
 Michael Jaeger: Hey, my name is  Michael,  Michael Jaeger. I’m, along with other people, I’m a maintainer for FOSSology, which is a Linux Foundation project, scanning for licenses. And SW360, which is an Eclipse Foundation project, providing component inventory. I’m employed at a German engineering company called Siemens. And in my free time, I ____________ trainings about tools.
 
 00:01:50:45  
-Bradley: OK, so, let’s just leave the mic at each end, and in that way we all minimize the mic passing. **So, first question for the panel is “what GPL or other license compliance problems can, do you believe that, compliance tools can solve for users?”**
+Bradley: OK, so, let’s just leave the mic at each end, and in that way we all minimize the mic passing. **So, first question for the panel is “what GPL or other license compliance problems can do you believe that compliance tools can solve for users?”**
 
 Michael: Did you say what GPL and other compliance problems?
 

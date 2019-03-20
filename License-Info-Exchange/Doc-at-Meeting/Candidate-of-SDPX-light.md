@@ -46,7 +46,7 @@ P: There was a proposal, but is not selected as the candidate.
 |3.22	|External Reference Comment	|	|	|||
 |	|	+ URL of OSS license|	| 	|P|To double-check OSS license|
 |	|	+ License text|	| 	|P|To specify a license in case where the license is not registered|
-|	|	+ modification record|	| 	|Yes|To comply with license obligation|
+|	|	+ modification record|	| ExternalRef |Yes|To comply with license obligation|
 |	|	+ Patent related notice|	| 	|P||
 |	|	+ License term |	| 	|P|To verify license obiligation|
 |4.	|File Information	|	||||	
@@ -136,7 +136,7 @@ P: There was a proposal, but is not selected as the candidate.
 |3.22	|External Reference Comment	|外部参照コメント	||	||
 |	|	+ OSSライセンスのURL|	||　P	|OSSライセンスに言及しているURL(ライセンスの検証用)|
 |	|	+ ライセンスファイルそのもの|	|| P	|SPDX未登録の場合の確認用|
-|	|	+ オリジナルからの改変の有無|	|| Yes	|V-up版への入れ替え可否|
+|	|	+ オリジナルからの改変の有無|	|ExternalRef| Yes	|V-up版への入れ替え可否|
 |	|	+ 特許に関する特記事項の有無|	|| P	||
 |	|	+ ライセンス条件|	|| P	|ソース開示の要否等 (ライセンスに関する義務の確認用)|
 |4.	|File Information	|ファイル情報	|| ||	

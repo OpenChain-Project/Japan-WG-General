@@ -85,29 +85,23 @@ It is useful for business to define an additional file besides the SPDX file. (o
 
 ## 4. Table of SPDX Lite (Candidate)
 
-## Candidate of SPDX light (under discussion)
-
-Yes: Candidate
-
-P: There was a proposal, but is not selected as the candidate.
-
-| SPDX section no. | License Info. | Info. name in Japanese  | Tag  | SPDX Light  | Rationale      |
-|:------------|:-------------|:------------------|:------------------|:------------------|:------------------|
-|3.1	|Package Name	|	| PackageName |Yes|To identify software	|
-|3.2	|Package SPDX Identifier	|	| SPDXID|Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
-|3.3	|Package Version	|	| PackageVersion |Yes|To identify specific version	|
-|3.4	|Package File Name	|	| PackageFileName	|Yes|To identify specific package|
-|3.7	|Package Download Location 	|	| PackageDownloadLocation |Yes|To get the identical software	|
-|3.8	|Files Analyzed	|	|	FilesAnalyzed |Yes| In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
-|3.11	|Package Home Page	|	| PackageHomePage	|Yes|To verify relevant information|
-|3.13	|Concluded License	|	| PackageLicenseConcluded	|Yes||
-|3.15	|Declared License	|	| PackageLicenseDeclared	|Yes||
-|3.16	|Comments on License	|	| PackageLicenseComments	|Yes|To verify additional conditions|
-|3.17	|Copyright Text	|	| PackageCopyrightText	|Yes||
-|	|	+ modification record|	| ExternalRef |Yes|To comply with license obligation|
-|6.1	|License Identifier	|	| LicenseID	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.2	|Extracted Text	|	| ExtractedText	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.3	|License Name	|	| LicenseName	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.5	|License Comment	|	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+| SPDX section no. | License Info. | Tag  | SPDX Lite  | Rationale      |
+|:------------|:-------------|:------------------|:------------------|:------------------|
+|3.1	|Package Name	| PackageName |Yes|To identify software	|
+|3.2	|Package SPDX Identifier	| SPDXID|Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
+|3.3	|Package Version	| PackageVersion |Yes|To identify specific version	|
+|3.4	|Package File Name	| PackageFileName	|Yes|To identify specific package|
+|3.7	|Package Download Location 	| PackageDownloadLocation |Yes|To get the identical software	|
+|3.8	|Files Analyzed	|	FilesAnalyzed |Yes| In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
+|3.11	|Package Home Page	| PackageHomePage	|Yes|To verify relevant information|
+|3.13	|Concluded License	| PackageLicenseConcluded	|Yes||
+|3.15	|Declared License	| PackageLicenseDeclared	|Yes||
+|3.16	|Comments on License	| PackageLicenseComments	|Yes|To verify additional conditions|
+|3.17	|Copyright Text	| PackageCopyrightText	|Yes||
+|	|	+ modification record| ExternalRef |Yes|To comply with license obligation|
+|6.1	|License Identifier	| LicenseID	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|6.2	|Extracted Text	| ExtractedText	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|6.3	|License Name	| LicenseName	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
 
 

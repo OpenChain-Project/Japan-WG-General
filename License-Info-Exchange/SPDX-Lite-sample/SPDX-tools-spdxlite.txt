@@ -11,7 +11,7 @@ Creator: Person: someone
 PackageName: SPDX tools
 PackageVersion:	2.0.3
 PackageFileName: spdx-tools-2.0.2-jar-with-dependencies.jar
-PackageDownloadLocation: NOASSERTION
+PackageDownloadLocation: NONE
 FilesAnalyzed: false
 PackageHomePage: https://spdx.org/tools
 PackageLicenseConcluded: Apache-2.0

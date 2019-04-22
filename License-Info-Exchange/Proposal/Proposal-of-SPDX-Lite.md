@@ -105,9 +105,9 @@ It is useful for business to define an additional file besides the SPDX file. (o
 |6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
 
 
-## 5. 
+## Appendix. Specification of SPDX Lite 
 
-## Document Creation 
+## 1. Document Creation 
 
 ## 1.1 (2.4) Document Name <a name="2.4"></a>
 
@@ -214,7 +214,7 @@ Example:
         <creator> Tool: LicenseFind-1.0 </creator>
     </CreationInfo>
 
-## Pacage Information
+## 2. Pacage Information
 
 ## 2.1 (3.1) Package Name <a name="3.1"></a>
 
@@ -554,7 +554,9 @@ Example:
 
 ## 2.6 (3.8) Files Analyzed <a name="3.8"></a>
 
-**2.6.1 (3.8.1)** Purpose: Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. If `false`, indicates packages that represent metadata or URI references to a project, product, artifact, distribution or a component. If `false`, the package must not contain any files.
+**2.6.1 (3.8.1)** Purpose: Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. If `false`, indicates packages that represent metadata or URI references to a project, product, artifact, distribution or a component. If `false`, the package must not contain any files. 
+
+### Note: In the SPDX Lite, always `false` is set. 
 
 **2.6.2 (3.8.2)** Intent: A package can refer to a project, product, artifact, distribution or a component that is external to the SPDX document.
 
@@ -808,7 +810,7 @@ Example:
         ...
     </Package>
     
-## Other Licensing Information
+## 3. Other Licensing Information
 
 ## 3.1 (6.1) License Identifier <a name="6.1"></a>
 

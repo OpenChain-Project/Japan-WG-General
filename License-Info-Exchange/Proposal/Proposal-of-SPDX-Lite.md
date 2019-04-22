@@ -109,6 +109,112 @@ It is useful for business to define an additional file besides the SPDX file. (o
 
 Fields:
 
+## 2.4 Document Name <a name="2.4"></a>
+
+**2.4.1** Purpose: Identify name of this document as designated by creator.
+
+**2.4.2** Intent: Here, the name of each document is an important convention and easier to refer to than the URI.
+
+**2.4.3** Cardinality: Mandatory, one.
+
+**2.4.4** DataFormat: Single line of text.
+
+**2.4.5** Tag: `DocumentName:`
+
+Example:
+
+    DocumentName: glibc-v2.3
+
+    DocumentName: ubuntu-14.04
+
+**2.4.6** RDF: Property `spdx:name` in class `Document`
+
+Example:
+
+    <SpdxDocument rdf:about="...">
+      <name>glibc-v2.3</name>
+    </SpdxDocument>
+
+    <SpdxDocument rdf:about="...">
+      <name>ubuntu-14.04</name>
+    </SpdxDocument>
+
+## 2.5 SPDX Document Namespace <a name="2.5"></a>
+
+**2.5.1** Purpose: Provide an SPDX document specific namespace as a unique absolute [Uniform Resource Identifier][URI] (URI) as specified in [RFC-3986][rfc3986], with the exception of the ‘#’ delimiter. The SPDX Document URI cannot contain a URI "part" (e.g. the "#" character), since the ‘#’ is used in SPDX element URIs (packages, files, snippets, etc) to separate the document namespace from the element’s SPDX identifier. Additionally, a scheme (e.g. “https:”) is required.
+
+The URI must be unique for the SPDX document including the specific version of the SPDX document. If the SPDX document is updated, thereby creating a new version, a new URI for the updated document must be used. There can only be one URI for an SPDX document and only one SPDX document for a given URI.
+
+**2.5.2** Intent: The URI provides an unambiguous mechanism for other SPDX documents to reference SPDX elements within this SPDX document. See [section 2.6](#2.6) for a description on how external documents are referenced. Although it is not required, the URI can be constructed in a way which provides information on how the SPDX document can be found. For example, the URI can be a URL referencing the SPDX document itself, if it is available on the internet. A best practice for creating the URI for SPDX documents available on the public internet is `http://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]` where:
+
+* `CreatorWebsite` is a website hosted by the creator of the document. (e.g. an SPDX document provided by SPDX would be spdx.org)
+* `PathToSpdx` is a path to where SPDX documents are stored on the website (e.g. /spdx/spdxdocs)
+* `DocumentName` is a name given to the SPDX Document itself, typically the (set of) package name(s) followed by the version. [(see section 2.4)](#2.4).
+* `UUID` is a [universally unique identifier][URI]. The UUID could be a version 4 random UUID which can be generated from the [Online UUID Generator][uuid-gen] or a version 5 UUID generated from a sha1 checksum known to be unique for this specific SPDX document version.
+* If the creator does not own their own website, a default SPDX CreatorWebsite and PathToSpdx can be used `spdx.org/spdxdocs`. Note that the SPDX documents are not currently stored or accessible on this website. The URI is only used to create a unique ID following the above conventions.
+
+Note that the URI does not have to be accessible. It is only intended to provide a unique ID. In many cases, the URI will point to a web accessible document, but this should not be assumed to be the case.
+
+[URI]: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+[rfc3986]: https://tools.ietf.org/html/rfc3986
+[uuid-gen]: https://www.uuidgenerator.net/
+
+**2.5.3** Cardinality: Mandatory, one.
+
+**2.5.4** Data Format: unique absolute Uniform Resource Identifier (URI) as specified in [RFC-3986](https://tools.ietf.org/html/rfc3986), with the following exceptions:
+
+The SPDX Document URI cannot contain a URI "part" (e.g. the `#` delimiter), since the `#` is used to uniquely identify SPDX element identifiers.
+The URI must contain a scheme (e.g. `https:`).
+
+The URI must be unique for the SPDX document including the specific version of the SPDX document. If the SPDX document is updated, thereby creating a new version, a new URI for the updated document must be used. There can only be one URI for an SPDX document and only one SPDX document for a given URI.
+
+**2.5.5** Tag: `DocumentNamespace:`
+
+Example:
+
+    DocumentNamespace: http://spdx.org/spdxdocs/spdx-tools-v1.2-3F2504E0-4F89-41D3-9A0C-0305E82...
+
+**2.5.6** RDF: The unique ID is the URI for the SPDX document
+
+Example:
+
+    <SpdxDocument rdf:about="http://spdx.org/spdxdocs/spdx-tools-v1.2-3F2504E0-4F89-41D3-9A0C-0305E82...">
+        <rdfs:comment>This document was created using SPDX 2.0 using licenses from the web site.</rdfs:comment>
+    </SpdxDocument>
+
+## 2.8 Creator <a name="2.8"></a>
+
+**2.8.1** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name. If the SPDX file was created on behalf of a company or organization, indicate the entity name. If the SPDX file was created using a software tool, indicate the name and version for that tool. If multiple participants or tools were involved, use multiple instances of this field. Person name or organization name may be designated as “anonymous” if appropriate.
+
+**2.8.2** Intent: Here, the generation method will assist the recipient of the SPDX file in assessing the general reliability/accuracy of the analysis information.
+
+**2.8.3** Cardinality: Mandatory, one or many.
+
+**2.8.4** Data Format: Single line of text with the following keywords:
+
+    ”Person: person name” and optional “(email)”
+    "Organization: organization” and optional “(email)”
+    "Tool: toolidentifier-version”
+
+**2.8.5** Tag: `Creator:`
+
+Example:
+
+    Creator: Person: Jane Doe ()
+    Creator: Organization: ExampleCodeInspect ()
+    Creator: Tool: LicenseFind-1.0
+
+**2.8.6** RDF: Property `spdx:creator` in class `spdx:CreationInfo`
+
+Example:
+
+    <CreationInfo>
+        <creator> Person: Jane Doe () </creator>
+        <creator> Organization: ExampleCodeInspect () </creator>
+        <creator> Tool: LicenseFind-1.0 </creator>
+    </CreationInfo>
+
+
 ## 3.1 Package Name <a name="3.1"></a>
 
 **3.1.1** Purpose: Identify the full name of the package as given by the [Package Originator](#3.6).

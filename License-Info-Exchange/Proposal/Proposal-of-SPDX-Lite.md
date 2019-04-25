@@ -59,7 +59,7 @@ Japan WG does not have the appropriate paths to OSS communities, but REUSE initi
 A proposal of newly creating "SPDX Lite" has been discussed in subgroup of Japan WG.
 * SDPX Lite:
   * Should be easy to understand
-  * Should be easy to make
+  * Should be easy to make mannually
   * Should have enough information to comply with OSS license
   * Should have the affinity with SPDX, that means the subset of SPDX.
 
@@ -68,7 +68,6 @@ We think SPDX and SPDX Lite can cover all the supply chain.
 
 SPDX Lite is the entry point to the SPDX world.
 We hope entry users change their format from SPDX Lite to SPDX.
-
 
 Case study on actually used list.
 Almost items are included in Package Information

@@ -7,7 +7,7 @@
 
 
 
-### 1.1 Issue of license
+### 1.1 Issues of license
 
 * Appropriate license information is not provided by suppliers. Some suppliers do not know OSS license.  (Knowledge)
 
@@ -21,20 +21,20 @@
 
 ### 1.2 Issues of copyright notice
 
-Background
+Background:
 Companies want to do internal compliance process automatically by tools.
 
-* Copyright notice is not at all written in the source code from upper stream.  (Knowledge)
+* Copyright notice is not written in the source code from upper stream.  (Knowledge)
 
-* Copyright is written, but in the different ways in each source code. (No Standard)
+* Copyright is written, but in different ways in the source code. (No Standard)
   * There are too many patterns to scan automatically by tools. Therefore engineers do compliance tasks, instead of development.
 
 ## 2. Discussion 
 
 It is nice to make a guideline for exchanging license info. including copyright notice. 
 Exchanging license info. between organization is out of scope of the OpenChain.
-Guideline does not give rules that a company must comply with. 
-Guideline is a good way to show an appropriate procedure. 
+Guideline is a good way to show an appropriate procedure. Guideline does not give rules that a company must comply with. 
+
 
 There is the SPDX, we should use the standard. 
 Reinvention is not good. Intermittent suppliers in the supply chain like semiconductor companies have to hold all the information.
@@ -64,17 +64,18 @@ A proposal of newly creating "SPDX Lite" has been discussed in subgroup of Japan
   * Should have the affinity with SPDX, that means the subset of SPDX.
 
 
-We think SPDX and SPDX Lite can cover all the supply chain.
+We think SPDX and SPDX Lite can cover all the software supply chain.
 
 SPDX Lite is the entry point to the SPDX world.
-We hope entry users change their format from SPDX Lite to SPDX.
+We hope entry users change their format from SPDX Lite to SPDX in future.
 
 Case study on actually used list.
 Almost items are included in Package Information
 
-Candidate is created by the lists that are actually used in business.
+Candidate has been created by the lists that are actually used in automotive industry in Japan.
 
 SPDX is designed to carry the information from upper stream to down stream. (Downward)
+
 
 Some companies including OEM companies want to manage software in the supply chain.
 A company’s policy may not allow to use copyleft license.
@@ -140,23 +141,11 @@ Example:
 
 ## 1.2 (2.5) SPDX Document Namespace <a name="2.5"></a>
 
-**1.2.1 (2.5.1)** Purpose: Provide an SPDX document specific namespace as a unique absolute [Uniform Resource Identifier][URI] (URI) as specified in [RFC-3986][rfc3986], with the exception of the ‘#’ delimiter. The SPDX Document URI cannot contain a URI "part" (e.g. the "#" character), since the ‘#’ is used in SPDX element URIs (packages, files, snippets, etc) to separate the document namespace from the element’s SPDX identifier. Additionally, a scheme (e.g. “https:”) is required.
+**1.2.1 (2.5.1)** Purpose: Provide an SPDX document specific namespace.
 
 The URI must be unique for the SPDX document including the specific version of the SPDX document. If the SPDX document is updated, thereby creating a new version, a new URI for the updated document must be used. There can only be one URI for an SPDX document and only one SPDX document for a given URI.
 
-**1.2.2 (2.5.2)** Intent: The URI provides an unambiguous mechanism for other SPDX documents to reference SPDX elements within this SPDX document. See [section 2.6](#2.6) for a description on how external documents are referenced. Although it is not required, the URI can be constructed in a way which provides information on how the SPDX document can be found. For example, the URI can be a URL referencing the SPDX document itself, if it is available on the internet. A best practice for creating the URI for SPDX documents available on the public internet is `http://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]` where:
-
-* `CreatorWebsite` is a website hosted by the creator of the document. (e.g. an SPDX document provided by SPDX would be spdx.org)
-* `PathToSpdx` is a path to where SPDX documents are stored on the website (e.g. /spdx/spdxdocs)
-* `DocumentName` is a name given to the SPDX Document itself, typically the (set of) package name(s) followed by the version. [(see section 2.4)](#2.4).
-* `UUID` is a [universally unique identifier][URI]. The UUID could be a version 4 random UUID which can be generated from the [Online UUID Generator][uuid-gen] or a version 5 UUID generated from a sha1 checksum known to be unique for this specific SPDX document version.
-* If the creator does not own their own website, a default SPDX CreatorWebsite and PathToSpdx can be used `spdx.org/spdxdocs`. Note that the SPDX documents are not currently stored or accessible on this website. The URI is only used to create a unique ID following the above conventions.
-
-Note that the URI does not have to be accessible. It is only intended to provide a unique ID. In many cases, the URI will point to a web accessible document, but this should not be assumed to be the case.
-
-[URI]: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
-[rfc3986]: https://tools.ietf.org/html/rfc3986
-[uuid-gen]: https://www.uuidgenerator.net/
+**1.2.2 (2.5.2)** Intent: The URI provides an unambiguous mechanism for other SPDX documents to reference SPDX elements within this SPDX document. 
 
 **1.2.3 (2.5.3)** Cardinality: Mandatory, one.
 
@@ -183,7 +172,7 @@ Example:
 
 ## 1.3 (2.8) Creator <a name="2.8"></a>
 
-**1.3.1 (2.8.1)** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name. If the SPDX file was created on behalf of a company or organization, indicate the entity name. If the SPDX file was created using a software tool, indicate the name and version for that tool. If multiple participants or tools were involved, use multiple instances of this field. Person name or organization name may be designated as “anonymous” if appropriate.
+**1.3.1 (2.8.1)** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. 
 
 **1.3.2 (2.8.2)** Intent: Here, the generation method will assist the recipient of the SPDX file in assessing the general reliability/accuracy of the analysis information.
 
@@ -308,7 +297,7 @@ Example:
 
 **2.4.1 (3.4.1)** Purpose: Provide the actual file name of the package, or path of the directory being treated as a package. This may include the packaging and compression methods used as part of the file name, if appropriate.
 
-**2.4.2 (3.4.2)** Intent: The actual file name of the compressed file containing the package may be a significant technical element that needs to be included with each package identification information. If a grouping, like a set of files in a subdirectory, is being treated as a package, the subdirectory name may be appropriate to provide. Subdirectory name is preceeded with a `./`. See [RFC 3986][rfc3986] for syntax.
+**2.4.2 (3.4.2)** Intent: The actual file name of the compressed file containing the package may be a significant technical element that needs to be included with each package identification information. 
 
 **2.4.3 (3.4.3)** Cardinality: Optional, one.
 
@@ -363,18 +352,6 @@ Use:
 
 **2.5.4 (3.7.4)** Data Format: uniform resource locator | VCS location | `NONE` | `NOASSERTION`
 
-For version-controlled files, the VCS location syntax is similar to a URL and has the:
-
-    <vcs_tool>+<transport>://<host_name>[/<path_to_repository>][@<revision_tag_or_branch>][#<sub_path>]
-
-This VCS location compact notation (inspired and mostly adopted from [pip][pip-vcs] as of 2015-02-20) supports referencing locations in version control systems such as [Git][], [Mercurial][], [Subversion][] and [Bazaar][], and specifies the type of VCS tool using url prefixes: `git+`, `hg+`, `bzr+`, `svn+` and specific transport schemes such as SSH or HTTPS.
-
-Specifying sub-paths, branch names, a commit hash, a revision or a tag name is recommended, and supported using the `@` delimiter for commits and the `#` delimiter for sub-paths.
-
-Using user names and password in the `<host_name>` is not supported and should be considered as an error. User access control to URLs or VCS repositories must be handled outside of an SPDX document.
-
-In VCS location compact notations, the trailing slashes in `<host_name>`, `<path_to_repository>` are not significant. Leading and trailing slashes in `<sub_path>` are not significant.
-
 **2.5.5 (3.7.5)** Tag: `PackageDownloadLocation:`
 
 Examples if ambiguous:
@@ -387,147 +364,6 @@ Example for a plain URL:
 
     PackageDownloadLocation: http://ftp.gnu.org/gnu/glibc/glibc-ports-2.15.tar.gz
 
-Example for [Git][]:
-
-SPDX supported schemes are: `git`, `git+git`, `git+https`, `git+http`, and `git+ssh`. `git` and `git+git` are equivalent.
-
-Here are the supported forms:
-
-    PackageDownloadLocation: git://git.myproject.org/MyProject
-
-    PackageDownloadLocation: git+https://git.myproject.org/MyProject.git
-
-    PackageDownloadLocation: git+http://git.myproject.org/MyProject
-
-    PackageDownloadLocation: git+ssh://git.myproject.org/MyProject.git
-
-    PackageDownloadLocation: git+git://git.myproject.org/MyProject
-
-    PackageDownloadLocation: git+git@git.myproject.org:MyProject
-
-To specify a sub-path to a file or directory inside a repository use the `#` delimiter:
-
-    PackageDownloadLocation: git://git.myproject.org/MyProject#src/somefile.c
-
-    PackageDownloadLocation: git+https://git.myproject.org/MyProject#src/Class.java
-
-To specify branch names, a commit hash or a tag name, use the `@` delimiter:
-
-    PackageDownloadLocation: git://git.myproject.org/MyProject.git@master
-
-    PackageDownloadLocation: git+https://git.myproject.org/MyProject.git@v1.0
-
-    PackageDownloadLocation: git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709
-
-Sub-paths and branch names or commit hash can be combined too:
-
-    PackageDownloadLocation: git+https://git.myproject.org/MyProject.git@master#/src/MyClass.cpp
-
-    PackageDownloadLocation: git+https://git.myproject.org/MyProject@da39a3ee5e6b4b0d3255bfef95601890afd80709#lib/variable.rb
-
-Example for [Mercurial][]:
-
-SPDX supported schemes are: `hg+http`, `hg+https`, `hg+static-http`, and `hg+ssh`.
-
-The supported forms are:
-
-    PackageDownloadLocation: hg+http://hg.myproject.org/MyProject
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject
-
-    PackageDownloadLocation: hg+ssh://hg.myproject.org/MyProject
-
-To specify a sub-path to a file or directory inside a repository use the `#` delimiter:
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject#src/somefile.c
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject#src/Class.java
-
-To pass branch names, a commit hash, a tag name or a local branch name use the `@` delimiter:
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@da39a3ee5e6b
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@2019
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@v1.0
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@special_feature
-
-Sub-paths and branch names or commit hash can be combined too:
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@master#/src/MyClass.cpp
-
-    PackageDownloadLocation: hg+https://hg.myproject.org/MyProject@da39a3ee5e6b#lib/variable.rb
-
-Example for [Subversion][]:
-
-SPDX supported schemes are: `svn`, `svn+svn`, `svn+http`, `svn+https`, `svn+ssh`. `svn` and `svn+svn` are equivalent.
-
-The supported forms are:
-
-    PackageDownloadLocation: svn://svn.myproject.org/svn/MyProject
-
-    PackageDownloadLocation: svn+svn://svn.myproject.org/svn/MyProject
-
-    PackageDownloadLocation: svn+http://svn.myproject.org/svn/MyProject/trunk
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/svn/MyProject/trunk
-
-To specify a sub-path to a file or directory inside a repository use the `#` delimiter:
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject#src/somefile.c
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject#src/Class.java
-
-This support is less important for SVN since the URL path can also contain sub-paths; this two forms are equivalent:
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject/trunk#src/somefile.c
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject/trunk/src/somefile.c
-
-You can specify a revision using the `@` delimiter:
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/svn/MyProject/trunk@2019
-
-Sub-paths and revisions can be combined too:
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject@123#/src/MyClass.cpp
-
-    PackageDownloadLocation: svn+https://svn.myproject.org/MyProject/trunk@1234#lib/variable/variable.rb
-
-Example for [Bazaar][]:
-
-SPDX supported schemes are: `bzr+http`, `bzr+https`, `bzr+ssh`, `bzr+sftp`, `bzr+ftp`, and `bzr+lp`.
-
-The supported forms are:
-
-    PackageDownloadLocation: bzr+https://bzr.myproject.org/MyProject/trunk
-
-    PackageDownloadLocation: bzr+http://bzr.myproject.org/MyProject/trunk
-
-    PackageDownloadLocation: bzr+sftp://myproject.org/MyProject/trunk
-
-    PackageDownloadLocation: bzr+ssh://myproject.org/MyProject/trunk
-
-    PackageDownloadLocation: bzr+ftp://myproject.org/MyProject/trunk
-
-    PackageDownloadLocation: bzr+lp:MyProject
-
-To specify a sub-path to a file or directory inside a repository use the `#` delimiter:
-
-    PackageDownloadLocation: bzr+https://bzr.myproject.org/MyProject/trunk#src/somefile.c
-
-    PackageDownloadLocation: bzr+https://bzr.myproject.org/MyProject/trunk#src/Class.java
-
-You can specify a revision or tag using the `@` delimiter:
-
-    PackageDownloadLocation: bzr+https://bzr.myproject.org/MyProject/trunk@2019
-
-    PackageDownloadLocation: bzr+http://bzr.myproject.org/MyProject/trunk@v1.0
-
-Sub-paths and revisions can be combined too:
-
-    PackageDownloadLocation: bzr+https://bzr.myproject.org/MyProject/trunk@2019#src/somefile.c
 
 **2.5.6 (3.7.6)** RDF: property `spdx:downloadLocation` in class `spdx:Package`
 
@@ -558,12 +394,6 @@ Example:
 ### Note: In the SPDX Lite, always `false` is set. 
 
 **2.6.2 (3.8.2)** Intent: A package can refer to a project, product, artifact, distribution or a component that is external to the SPDX document.
-
-Some examples:
-
-A bundle of external products: Package A can be metadata about Packages and their dependencies. It may also be a loosely organized manifest of references to Packages involved in a product or project. Build or execution may transitively discover more Packages and dependencies. All of these referenced Packages can have their own SPDX Documents. In this case, Package A may be defined with its File Analyzed attribute set to `false`. Package A includes External Document References to SPDX documents containing Packages referenced in all the available relationships. The Relationships section then relates the SPDX documents and contained SPDX elements with appropriate semantics per the dependencies in the scope of Package A.
-Package relation to external product: Package A can have a STATIC_LINK relationship to Package B, but the binary representation of Package B is furnished by the build process and thus not contained in the file list of Package A. In this case, Package B needs to be defined with its Files Analyzed attribute set to false and all the other attributes subject to the subsequently defined constraints. Then, the relationship between Package A and Package B can be documented as described in [Section 7](7-relationships-between-SPDX-elements.md).
-File derived from external product: Package A contains multiple files derived from an outside project. Rather than use the `artifactOf*` attributes (Sections 4.9-4.11) to describe the relation of these files to their project, the outside project can be represented by another package, Package B, whose [`FilesAnalyzed`](#3.8) attribute is set to `false`. Each of the binary files can then have a relationship to package B (Section 6). This allows the outside project to be represented by a single SPDX identifier (the identifier of Package B). It also allows the relationship(s) between the outside project and each of the files be represented in much more detail.
 
 **2.6.3 (3.8.3)** Cardinality: Optional, one.  If omitted, the default value of `true` is assumed.
 

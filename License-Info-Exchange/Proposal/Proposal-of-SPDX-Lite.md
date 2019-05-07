@@ -31,15 +31,13 @@ Companies want to do internal compliance process automatically by tools.
 
 ## 2. Discussion 
 
-It is nice to make a guideline for exchanging license info. including copyright notice. 
-Exchanging license info. between organization is out of scope of the OpenChain.
-Guideline is a good way to show an appropriate procedure. Guideline does not give rules that a company must comply with. 
+It is nice to make a guideline for exchanging license infomation including copyright notice, which is applicable to actual business. 
+Making a guideline is a good way to show an appropriate procedure. The guideline does not give rules that a company must comply with. 
 
+Standard and business are key to make an applicable guideline.
 
-There is the SPDX, we should use the standard. 
-Reinvention is not good. Intermittent suppliers in the supply chain like semiconductor companies have to hold all the information.
+Intermittent suppliers in the supply chain like semiconductor companies have to hold all the information.
 If an intermittent supplier lose information, a company in down stream cannot recover it.
-Some companies are using the SPDX.
 
 
 However, in the supply chain, there are many small companies that cannot make an SPDX file by themselves.

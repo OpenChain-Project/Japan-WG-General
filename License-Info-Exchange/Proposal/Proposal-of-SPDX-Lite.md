@@ -83,41 +83,44 @@ It is useful for business to define an additional file besides the SPDX file. (o
 
 ## 4. Table of SPDX Lite (Candidate)
 
-| SPDX section no. | License Info. | Tag  | SPDX Lite  | Rationale      |
-|:------------|:-------------|:------------------|:------------------|:------------------|
-|3.1	|Package Name	| PackageName |Yes|To identify software	|
-|3.2	|Package SPDX Identifier	| SPDXID|Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
-|3.3	|Package Version	| PackageVersion |Yes|To identify specific version	|
-|3.4	|Package File Name	| PackageFileName	|Yes|To identify specific package|
-|3.7	|Package Download Location 	| PackageDownloadLocation |Yes|To get the identical software	|
-|3.8	|Files Analyzed	|	FilesAnalyzed |Yes| In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
-|3.11	|Package Home Page	| PackageHomePage	|Yes|To verify relevant information|
-|3.13	|Concluded License	| PackageLicenseConcluded	|Yes||
-|3.15	|Declared License	| PackageLicenseDeclared	|Yes||
-|3.16	|Comments on License	| PackageLicenseComments	|Yes|To verify additional conditions|
-|3.17	|Copyright Text	| PackageCopyrightText	|Yes||
-|	|	+ modification record| ExternalRef |Yes|To comply with license obligation|
-|6.1	|License Identifier	| LicenseID	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.2	|Extracted Text	| ExtractedText	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.3	|License Name	| LicenseName	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+| SPDX Lite section no. | SPDX section no. | License Info. | Tag  | SPDX Lite  | Rationale      |
+|:------------|:------------|:-------------|:------------------|:------------------|:------------------|
+|L1.1	|2.4	|Document Name	| DocumentName |Yes|To identify SPDX Lite document	|
+|L1.2	|2.5	|SPDX Document Namespace	| DocumentNamespace |Yes|To identify SPDX Lite document name	|
+|L1.3	|2.8	|Creator	| Creator |Yes|To identify creator	|
+|L2.1	|3.1	|Package Name	| PackageName |Yes|To identify software	|
+|L2.2	|3.2	|Package SPDX Identifier	| SPDXID|Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
+|L2.3	|3.3	|Package Version	| PackageVersion |Yes|To identify specific version	|
+|L2.4	|3.4	|Package File Name	| PackageFileName	|Yes|To identify specific package|
+|L2.5	|3.7	|Package Download Location 	| PackageDownloadLocation |Yes|To get the identical software	|
+|L2.6	|3.8	|Files Analyzed	|	FilesAnalyzed |Yes| In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
+|L2.7	|3.11	|Package Home Page	| PackageHomePage	|Yes|To verify relevant information|
+|L2.8	|3.13	|Concluded License	| PackageLicenseConcluded	|Yes||
+|L2.9	|3.15	|Declared License	| PackageLicenseDeclared	|Yes||
+|L2.10	|3.16	|Comments on License	| PackageLicenseComments	|Yes|To verify additional conditions|
+|L2.11	|3.17	|Copyright Text	| PackageCopyrightText	|Yes||
+|	|	|	+ modification record| ExternalRef |Yes|To comply with license obligation|
+|L3.1	|6.1	|License Identifier	| LicenseID	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.2	|6.2	|Extracted Text	| ExtractedText	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.3	|6.3	|License Name	| LicenseName	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.4	|6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
 
 
 ## Appendix. Specification of SPDX Lite 
 
-## 1. Document Creation 
+## L1. Document Creation 
 
-## 1.1 (2.4) Document Name <a name="2.4"></a>
+## L1.1 (2.4) Document Name <a name="2.4"></a>
 
-**1.1.1 (2.4.1)** Purpose: Identify name of this document as designated by creator.
+**L1.1.1 (2.4.1)** Purpose: Identify name of this document as designated by creator.
 
-**1.1.2 (2.4.2)** Intent: Here, the name of each document is an important convention and easier to refer to than the URI.
+**L1.1.2 (2.4.2)** Intent: Here, the name of each document is an important convention and easier to refer to than the URI.
 
-**1.1.3 (2.4.3)** Cardinality: Mandatory, one.
+**L1.1.3 (2.4.3)** Cardinality: Mandatory, one.
 
-**1.1.4 (2.4.4)** DataFormat: Single line of text.
+**L1.1.4 (2.4.4)** DataFormat: Single line of text.
 
-**1.1.5 (2.4.5)** Tag: `DocumentName:`
+**L1.1.5 (2.4.5)** Tag: `DocumentName:`
 
 Example:
 
@@ -125,7 +128,7 @@ Example:
 
     DocumentName: ubuntu-14.04
 
-**1.1.6 (2.4.6)** RDF: Property `spdx:name` in class `Document`
+**L1.1.6 (2.4.6)** RDF: Property `spdx:name` in class `Document`
 
 Example:
 
@@ -137,30 +140,30 @@ Example:
       <name>ubuntu-14.04</name>
     </SpdxDocument>
 
-## 1.2 (2.5) SPDX Document Namespace <a name="2.5"></a>
+## L1.2 (2.5) SPDX Document Namespace <a name="2.5"></a>
 
-**1.2.1 (2.5.1)** Purpose: Provide an SPDX document specific namespace.
+**L1.2.1 (2.5.1)** Purpose: Provide an SPDX document specific namespace.
 
 The URI must be unique for the SPDX document including the specific version of the SPDX document. If the SPDX document is updated, thereby creating a new version, a new URI for the updated document must be used. There can only be one URI for an SPDX document and only one SPDX document for a given URI.
 
-**1.2.2 (2.5.2)** Intent: The URI provides an unambiguous mechanism for other SPDX documents to reference SPDX elements within this SPDX document. 
+**L1.2.2 (2.5.2)** Intent: The URI provides an unambiguous mechanism for other SPDX documents to reference SPDX elements within this SPDX document. 
 
-**1.2.3 (2.5.3)** Cardinality: Mandatory, one.
+**L1.2.3 (2.5.3)** Cardinality: Mandatory, one.
 
-**1.2.4 (2.5.4)** Data Format: unique absolute Uniform Resource Identifier (URI) as specified in [RFC-3986](https://tools.ietf.org/html/rfc3986), with the following exceptions:
+**L1.2.4 (2.5.4)** Data Format: unique absolute Uniform Resource Identifier (URI) as specified in [RFC-3986](https://tools.ietf.org/html/rfc3986), with the following exceptions:
 
 The SPDX Document URI cannot contain a URI "part" (e.g. the `#` delimiter), since the `#` is used to uniquely identify SPDX element identifiers.
 The URI must contain a scheme (e.g. `https:`).
 
 The URI must be unique for the SPDX document including the specific version of the SPDX document. If the SPDX document is updated, thereby creating a new version, a new URI for the updated document must be used. There can only be one URI for an SPDX document and only one SPDX document for a given URI.
 
-**1.2.5 (2.5.5)** Tag: `DocumentNamespace:`
+**L1.2.5 (2.5.5)** Tag: `DocumentNamespace:`
 
 Example:
 
     DocumentNamespace: http://spdx.org/spdxdocs/spdx-tools-v1.2-3F2504E0-4F89-41D3-9A0C-0305E82...
 
-**1.2.6 (2.5.6)** RDF: The unique ID is the URI for the SPDX document
+**L1.2.6 (2.5.6)** RDF: The unique ID is the URI for the SPDX document
 
 Example:
 
@@ -168,21 +171,21 @@ Example:
         <rdfs:comment>This document was created using SPDX 2.0 using licenses from the web site.</rdfs:comment>
     </SpdxDocument>
 
-## 1.3 (2.8) Creator <a name="2.8"></a>
+## L1.3 (2.8) Creator <a name="2.8"></a>
 
-**1.3.1 (2.8.1)** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. 
+**L1.3.1 (2.8.1)** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. 
 
-**1.3.2 (2.8.2)** Intent: Here, the generation method will assist the recipient of the SPDX file in assessing the general reliability/accuracy of the analysis information.
+**L1.3.2 (2.8.2)** Intent: Here, the generation method will assist the recipient of the SPDX file in assessing the general reliability/accuracy of the analysis information.
 
-**1.3.3 (2.8.3)** Cardinality: Mandatory, one or many.
+**L1.3.3 (2.8.3)** Cardinality: Mandatory, one or many.
 
-**1.3.4 (2.8.4)** Data Format: Single line of text with the following keywords:
+**L1.3.4 (2.8.4)** Data Format: Single line of text with the following keywords:
 
     ”Person: person name” and optional “(email)”
     "Organization: organization” and optional “(email)”
     "Tool: toolidentifier-version”
 
-**1.3.5 (2.8.5)** Tag: `Creator:`
+**L1.3.5 (2.8.5)** Tag: `Creator:`
 
 Example:
 
@@ -190,7 +193,7 @@ Example:
     Creator: Organization: ExampleCodeInspect ()
     Creator: Tool: LicenseFind-1.0
 
-**1.3.6 (2.8.6)** RDF: Property `spdx:creator` in class `spdx:CreationInfo`
+**L1.3.6 (2.8.6)** RDF: Property `spdx:creator` in class `spdx:CreationInfo`
 
 Example:
 
@@ -200,25 +203,25 @@ Example:
         <creator> Tool: LicenseFind-1.0 </creator>
     </CreationInfo>
 
-## 2. Pacage Information
+## L2. Pacage Information
 
-## 2.1 (3.1) Package Name <a name="3.1"></a>
+## L2.1 (3.1) Package Name <a name="3.1"></a>
 
-**2.1.1 (3.1.1)** Purpose: Identify the full name of the package as given by the [Package Originator](#3.6).
+**L2.1.1 (3.1.1)** Purpose: Identify the full name of the package as given by the [Package Originator](#3.6).
 
-**2.1.2 (3.1.2)** Intent: The name of each package is an important conventional technical identifier to be maintained for each package.
+**L2.1.2 (3.1.2)** Intent: The name of each package is an important conventional technical identifier to be maintained for each package.
 
-**2.1.3 (3.1.3)** Cardinality: Mandatory, one.
+**L2.1.3 (3.1.3)** Cardinality: Mandatory, one.
 
-**2.1.4 (3.1.4)** Data Format: Single line of text.
+**L2.1.4 (3.1.4)** Data Format: Single line of text.
 
-**2.1.5 (3.1.5)** Tag: `PackageName:`
+**L2.1.5 (3.1.5)** Tag: `PackageName:`
 
 Example:
 
     PackageName: glibc
 
-**2.1.6 (3.1.6)** RDF: property `spdx:name` in class `spdx:Package`
+**L2.1.6 (3.1.6)** RDF: property `spdx:name` in class `spdx:Package`
 
 Example:
 
@@ -226,25 +229,25 @@ Example:
         <name>glibc</name>
     </Package>
 
-## 2.2 (3.2) Package SPDX Identifier <a name="3.2"></a>
+## L2.2 (3.2) Package SPDX Identifier <a name="3.2"></a>
 
-**2.2.1 (3.2.1)** Purpose: Uniquely identify any element in an SPDX document which may be referenced by other elements. These may be referenced internally and externally with the addition of the SPDX Document Identifier.
+**L2.2.1 (3.2.1)** Purpose: Uniquely identify any element in an SPDX document which may be referenced by other elements. These may be referenced internally and externally with the addition of the SPDX Document Identifier.
 
-**2.2.2 (3.2.2)** Intent: There may be several versions of the same package within an SPDX document. Each element needs to be able to be referred to uniquely so that relationships between elements can be clearly articulated.
+**L2.2.2 (3.2.2)** Intent: There may be several versions of the same package within an SPDX document. Each element needs to be able to be referred to uniquely so that relationships between elements can be clearly articulated.
 
-**2.2.3 (3.2.3)** Cardinality: Mandatory, one.
+**L2.2.3 (3.2.3)** Cardinality: Mandatory, one.
 
-**2.2.4 (3.2.4)** Data Format: "SPDXRef-"`[idstring]`
+**L2.2.4 (3.2.4)** Data Format: "SPDXRef-"`[idstring]`
 
 where `[idstring]` is a unique string containing letters, numbers, `.`, and/or `-`.
 
-**2.2.5 (3.2.5)** Tag: `SPDXID:`
+**L2.2.5 (3.2.5)** Tag: `SPDXID:`
 
 Example:
 
     SPDXID: SPDXRef-1
 
-**2.2.6 (3.2.6)** RDF: The URI for the element will follow the form:
+**L2.2.6 (3.2.6)** RDF: The URI for the element will follow the form:
 
     [SPDX DocumentNamespace]#[SPDX Identifier]
 
@@ -265,23 +268,23 @@ Example using document URI:
         ...
     </Package>
 
-## 2.3 (3.3) Package Version <a name="3.3"></a>
+## L2.3 (3.3) Package Version <a name="3.3"></a>
 
-**2.3.1 (3.3.1)** Purpose: Identify the version of the package.
+**L2.3.1 (3.3.1)** Purpose: Identify the version of the package.
 
-**2.3.2 (3.3.2)** Intent: The versioning of a package is a useful for identification purposes and for indicating later changes of the package version.
+**L2.3.2 (3.3.2)** Intent: The versioning of a package is a useful for identification purposes and for indicating later changes of the package version.
 
-**2.3.3 (3.3.3)** Cardinality: Optional, one.
+**L2.3.3 (3.3.3)** Cardinality: Optional, one.
 
-**2.3.4 (3.3.4)** Data Format: Single line of text.
+**L2.3.4 (3.3.4)** Data Format: Single line of text.
 
-**2.3.5 (3.3.5)** Tag: `PackageVersion:`
+**L2.3.5 (3.3.5)** Tag: `PackageVersion:`
 
 Example:
 
     PackageVersion: 2.11.1
 
-**2.3.6 (3.3.6)** RDF: property `spdx:versionInfo` in class `spdx:Package`
+**L2.3.6 (3.3.6)** RDF: property `spdx:versionInfo` in class `spdx:Package`
 
 Example:
 
@@ -291,17 +294,17 @@ Example:
         ...
     </Package>
 
-## 2.4 (3.4) Package File Name <a name="3.4"></a>
+## L2.4 (3.4) Package File Name <a name="3.4"></a>
 
-**2.4.1 (3.4.1)** Purpose: Provide the actual file name of the package, or path of the directory being treated as a package. This may include the packaging and compression methods used as part of the file name, if appropriate.
+**L2.4.1 (3.4.1)** Purpose: Provide the actual file name of the package, or path of the directory being treated as a package. This may include the packaging and compression methods used as part of the file name, if appropriate.
 
-**2.4.2 (3.4.2)** Intent: The actual file name of the compressed file containing the package may be a significant technical element that needs to be included with each package identification information. 
+**L2.4.2 (3.4.2)** Intent: The actual file name of the compressed file containing the package may be a significant technical element that needs to be included with each package identification information. 
 
-**2.4.3 (3.4.3)** Cardinality: Optional, one.
+**L2.4.3 (3.4.3)** Cardinality: Optional, one.
 
-**2.4.4 (3.4.4)** Data Format: Single line of text.
+**L2.4.4 (3.4.4)** Data Format: Single line of text.
 
-**2.4.5 (3.4.5)** Tag: `PackageFileName:`
+**L2.4.5 (3.4.5)** Tag: `PackageFileName:`
 
 Example:
 
@@ -311,7 +314,7 @@ Example (subdirectory being treated as a package):
 
     PackageFileName: ./myrootdir/mysubdir1
 
-**2.4.6 (3.4.6)** RDF: property `spdx:packageFileName` in class `spdx:Package`
+**L2.4.6 (3.4.6)** RDF: property `spdx:packageFileName` in class `spdx:Package`
 
 Example:
 
@@ -329,9 +332,9 @@ Example (subdirectory being treated as a package):
        ...
     </Package>
 
-## 2.5 (3.7) Package Download Location <a name="3.7"></a>
+## L2.5 (3.7) Package Download Location <a name="3.7"></a>
 
-**2.5.1 (3.7.1)** Purpose: This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created.
+**L2.5.1 (3.7.1)** Purpose: This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created.
 
 Use:
 
@@ -344,13 +347,13 @@ Use:
 
     (iii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
 
-**2.5.2 (3.7.2)** Intent: Where and how to download the exact package being referenced is critical verification and tracking data.
+**L2.5.2 (3.7.2)** Intent: Where and how to download the exact package being referenced is critical verification and tracking data.
 
-**2.5.3 (3.7.3)** Cardinality: Mandatory, one.
+**L2.5.3 (3.7.3)** Cardinality: Mandatory, one.
 
-**2.5.4 (3.7.4)** Data Format: uniform resource locator | VCS location | `NONE` | `NOASSERTION`
+**L2.5.4 (3.7.4)** Data Format: uniform resource locator | VCS location | `NONE` | `NOASSERTION`
 
-**2.5.5 (3.7.5)** Tag: `PackageDownloadLocation:`
+**L2.5.5 (3.7.5)** Tag: `PackageDownloadLocation:`
 
 Examples if ambiguous:
 
@@ -363,7 +366,7 @@ Example for a plain URL:
     PackageDownloadLocation: http://ftp.gnu.org/gnu/glibc/glibc-ports-2.15.tar.gz
 
 
-**2.5.6 (3.7.6)** RDF: property `spdx:downloadLocation` in class `spdx:Package`
+**L2.5.6 (3.7.6)** RDF: property `spdx:downloadLocation` in class `spdx:Package`
 
 Example:
 
@@ -385,25 +388,25 @@ Example:
         <downloadLocation rdf:resource="http://spdx.org/rdf/terms#none"/>
     </Package>
 
-## 2.6 (3.8) Files Analyzed <a name="3.8"></a>
+## L2.6 (3.8) Files Analyzed <a name="3.8"></a>
 
-**2.6.1 (3.8.1)** Purpose: Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. If `false`, indicates packages that represent metadata or URI references to a project, product, artifact, distribution or a component. If `false`, the package must not contain any files. 
+**L2.6.1 (3.8.1)** Purpose: Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. If `false`, indicates packages that represent metadata or URI references to a project, product, artifact, distribution or a component. If `false`, the package must not contain any files. 
 
-### Note: In the SPDX Lite, always `false` is set. 
+### Note: In the SPDX Lite, `false` must be set. 
 
-**2.6.2 (3.8.2)** Intent: A package can refer to a project, product, artifact, distribution or a component that is external to the SPDX document.
+**L2.6.2 (3.8.2)** Intent: A package can refer to a project, product, artifact, distribution or a component that is external to the SPDX document.
 
-**2.6.3 (3.8.3)** Cardinality: Optional, one.  If omitted, the default value of `true` is assumed.
+**L2.6.3 (3.8.3)** Cardinality: Optional, one.  If omitted, the default value of `true` is assumed.
 
-**2.6.4 (3.8.4)** Data Format: Boolean
+**L2.6.4 (3.8.4)** Data Format: Boolean
 
-**2.6.5 (3.8.5)** Tag: `FilesAnalyzed`
+**L2.6.5 (3.8.5)** Tag: `FilesAnalyzed`
 
 Example:
 
     FilesAnalyzed: false
 
-**2.6.6(3.8.6)** RDF: property `spdx:filesAnalyzed` in class `spdx:Package`
+**L2.6.6(3.8.6)** RDF: property `spdx:filesAnalyzed` in class `spdx:Package`
 
 Example:
 
@@ -413,9 +416,9 @@ Example:
         ...
     </Package>
 
-## 2.7 (3.11) Package Home Page <a name="3.11"></a>
+## L2.7 (3.11) Package Home Page <a name="3.11"></a>
 
-**2.7.1 (3.11.1)** Purpose: Provide a place for the SPDX file creator to record a web site that serves as the package's home page. This link can also be used to reference further information about the package referenced by the SPDX file creator.
+**L2.7.1 (3.11.1)** Purpose: Provide a place for the SPDX file creator to record a web site that serves as the package's home page. This link can also be used to reference further information about the package referenced by the SPDX file creator.
 
 Use:
 
@@ -428,28 +431,28 @@ Use:
 
     (iii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
 
-**2.7.2 (3.11.2)** Intent: Save the recipient of the SPDX file who is looking for more info from having to search for and verify a match between the package and the associated project homepage.
+**L2.7.2 (3.11.2)** Intent: Save the recipient of the SPDX file who is looking for more info from having to search for and verify a match between the package and the associated project homepage.
 
-**2.7.3 (3.11.3)** Cardinality: Optional, one.
+**L2.7.3 (3.11.3)** Cardinality: Optional, one.
 
-**2.7.4 (3.11.4)** Data Format: uniform resource locator | `NONE` | `NOASSERTION`
+**L2.7.4 (3.11.4)** Data Format: uniform resource locator | `NONE` | `NOASSERTION`
 
-**2.7.5 (3.11.5)** Tag: `PackageHomePage:`
+**L2.7.5 (3.11.5)** Tag: `PackageHomePage:`
 
 Example:
 
     PackageHomePage: http://ftp.gnu.org/gnu/glibc
 
-**2.7.6 (3.11.6)** RDF: property `doap:homepage` in class `spdx:Package`
+**L2.7.6 (3.11.6)** RDF: property `doap:homepage` in class `spdx:Package`
 
 Example:
 
     <Package rdf:about="...">
         <doap:homepage >http://ftp.gnu.org/gnu/glibc/</doap:homepage>    </Package>
 
-## 2.8 (3.13) Concluded License <a name="3.13"></a>
+## L2.8 (3.13) Concluded License <a name="3.13"></a>
 
-**2.8.1 (3.13.1)** Purpose: Contain the license the SPDX file creator has concluded as governing the package or alternative values, if the governing license cannot be determined.
+**L2.8.1 (3.13.1)** Purpose: Contain the license the SPDX file creator has concluded as governing the package or alternative values, if the governing license cannot be determined.
 
 The options to populate this field are limited to:
 
@@ -465,17 +468,17 @@ The options to populate this field are limited to:
 
 If the Concluded License is not the same as the [Declared License](#3.15), a written explanation should be provided in the Comments on License field [(section 3.16)](#3.16). With respect to `NOASSERTION`, a written explanation in the Comments on License field [(section 3.16)](#3.16) is preferred.
 
-**2.8.2 (3.13.2)** Intent: Here, the intent is for the SPDX file creator to analyze the license information in package, and other objective information, e.g., COPYING file, together with the results from any scanning tools, to arrive at a reasonably objective conclusion as to what license governs the package.
+**L2.8.2 (3.13.2)** Intent: Here, the intent is for the SPDX file creator to analyze the license information in package, and other objective information, e.g., COPYING file, together with the results from any scanning tools, to arrive at a reasonably objective conclusion as to what license governs the package.
 
-**2.8.3 (3.13.3)** Cardinality: Mandatory, one.
+**L2.8.3 (3.13.3)** Cardinality: Mandatory, one.
 
-**2.8.4 (3.13.4)** Data Format: `<SPDX License Expression>` | `NONE` | `NOASSERTION`
+**L2.8.4 (3.13.4)** Data Format: `<SPDX License Expression>` | `NONE` | `NOASSERTION`
 
 where:
 
 `<SPDX License Expression>` is a valid SPDX License Expression as defined in [Appendix IV](appendix-IV-SPDX-license-expressions.md).
 
-**2.8.5 (3.13.5)** Tag: `PackageLicenseConcluded:`
+**L2.8.5 (3.13.5)** Tag: `PackageLicenseConcluded:`
 
 Example:
 
@@ -485,7 +488,7 @@ Example:
 
     PackageLicenseConcluded: (LGPL-2.0 OR LicenseRef-3)
 
-**2.8.6 (3.13.6)** RDF: property `spdx:licenseConcluded` in `class spdx:Package`
+**L2.8.6 (3.13.6)** RDF: property `spdx:licenseConcluded` in `class spdx:Package`
 
 Example:
 
@@ -508,9 +511,9 @@ Example:
         ...
     </Package>
 
-## 2.9 (3.15) Declared License <a name="3.15"></a>
+## L2.9 (3.15) Declared License <a name="3.15"></a>
 
-**2.9.1 (3.15.1)** Purpose: List the licenses that have been declared by the authors of the package. Any license information that does not originate from the package authors, e.g. license information from a third party repository, should not be included in this field.
+**L2.9.1 (3.15.1)** Purpose: List the licenses that have been declared by the authors of the package. Any license information that does not originate from the package authors, e.g. license information from a third party repository, should not be included in this field.
 
 The options to populate this field are limited to:
 
@@ -522,17 +525,17 @@ The options to populate this field are limited to:
 
     (ii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
 
-**2.9.2 (3.15.2)** Intent: This is simply the license identified in text in one or more files (for example COPYING file) in the source code package. This field is not intended to capture license information obtained from an external source, such as the package website. Such information can be included in Concluded License [(section 3.13)](#3.13). This field may have multiple Declared Licenses, if multiple licenses are declared at the package level.
+**L2.9.2 (3.15.2)** Intent: This is simply the license identified in text in one or more files (for example COPYING file) in the source code package. This field is not intended to capture license information obtained from an external source, such as the package website. Such information can be included in Concluded License [(section 3.13)](#3.13). This field may have multiple Declared Licenses, if multiple licenses are declared at the package level.
 
-**2.9.3 (3.15.3)** Cardinality: Mandatory, one.
+**L2.9.3 (3.15.3)** Cardinality: Mandatory, one.
 
-**2.9.4 (3.15.4)** Data Format: `<SPDX License Expression>` | `NONE` | `NOASSERTION`
+**L2.9.4 (3.15.4)** Data Format: `<SPDX License Expression>` | `NONE` | `NOASSERTION`
 
 where:
 
 * `<SPDX License Expression>` is a valid SPDX License Expression as defined in [Appendix IV](appendix-IV-SPDX-license-expressions.md).
 
-**2.9.5 (3.15.5)** Tag: `PackageLicenseDeclared:`
+**L2.9.5 (3.15.5)** Tag: `PackageLicenseDeclared:`
 
 Example:
 
@@ -542,7 +545,7 @@ Example:
 
     PackageLicenseDeclared: (LGPL-2.0 AND LicenseRef-3)
 
-**2.9.6 (3.15.6)** RDF: property `spdx:licenseDeclared` in class `spdx:Package`
+**L2.9.6 (3.15.6)** RDF: property `spdx:licenseDeclared` in class `spdx:Package`
 
 Example:
 
@@ -566,28 +569,28 @@ Example:
         ...
     </Package>
 
-## 2.10 (3.16) Comments on License <a name="3.16"></a>
+## L2.10 (3.16) Comments on License <a name="3.16"></a>
 
-**2.10.1 (3.16.1)** Purpose: This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package. If the Concluded License does not match the Declared License or License Information from Files, this should be explained by the SPDX file creator. Its is also preferable to include an explanation here when the Concluded License is `NOASSERTION`.
+**L2.10.1 (3.16.1)** Purpose: This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package. If the Concluded License does not match the Declared License or License Information from Files, this should be explained by the SPDX file creator. Its is also preferable to include an explanation here when the Concluded License is `NOASSERTION`.
 
-**2.10.2 (3.16.2)** Intent: Here, the intent is to provide the recipient of the SPDX file with a detailed explanation of how the Concluded License was determined if it does not match the License Information from the files or the source code package, is marked `NOASSERTION`, or other helpful information relevant to determining the license of the package.
+**L2.10.2 (3.16.2)** Intent: Here, the intent is to provide the recipient of the SPDX file with a detailed explanation of how the Concluded License was determined if it does not match the License Information from the files or the source code package, is marked `NOASSERTION`, or other helpful information relevant to determining the license of the package.
 
-**2.10.3 (3.16.3)** Cardinality: Optional, one.
+**L2.10.3 (3.16.3)** Cardinality: Optional, one.
 
-**2.10.4 (3.16.4)** Data Format: free form text that can span multiple lines.
+**L2.10.4 (3.16.4)** Data Format: free form text that can span multiple lines.
 
 In `tag:value` format this is delimited by `<text>...</text>`.
 
 In RDF, it is delimited by `<licenseComment>`.
 
-**2.10.5 (3.16.5)** Tag: `PackageLicenseComments:`
+**L2.10.5 (3.16.5)** Tag: `PackageLicenseComments:`
 
 Example:
 
     PackageLicenseComments: <text>The license for this project changed with the release of version 1.4.
     The version of the project included here post-dates the license change.</text>
 
-**2.10.6 (3.16.6)** RDF: property `spdx:licenseComments` in class `spdx:Package`
+**L2.10.6 (3.16.6)** RDF: property `spdx:licenseComments` in class `spdx:Package`
 
 Example:
 
@@ -601,9 +604,9 @@ Example:
         ...
     </Package>
 
-## 2.11 (3.17) Copyright Text <a name="3.17"></a>
+## L2.11 (3.17) Copyright Text <a name="3.17"></a>
 
-**2.11.1 (3.17.1)** Purpose: Identify the copyright holders of the package, as well as any dates present. This will be a free form text field extracted from package information files. The options to populate this field are limited to:
+**L2.11.1 (3.17.1)** Purpose: Identify the copyright holders of the package, as well as any dates present. This will be a free form text field extracted from package information files. The options to populate this field are limited to:
 
 * Any text related to a copyright notice, even if not complete;
 * `NONE` if the package contains no copyright information whatsoever; or
@@ -613,13 +616,13 @@ Example:
 
     (ii) the SPDX document creator has intentionally provided no information (no meaning should be implied by doing so).
 
-**2.11.2 (3.17.2)** Intent: Record any copyright notices for the package.
+**L2.11.2 (3.17.2)** Intent: Record any copyright notices for the package.
 
-**2.11.3 (3.17.3)** Cardinality: Mandatory, one.
+**L2.11.3 (3.17.3)** Cardinality: Mandatory, one.
 
-**2.11.4 (3.17.4)** Data Format: free form text that can span multiple lines | `NONE` | `NOASSERTION`
+**L2.11.4 (3.17.4)** Data Format: free form text that can span multiple lines | `NONE` | `NOASSERTION`
 
-**2.11.5 (3.17.5)** Tag: `PackageCopyrightText:`
+**L2.11.5 (3.17.5)** Tag: `PackageCopyrightText:`
 
 In `tag:value` format multiple lines are delimited by `<text>...</text>`.
 
@@ -627,7 +630,7 @@ Example:
 
     PackageCopyrightText: <text>Copyright 2008-2010 John Smith</text>
 
-**2.11.6 (3.17.6)** RDF: property `spdx:copyrightText` in class `spdx:Package`
+**L2.11.6 (3.17.6)** RDF: property `spdx:copyrightText` in class `spdx:Package`
 
 Example:
 
@@ -637,23 +640,23 @@ Example:
         ...
     </Package>
     
-## 3. Other Licensing Information
+## L3. Other Licensing Information
 
-## 3.1 (6.1) License Identifier <a name="6.1"></a>
+## L3.1 (6.1) License Identifier <a name="6.1"></a>
 
-**3.1.1 (6.1.1)** Purpose: Provide a locally unique identifier to refer to licenses that are not found on the SPDX License List. This unique identifier can then be used in the packages and files sections of the SPDX file (sections [3](3-package-information.md) and [4](4-file-information.md), respectively).
+**L3.1.1 (6.1.1)** Purpose: Provide a locally unique identifier to refer to licenses that are not found on the SPDX License List. This unique identifier can then be used in the packages and files sections of the SPDX file (sections [3](3-package-information.md) and [4](4-file-information.md), respectively).
 
-**3.1.2 (6.1.2)** Intent: Create a human readable short form license identifier for a license not on the SPDX License List. This identifier should be unique within the SPDX file. In previous versions of SPDX, the references were required to be sequential numbers, but as of version 1.2, creators may specify references that are easier for humans to remember and mentally map.
+**L3.1.2 (6.1.2)** Intent: Create a human readable short form license identifier for a license not on the SPDX License List. This identifier should be unique within the SPDX file. In previous versions of SPDX, the references were required to be sequential numbers, but as of version 1.2, creators may specify references that are easier for humans to remember and mentally map.
 
-**3.1.3 (6.1.3)** Cardinality: Conditional (mandatory, one) if license is not on SPDX License List.
+**L3.1.3 (6.1.3)** Cardinality: Conditional (mandatory, one) if license is not on SPDX License List.
 
-**3.1.4 (6.1.4)** Data Format: "LicenseRef-"`[idstring]`
+**L3.1.4 (6.1.4)** Data Format: "LicenseRef-"`[idstring]`
 
 where
 
 `[idstring]` is a unique string containing letters, numbers, `.` and/or `-`.
 
-**3.1.5 (6.1.5)** Tag: `LicenseID:`
+**L3.1.5 (6.1.5)** Tag: `LicenseID:`
 
 Examples:
 
@@ -661,7 +664,7 @@ Examples:
 
     LicenseID: LicenseRef-Beerware-4.2
 
-**3.1.6 (6.1.6)** RDF: Property `spdx:licenseID` in class `spdx:ExtractedLicensingInfo`
+**L3.1.6 (6.1.6)** RDF: Property `spdx:licenseID` in class `spdx:ExtractedLicensingInfo`
 
 Examples:
 
@@ -673,17 +676,17 @@ Examples:
         <licenseId>LicenseRef-Beerware-4.2</licenseId>
     </ExtractedLicensingInfo>
 
-# 3.2 (6.2) Extracted Text <a name="6.2"></a>
+# L3.2 (6.2) Extracted Text <a name="6.2"></a>
 
-**3.2.1 (6.2.1)** Purpose: Provide a copy of the actual text of the license reference extracted from the package or file that is associated with the License Identifier to aid in future analysis.
+**L3.2.1 (6.2.1)** Purpose: Provide a copy of the actual text of the license reference extracted from the package or file that is associated with the License Identifier to aid in future analysis.
 
-**3.2.2 (6.2.2)** Intent: Provide the actual text as found in the package or file for a license that is not on the SPDX License List.
+**L3.2.2 (6.2.2)** Intent: Provide the actual text as found in the package or file for a license that is not on the SPDX License List.
 
-**3.2.3 (6.2.3)** Cardinality: Conditional (Mandatory, one) if there is a License Identifier assigned.
+**L3.2.3 (6.2.3)** Cardinality: Conditional (Mandatory, one) if there is a License Identifier assigned.
 
-**3.2.4 (6.2.4)** Data Format: Free form text field that may span multiple lines.
+**L3.2.4 (6.2.4)** Data Format: Free form text field that may span multiple lines.
 
-**3.2.5 (6.2.5)** Tag: `ExtractedText:`
+**L3.2.5 (6.2.5)** Tag: `ExtractedText:`
 
 In `tag:value` format multiple lines are delimited by `<text> .. </text>`.
 
@@ -695,7 +698,7 @@ Example 2 (if indeed full text of license present in File):
 
     ExtractedText: <text>"THE WHISKEY-WARE LICENSE": whiskeyfan@example.com wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a bottle of whiskey in return </text>
 
-**3.2.6 (6.2.6)** RDF: Property `spdx:extractedText` in class `spdx:ExtractedLicensingInfo`
+**L3.2.6 (6.2.6)** RDF: Property `spdx:extractedText` in class `spdx:ExtractedLicensingInfo`
 
 Example 1 (if only short reference to license present in File):
 
@@ -711,25 +714,25 @@ Example 2 (if indeed full text of license present in File):
         <extractedText>""THE WHISKEY-WARE LICENSE": whiskeyfan@example.com wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a bottle of whiskey in return.</extractedText>
     </ExtractedLicensingInfo>
 
-# 3.3 (6.3) License Name <a name="6.3"></a>
+# L3.3 (6.3) License Name <a name="6.3"></a>
 
-**3.3.1 (6.3.1)** Purpose: Provide a common name of the license that is not on the SPDX list.
+**L3.3.1 (6.3.1)** Purpose: Provide a common name of the license that is not on the SPDX list.
 
 Use `NOASSERTION` If there is no common name or it is not known.
 
-**3.3.2 (6.3.2)** Intent: Provides a human readable name suitable for use as a title or label of the license when showing compact lists of licenses from the SPDX data to humans.
+**L3.3.2 (6.3.2)** Intent: Provides a human readable name suitable for use as a title or label of the license when showing compact lists of licenses from the SPDX data to humans.
 
-**3.3.3 (6.3.3)** Cardinality: Conditional (mandatory, one) if license is not on SPDX License List.
+**L3.3.3 (6.3.3)** Cardinality: Conditional (mandatory, one) if license is not on SPDX License List.
 
-**3.3.4 (6.3.4)** Data Format: Single line of text | `NOASSERTION`.
+**L3.3.4 (6.3.4)** Data Format: Single line of text | `NOASSERTION`.
 
-**3.3.5 (6.3.5)** Tag: `LicenseName:`
+**L3.3.5 (6.3.5)** Tag: `LicenseName:`
 
 Example:
 
     LicenseName: Whiskey-Ware License
 
-**3.3.6 (6.3.6)** RDF: Property `spdx:licenseName` in class `spdx:ExtractedLicensingInfo`
+**L3.3.6 (6.3.6)** RDF: Property `spdx:licenseName` in class `spdx:ExtractedLicensingInfo`
 
 Example:
 
@@ -738,17 +741,17 @@ Example:
     </ExtractedLicensingInfo>
 
 
-# 3.4 (6.5) License Comment <a name="6.5"></a>
+# L3.4 (6.5) License Comment <a name="6.5"></a>
 
-**3.4.1 (6.5.1)** Purpose: This field provides a place for the SPDX file creator to record any general comments about the license.
+**L3.4.1 (6.5.1)** Purpose: This field provides a place for the SPDX file creator to record any general comments about the license.
 
-**3.4.2 (6.5.2)** Intent: Here, the intent is to provide the recipient of the SPDX file with more information determined after careful analysis of a license, or addition cross references.
+**L3.4.2 (6.5.2)** Intent: Here, the intent is to provide the recipient of the SPDX file with more information determined after careful analysis of a license, or addition cross references.
 
-**3.4.3 (6.5.3)** Cardinality: Optional, one.
+**L3.4.3 (6.5.3)** Cardinality: Optional, one.
 
-**3.4.4 (6.5.4)** Data Format: Free form text that can span multiple lines
+**L3.4.4 (6.5.4)** Data Format: Free form text that can span multiple lines
 
-**3.4.5 (6.5.5)** Tag: `LicenseComment:`
+**L3.4.5 (6.5.5)** Tag: `LicenseComment:`
 
 In `tag:value` format multiple lines are delimited by `<text> .. </text>`.
 
@@ -756,7 +759,7 @@ Example:
 
     LicenseComment: <text>The Whiskey-Ware License has a couple of other standard variants.</text>
 
-**3.5.6 (6.5.6)** RDF: Property `rdfs:comment` in class `spdx:ExtractedLicensingInfo`
+**L3.5.6 (6.5.6)** RDF: Property `rdfs:comment` in class `spdx:ExtractedLicensingInfo`
 
 Example:
 

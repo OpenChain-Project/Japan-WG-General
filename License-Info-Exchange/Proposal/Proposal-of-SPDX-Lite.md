@@ -108,9 +108,9 @@ It is useful for business to define an additional file besides the SPDX file. (o
 
 ## Appendix. Specification of SPDX Lite 
 
-## L1. Document Creation 
+### L1. Document Creation 
 
-## L1.1 (2.4) Document Name <a name="2.4"></a>
+### L1.1 (2.4) Document Name <a name="2.4"></a>
 
 **L1.1.1 (2.4.1)** Purpose: Identify name of this document as designated by creator.
 
@@ -138,7 +138,7 @@ Example:
       <name>ubuntu-14.04</name>
     </SpdxDocument>
 
-## L1.2 (2.5) SPDX Document Namespace <a name="2.5"></a>
+### L1.2 (2.5) SPDX Document Namespace <a name="2.5"></a>
 
 **L1.2.1 (2.5.1)** Purpose: Provide an SPDX document specific namespace.
 
@@ -167,7 +167,7 @@ Example:
         <rdfs:comment>This document was created using SPDX 2.0 using licenses from the web site.</rdfs:comment>
     </SpdxDocument>
 
-## L1.3 (2.8) Creator <a name="2.8"></a>
+### L1.3 (2.8) Creator <a name="2.8"></a>
 
 **L1.3.1 (2.8.1)** Purpose: Identify who (or what, in the case of a tool) created the SPDX file. 
 
@@ -197,9 +197,9 @@ Example:
         <creator> Tool: LicenseFind-1.0 </creator>
     </CreationInfo>
 
-## L2. Pacage Information
+### L2. Pacage Information
 
-## L2.1 (3.1) Package Name <a name="3.1"></a>
+### L2.1 (3.1) Package Name <a name="3.1"></a>
 
 **L2.1.1 (3.1.1)** Purpose: Identify the full name of the package as given by the [Package Originator](#3.6).
 
@@ -221,7 +221,7 @@ Example:
         <name>glibc</name>
     </Package>
 
-## L2.2 (3.2) Package SPDX Identifier <a name="3.2"></a>
+### L2.2 (3.2) Package SPDX Identifier <a name="3.2"></a>
 
 **L2.2.1 (3.2.1)** Purpose: Uniquely identify any element in an SPDX document which may be referenced by other elements. These may be referenced internally and externally with the addition of the SPDX Document Identifier.
 
@@ -258,7 +258,7 @@ Example using document URI:
         ...
     </Package>
 
-## L2.3 (3.3) Package Version <a name="3.3"></a>
+### L2.3 (3.3) Package Version <a name="3.3"></a>
 
 **L2.3.1 (3.3.1)** Purpose: Identify the version of the package.
 
@@ -282,7 +282,7 @@ Example:
         ...
     </Package>
 
-## L2.4 (3.4) Package File Name <a name="3.4"></a>
+### L2.4 (3.4) Package File Name <a name="3.4"></a>
 
 **L2.4.1 (3.4.1)** Purpose: Provide the actual file name of the package, or path of the directory being treated as a package. This may include the packaging and compression methods used as part of the file name, if appropriate.
 
@@ -318,7 +318,7 @@ Example (subdirectory being treated as a package):
        ...
     </Package>
 
-## L2.5 (3.7) Package Download Location <a name="3.7"></a>
+### L2.5 (3.7) Package Download Location <a name="3.7"></a>
 
 **L2.5.1 (3.7.1)** Purpose: This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created.
 
@@ -372,7 +372,7 @@ Example:
         <downloadLocation rdf:resource="http://spdx.org/rdf/terms#none"/>
     </Package>
 
-## L2.6 (3.8) Files Analyzed <a name="3.8"></a>
+### L2.6 (3.8) Files Analyzed <a name="3.8"></a>
 
 **L2.6.1 (3.8.1)** Purpose: Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. If `false`, indicates packages that represent metadata or URI references to a project, product, artifact, distribution or a component. If `false`, the package must not contain any files. 
 
@@ -398,7 +398,7 @@ Example:
         ...
     </Package>
 
-## L2.7 (3.11) Package Home Page <a name="3.11"></a>
+### L2.7 (3.11) Package Home Page <a name="3.11"></a>
 
 **L2.7.1 (3.11.1)** Purpose: Provide a place for the SPDX file creator to record a web site that serves as the package's home page. This link can also be used to reference further information about the package referenced by the SPDX file creator.
 
@@ -430,7 +430,7 @@ Example:
     <Package rdf:about="...">
         <doap:homepage >http://ftp.gnu.org/gnu/glibc/</doap:homepage>    </Package>
 
-## L2.8 (3.13) Concluded License <a name="3.13"></a>
+### L2.8 (3.13) Concluded License <a name="3.13"></a>
 
 **L2.8.1 (3.13.1)** Purpose: Contain the license the SPDX file creator has concluded as governing the package or alternative values, if the governing license cannot be determined.
 
@@ -489,7 +489,7 @@ Example:
         ...
     </Package>
 
-## L2.9 (3.15) Declared License <a name="3.15"></a>
+### L2.9 (3.15) Declared License <a name="3.15"></a>
 
 **L2.9.1 (3.15.1)** Purpose: List the licenses that have been declared by the authors of the package. Any license information that does not originate from the package authors, e.g. license information from a third party repository, should not be included in this field.
 
@@ -545,7 +545,7 @@ Example:
         ...
     </Package>
 
-## L2.10 (3.16) Comments on License <a name="3.16"></a>
+### L2.10 (3.16) Comments on License <a name="3.16"></a>
 
 **L2.10.1 (3.16.1)** Purpose: This field provides a place for the SPDX file creator to record any relevant background information or analysis that went in to arriving at the Concluded License for a package. If the Concluded License does not match the Declared License or License Information from Files, this should be explained by the SPDX file creator. Its is also preferable to include an explanation here when the Concluded License is `NOASSERTION`.
 
@@ -578,7 +578,7 @@ Example:
         ...
     </Package>
 
-## L2.11 (3.17) Copyright Text <a name="3.17"></a>
+### L2.11 (3.17) Copyright Text <a name="3.17"></a>
 
 **L2.11.1 (3.17.1)** Purpose: Identify the copyright holders of the package, as well as any dates present. This will be a free form text field extracted from package information files. The options to populate this field are limited to:
 
@@ -612,9 +612,9 @@ Example:
         ...
     </Package>
     
-## L3. Other Licensing Information
+### L3. Other Licensing Information
 
-## L3.1 (6.1) License Identifier <a name="6.1"></a>
+### L3.1 (6.1) License Identifier <a name="6.1"></a>
 
 **L3.1.1 (6.1.1)** Purpose: Provide a locally unique identifier to refer to licenses that are not found on the SPDX License List. This unique identifier can then be used in the packages and files sections of the SPDX file (sections [3](3-package-information.md) and [4](4-file-information.md), respectively).
 
@@ -646,7 +646,7 @@ Examples:
         <licenseId>LicenseRef-Beerware-4.2</licenseId>
     </ExtractedLicensingInfo>
 
-# L3.2 (6.2) Extracted Text <a name="6.2"></a>
+### L3.2 (6.2) Extracted Text <a name="6.2"></a>
 
 **L3.2.1 (6.2.1)** Purpose: Provide a copy of the actual text of the license reference extracted from the package or file that is associated with the License Identifier to aid in future analysis.
 
@@ -682,7 +682,7 @@ Example 2 (if indeed full text of license present in File):
         <extractedText>""THE WHISKEY-WARE LICENSE": whiskeyfan@example.com wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a bottle of whiskey in return.</extractedText>
     </ExtractedLicensingInfo>
 
-# L3.3 (6.3) License Name <a name="6.3"></a>
+### L3.3 (6.3) License Name <a name="6.3"></a>
 
 **L3.3.1 (6.3.1)** Purpose: Provide a common name of the license that is not on the SPDX list.
 
@@ -707,7 +707,7 @@ Example:
     </ExtractedLicensingInfo>
 
 
-# L3.4 (6.5) License Comment <a name="6.5"></a>
+### L3.4 (6.5) License Comment <a name="6.5"></a>
 
 **L3.4.1 (6.5.1)** Purpose: This field provides a place for the SPDX file creator to record any general comments about the license.
 
@@ -723,7 +723,7 @@ Example:
 
     LicenseComment: <text>The Whiskey-Ware License has a couple of other standard variants.</text>
 
-**L3.5.5 (6.5.6)** RDF: Property `rdfs:comment` in class `spdx:ExtractedLicensingInfo`
+**L3.4.5 (6.5.6)** RDF: Property `rdfs:comment` in class `spdx:ExtractedLicensingInfo`
 
 Example:
 

@@ -22,7 +22,7 @@ SPDX Lite can be used parallel with SPDX in software supply chains .
 ## 2. Table of SPDX Lite
 
 | SPDX Lite section no. | corresponding SPDX section no. | License Info. | Tag  | Rationale      |
-|:------------|:------------|:-------------|:------------------|:------------------|
+|:-------|:-------|:--------|:-------|:------------------|
 |L1.1	|2.4	|Document Name	| DocumentName |To identify SPDX Lite document	|
 |L1.2	|2.5	|SPDX Document Namespace	| DocumentNamespace |To identify SPDX Lite document name	|
 |L1.3	|2.8	|Creator	| Creator |To identify creator	|

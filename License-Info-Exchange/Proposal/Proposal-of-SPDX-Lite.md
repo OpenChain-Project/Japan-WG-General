@@ -15,6 +15,8 @@ The mandatory part of the Package information is basic but indispensable for com
 
 SPDX Lite has the affinity with SPDX tools due to its containing the mandatory part of the Document Creation and Package Information. 
 
+SPDX Lite can be used parallel with SPDX in software supply chains . 
+
 
 
 ## 2. Table of SPDX Lite

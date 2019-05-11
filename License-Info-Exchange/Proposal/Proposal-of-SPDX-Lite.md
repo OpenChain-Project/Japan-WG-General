@@ -21,27 +21,27 @@ SPDX Lite can be used parallel with SPDX in software supply chains .
 
 ## 2. Table of SPDX Lite
 
-| SPDX Lite section no. | SPDX section no. | License Info. | Tag  | SPDX Lite  | Rationale      |
-|:------------|:------------|:-------------|:------------------|:------------------|:------------------|
-|L1.1	|2.4	|Document Name	| DocumentName |Yes|To identify SPDX Lite document	|
-|L1.2	|2.5	|SPDX Document Namespace	| DocumentNamespace |Yes|To identify SPDX Lite document name	|
-|L1.3	|2.8	|Creator	| Creator |Yes|To identify creator	|
-|L2.1	|3.1	|Package Name	| PackageName |Yes|To identify software	|
-|L2.2	|3.2	|Package SPDX Identifier	| SPDXID|Yes| To keep compatibility with SPDX. Feedback from SPDX team. |
-|L2.3	|3.3	|Package Version	| PackageVersion |Yes|To identify specific version	|
-|L2.4	|3.4	|Package File Name	| PackageFileName	|Yes|To identify specific package|
-|L2.5	|3.7	|Package Download Location 	| PackageDownloadLocation |Yes|To get the identical software	|
-|L2.6	|3.8	|Files Analyzed	|	FilesAnalyzed |Yes| In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
-|L2.7	|3.11	|Package Home Page	| PackageHomePage	|Yes|To verify relevant information|
-|L2.8	|3.13	|Concluded License	| PackageLicenseConcluded	|Yes||
-|L2.9	|3.15	|Declared License	| PackageLicenseDeclared	|Yes||
-|L2.10	|3.16	|Comments on License	| PackageLicenseComments	|Yes|To verify additional conditions|
-|L2.11	|3.17	|Copyright Text	| PackageCopyrightText	|Yes||
-|	|	|	+ modification record| ExternalRef |Yes|To comply with license obligation|
-|L3.1	|6.1	|License Identifier	| LicenseID	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|L3.2	|6.2	|Extracted Text	| ExtractedText	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|L3.3	|6.3	|License Name	| LicenseName	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
-|L3.4	|6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
+| SPDX Lite section no. | corresponding SPDX section no. | License Info. | Tag  | Rationale      |
+|:------------|:------------|:-------------|:------------------|:------------------|
+|L1.1	|2.4	|Document Name	| DocumentName |To identify SPDX Lite document	|
+|L1.2	|2.5	|SPDX Document Namespace	| DocumentNamespace |To identify SPDX Lite document name	|
+|L1.3	|2.8	|Creator	| Creator |To identify creator	|
+|L2.1	|3.1	|Package Name	| PackageName |To identify software	|
+|L2.2	|3.2	|Package SPDX Identifier	| SPDXID | To keep compatibility with SPDX. Feedback from SPDX team. |
+|L2.3	|3.3	|Package Version	| PackageVersion |To identify specific version	|
+|L2.4	|3.4	|Package File Name	| PackageFileName	|To identify specific package|
+|L2.5	|3.7	|Package Download Location 	| PackageDownloadLocation |To get the identical software	|
+|L2.6	|3.8	|Files Analyzed	|	FilesAnalyzed | In SPDX Lite, to set "false". To keep compatibility with SPDX. Feedback from SPDX team. |
+|L2.7	|3.11	|Package Home Page	| PackageHomePage	|To verify relevant information|
+|L2.8	|3.13	|Concluded License	| PackageLicenseConcluded	||
+|L2.9	|3.15	|Declared License	| PackageLicenseDeclared	||
+|L2.10	|3.16	|Comments on License	| PackageLicenseComments	|To verify additional conditions|
+|L2.11	|3.17	|Copyright Text	| PackageCopyrightText	||
+|	|	|	+ modification record| ExternalRef |To comply with license obligation|
+|L3.1	|6.1	|License Identifier	| LicenseID	|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.2	|6.2	|Extracted Text	| ExtractedText	|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.3	|6.3	|License Name	| LicenseName	|To specify licenses which are not on the SPDX license list / To specify dual license|
+|L3.4	|6.5	|License Comment	| LicenseComment	|To specify licenses which are not on the SPDX license list / To specify dual license|
 
 
 ## 3. Specification of SPDX Lite 

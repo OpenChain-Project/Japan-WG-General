@@ -1,87 +1,23 @@
 # Proposal of SPDX Lite
 
-### Proposed by the OpenChain Japan Work Group / License Info Subgroup
+### This has been proposed by the OpenChain Japan Work Group / License Info Subgroup. 
 
 
-## 1. Background
+## Appendix-xx SPDX Lite
+
+## 1. Explanation of SPDX Lite 
+
+SPDX Lite defines the subset of the SPDX specification, from the point of view of use cases in industries. SPDX Lite aims at the balance between the standard and workflows in industries. 
+
+SPDX Lite is the subset of the SPDX specification. SPDX Lite consists of mandatory part of the Document Creation and Package Information and other basic information. 
+
+The mandatory part of the Package information is basic but indispensable for complying with licenses. It is easy to understand licensing information by reading an SPDX Lite file. It is easy to create manually an SPDX Lite file by anyone who does not have enough knowledge about licensing infomation, so that tools are not necessarily required to create an SPDX Lite file. 
+
+SPDX Lite has the affinity with SPDX tools due to its containing the mandatory part of the Document Creation and Package Information. 
 
 
 
-### 1.1 Issues of license
-
-* Appropriate license information is not provided by suppliers. Some suppliers do not know OSS license.  (Knowledge)
-
-* Other suppliers indirectly refuse to provide license info..  (Workload)
-  * “I do not know OSS license...”
-  * “Only your company requests such info...”
-
-* Different customers ask different formats.  (No Standard)
-  * In automotive industry, a supplier has many customer companies. 
-
-
-### 1.2 Issues of copyright notice
-
-Background:
-Companies want to do internal compliance process automatically by tools.
-
-* Copyright notice is not written in the source code from upper stream.  (Knowledge)
-
-* Copyright is written, but in different ways in the source code. (No Standard)
-  * There are too many patterns to scan automatically by tools. Therefore engineers do compliance tasks, instead of development.
-
-## 2. Discussion 
-
-It is nice to make a guideline for exchanging license infomation including copyright notice, which is applicable to actual business. 
-Making a guideline is a good way to show an appropriate procedure. The guideline does not give rules that a company must comply with. 
-
-Standard and business are key to make an applicable guideline.
-
-Intermittent suppliers in the supply chain like semiconductor companies have to hold all the information.
-If an intermittent supplier lose information, a company in down stream cannot recover it.
-
-
-However, in the supply chain, there are many small companies that cannot make an SPDX file by themselves.
-SPDX specification is not broadly known by engineers.
-Making an SPDX file requires to use compliance tools. 
-In some cases, the size of an SPDX file is very huge due to “RELATIONSHIP”.
-
-REUSE initiative gives us the good path to access OSS communities
-It recommends a standard to write copyright notice and license notice.
-Standardization of notice is good for machine to do compliance process.
-It also recommends SPDX. 
-Japan WG does not have the appropriate paths to OSS communities, but REUSE initiative can access broadly.
-
-
-## 3. SPDX Lite
-
-A proposal of newly creating "SPDX Lite" has been discussed in subgroup of Japan WG.
-* SDPX Lite:
-  * Should be easy to understand
-  * Should be easy to make mannually
-  * Should have enough information to comply with OSS license
-  * Should have the affinity with SPDX, that means the subset of SPDX.
-
-
-We think SPDX and SPDX Lite can cover all the software supply chain.
-
-SPDX Lite is the entry point to the SPDX world.
-We hope entry users change their format from SPDX Lite to SPDX in future.
-
-Case study on actually used list.
-Almost items are included in Package Information
-
-Candidate has been created by the lists that are actually used in automotive industry in Japan.
-
-SPDX is designed to carry the information from upper stream to down stream. (Downward)
-
-
-Some companies including OEM companies want to manage software in the supply chain.
-A company’s policy may not allow to use copyleft license.
-This means that an entity in down stream want to manage the stream(the supply chain). (Upward)
-
-It is useful for business to define an additional file besides the SPDX file. (ongoing)
-
-## 4. Table of SPDX Lite (Candidate)
+## 2. Table of SPDX Lite
 
 | SPDX Lite section no. | SPDX section no. | License Info. | Tag  | SPDX Lite  | Rationale      |
 |:------------|:------------|:-------------|:------------------|:------------------|:------------------|
@@ -106,7 +42,7 @@ It is useful for business to define an additional file besides the SPDX file. (o
 |L3.4	|6.5	|License Comment	| LicenseComment	|Yes|To specify licenses which are not on the SPDX license list / To specify dual license|
 
 
-## Appendix. Specification of SPDX Lite 
+## 3. Specification of SPDX Lite 
 
 ### L1. Document Creation 
 

@@ -1,6 +1,6 @@
 # Proposal of SPDX Lite
 
-### This has been proposed by the OpenChain Japan Work Group / License Info Subgroup. 
+### The format of the SPDX Lite has been proposed by the OpenChain Japan Work Group / License Info Subgroup. 
 
 
 ## Appendix-xx SPDX Lite

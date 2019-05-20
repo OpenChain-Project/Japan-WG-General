@@ -22,6 +22,16 @@ An SPDX Lite file can be used parallel with an SPDX file in software supply chai
 
 The SPDX Lite is the subset of the SPDX specification. The SPDX Lite consists of mandatory part of the Document Creation and Package Information and other basic information. 
 
+The mandatory part of the Document Creation (those are Document Name, SPDX Document Namespace and Creator) is used for keeping the compatibility with SPDX tools.
+
+The main part of the Package Information (those are Package Name,  Package Version, Package File Name, Package Download Location,  Package Home Page, Concluded License, Declared License, Comments on License and Copyright Text) is used for exchanging license information.
+
+In the Package Information, Package SPDX Identifier and Files Analyzed are used for keeping the compatiblity with SPDX tools. 
+
+File Analyzed must be set to "false", when SPDX Lite is used.
+
+Other information (License Identifier, Extracted Text, License Name and License Comment) is used for exchaning license information.
+
 
 ### Table of SPDX Lite
 

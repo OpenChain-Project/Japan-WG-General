@@ -30,7 +30,7 @@ In the Package Information, Package SPDX Identifier and Files Analyzed are used 
 
 File Analyzed must be set to "false", when SPDX Lite is used.
 
-Other information (License Identifier, Extracted Text, License Name and License Comment) is used for exchaning license information.
+Other information (License Identifier, Extracted Text, License Name and License Comment) is used for exchanging license information.
 
 
 ### Table of SPDX Lite

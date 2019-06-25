@@ -1,4 +1,4 @@
-# License Info Exchenge Gudeline
+# Guideline for Exchanging License Information between Organization
 
 This document describes a procedure to create artifacts for exchaninging license information between organizations, to comply with oss license. In this document, the supposed product type is embedded systems.
 
@@ -10,7 +10,7 @@ This document describes a procedure to create artifacts for exchaninging license
 1. How to create license information
 1. Samples of license information  
 
-## 1. The need of License Information 
+## 1. The Need of License Information 
 
 Open Source Software (OSS) has become essential to modern software development. OSS can be freely used, modified, and distributed by anyone who complies with the associated license conditions. To comply with the terms and conditions of the license, license information of the OSS is required. 
 

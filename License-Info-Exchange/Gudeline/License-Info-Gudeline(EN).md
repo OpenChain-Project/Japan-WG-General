@@ -25,12 +25,12 @@ https://spdx.org/
 
 #### SPDX Lite
 
-SPDXはライセンス情報を共有するために非常に優れたフォーマットです。
-しかし、ソフトウェア パッケージに関連する情報が膨大にあり、初心者が扱う事は難しいです。
-SPDX Liteはソフトウェアサプライチェーンにおいて、最低限は必要のライセンス情報をSPDXから抽出したフォーマットです。  
+The SPDX specification defines the excellent format to exchange license information between organization. However, the format defined by the SPDX specification is not so easy for beginners to create and use it, due to the required data related to software package is huge. 
 
-以下はSPDX-Liteのサンプルです。
-spread sheetなどに必要なライセンス情報を入力するだけで簡単に作成する事が出来ます。
+The SPDX Lite defines the subset that is the minimum requirement of the SPDX foramt. 
+
+The following is a sample of the SPDX Lite.
+The SPDX Lite format can be easily created by spread sheet.
 
 ![spdx-lite](https://user-images.githubusercontent.com/21073492/59993340-ee596500-968a-11e9-8783-5cf9a95ee351.png)
 

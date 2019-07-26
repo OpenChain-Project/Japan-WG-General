@@ -1,0 +1,21 @@
+DocumentName: example-v1.0
+DocumentNamespace: https://example.com/example-v1.0
+Creator: Person: someone
+
+PackageName: mbedtls
+PackageVersion:	2.16.2
+PackageFileName: mbedtls-2.16.2-apache.tgz
+PackageDownloadLocation: https://tls.mbed.org/download
+FilesAnalyzed: false
+PackageHomePage: https://tls.mbed.org/
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+##PackageLicenseComments: -
+PackageCopyrightText: Copyright (C) 2015-2018, Arm Limited (or its affiliates), All Rights Reserved
+## ModifiedStatus: -
+## LicenseID: 
+## ExtractedText: uga
+## LicenseName: -
+## LicenseComment: -
+

@@ -1,6 +1,6 @@
 # License-Info-Gudeline (JP)
 
-本文書はOSSコンプライアンスを遵守するために必要なライセンス情報を作成する手順を示す事を目的としており、組込み機器を想定して記載しています。
+本文書は、組織間で授受されるオープン ソース ソフトウェア (Open Source Software, OSS)に関して、OSSコンプライアンスを遵守するために必要となるライセンス情報を作成するガイドラインを示します。応用分野としては、一般ユーザーに広範囲に配布（販売）される製品（組込み機器）を想定して記載していますが、他の分野でも応用可能です。
 
 
 ## 目次
@@ -13,12 +13,17 @@
 
 ## 1. ライセンス情報の必要性 
 
-オープン ソース ソフトウェア (Open Source Software, OSS)は現代のソフトウェアには必要不可欠なものです。
-OSSは誰でも自由に使用する事が出来ますが、使用するためには一定の条件に従う必要があります。
-その条件に従うためには、使用しているOSSのライセンス情報が必要になります。
+現在、OSSは、ソフトウェア開発に必要不可欠なものとなっています。OSSは誰でも自由に利用する事が出来ますが、利用するためには一定の条件に従う必要があります。条件に従うためには、利用しているOSSのライセンス情報を把握することが必要です。
 
-ライセンス情報の必要性について、詳細は「オープンソースソフトウェアライセンス遵守に関する一般公衆ガイド」を参照します。
+製品がサプライチェーン上でつながる複数企業によって開発される場合には、サプライチェーンでつながっている全ての企業が正確なライセンス情報を提供することが必要になります。サプライチェーン上で1社でもライセンス情報の提供を正確に提供することができない場合には、その企業より下流にある企業全てがOSSライセンスを遵守できなくなります。サプライチェーンに関係する担当者全員がOSSについて正しく理解して作業することによって、製品のOSSコンプライアンスが初めて遵守可能になります。
+
+ライセンス情報の必要性についての詳細は、「オープンソースソフトウェアライセンス遵守に関する一般公衆ガイド」を参照して下さい。
 https://github.com/OpenChain-Project/curriculum/tree/master/supplier-leaflet
+
+組織間でOSSを授受する際に、同時に添付されるべきライセンス情報は、OSSコンプライアンスに関する情報を含む必要があります。これは、OSS名、バージョン等多岐に渡る情報で、しかもOSSライセンスによって必要となる情報が異なることから、担当者が正確に理解しないと、不十分な情報しか提供されない可能性があります。また、要求されるライセンス情報は企業によって異なることがあるため、提供側企業の担当者が混乱する可能性があります。
+
+上記課題を解決するために、本文書は、必要十分で最低限のライセンス情報を定義し、作成手順を示すことで、簡単で正確なライセンス情報の生成が誰にでも可能となることを目指しています。また、必要十分で最低限のライセンス情報をSPDX Liteとして定義し、SPDX仕様に提案しています。以下では、簡単にSPDXおよびSPDX Liteについて説明します。
+
 
 #### SPDX
 
@@ -56,25 +61,32 @@ SPDXの定義で必須とされるタグについてはSPDX Liteでも含まれ�
 SPDX Liteの項目と各項目の必要な理由を以下に記載します。
 
 ### SPDX Liteの項目一覧
+| # | corresponding SPDX section no. | License Info. |
+|:-----|:----|:-----------------------|
+|L1.1  |2.1  | SPDX Version           |
+|L1.2  |2.2  | Data License           |
+|L1.3  |2.3  | SPDX Identifier        |
+|L1.4	 |2.4	 | Document Name	        | 
+|L1.5	 |2.5	 | SPDX Document Namespace| 
+|L1.6	 |2.8	 | Creator	              | 
+|L1.7  |2.9  | Created                |
+|L2.1	 |3.1	 | Package Name	          | 
+|L2.2	 |3.2	 | Package SPDX Identifier| 
+|L2.3	 |3.3	 | Package Version        | 
+|L2.4	 |3.4	 | Package File Name      | 
+|L2.5	 |3.7	 | Package Download Location | 
+|L2.6	 |3.8	 | Files Analyzed         | 
+|L2.7  |3.11 | Package Home Page      | 
+|L2.8	 |3.13 | Concluded License      | 
+|L2.9	 |3.15 | Declared License       | 
+|L2.10 |3.16 | Comments on License    | 
+|L2.11 |3.17 | Copyright Text         | 
+|L2.12 |3.20 | Package Comment        | 
+|L3.1	 |6.1	 | License Identifier     | 
+|L3.2	 |6.2	 | Extracted Text         | 
+|L3.3	 |6.3	 | License Name           | 
+|L3.4	 |6.5	 | License Comment        | 
 
-| SPDX Lite section no. | corresponding SPDX section no. | License Info. | Tag  | 
-|:-------|:-------|:--------|:-------|
-|L2.1	|3.1	|Package Name	| PackageName |
-|L2.2	|3.2	|Package SPDX Identifier	| SPDXID |
-|L2.3	|3.3	|Package Version	| PackageVersion |
-|L2.4	|3.4	|Package File Name	| PackageFileName	|
-|L2.5	|3.7	|Package Download Location 	| PackageDownloadLocation |
-|L2.6	|3.8	|Files Analyzed	|	FilesAnalyzed |
-|L2.7	|3.11	|Package Home Page	| PackageHomePage	|
-|L2.8	|3.13	|Concluded License	| PackageLicenseConcluded	||
-|L2.9	|3.15	|Declared License	| PackageLicenseDeclared	||
-|L2.10	|3.16	|Comments on License	| PackageLicenseComments	|
-|L2.11	|3.17	|Copyright Text	| PackageCopyrightText	||
-|	|	|	+ modification record| ExternalRef |
-|L3.1	|6.1	|License Identifier	| LicenseID	|
-|L3.2	|6.2	|Extracted Text	| ExtractedText	|
-|L3.3	|6.3	|License Name	| LicenseName	|
-|L3.4	|6.5	|License Comment	| LicenseComment	|
 
 ### Package Name
 

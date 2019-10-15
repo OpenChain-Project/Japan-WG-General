@@ -320,5 +320,7 @@ https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-E
 
 #### 受託開発の納品物でOSSを利用している構成
 #### 組込み製品でOSSを活用している構成
+例)Linux kernelソースコードの入手先が変わる一例
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXLite_ソース入手先が変わるパターン.pptx
 #### サプライチェーンで受け渡す際の構成
 

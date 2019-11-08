@@ -275,10 +275,26 @@ SPDXライセンス リストに掲載されていないライセンスは無い
 例)SPDX tools https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt
 
 #### 受託開発の納品物でOSSを利用している構成
+受託開発の納品物で複数のOSSを利用している場合の記載例
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample2/SPDX-Lite-sample_20190920.xlsx
+
+その他の記載例
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample
+
 
 #### 組込み製品でOSSを活用している構成
 例)Linux kernelソースコードの入手先が変わる一例
 
 
 #### サプライチェーンで受け渡す際の構成
+4社の受託開発の納品物で複数のOSSを利用している場合の記載例
+4社からそれぞれ納品されるOSS情報を1ファイルに纏め、
+サプライチェーン上流にOSS情報を受け渡す場合の例になります。
+![SupplyChain](./SupplyChain-en.png)
+
+4社のSPDX-Liteファイル
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3
+
+4社の納品物のOSS情報を1ファイルに纏めたファイル
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3/spdx_lite_sample_all.xlsx
 

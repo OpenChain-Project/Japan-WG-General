@@ -294,5 +294,5 @@ https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-E
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3
 
 4社の納品物のOSS情報を1ファイルに纏めたファイル
-https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3/spdx_lite_sample_all.xlsx
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3/SPDX-Lite-sample_company-All.xlsx
 

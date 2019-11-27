@@ -86,7 +86,7 @@ SPDX Liteの項目と各項目の必要な理由を以下に記載します。
 |L3.3	 |6.3	 | License Name           | 
 |L3.4	 |6.5	 | License Comment        | 
 
-各タグの内容で特定できない項目がある場合は、" NOASSERTION”を記載します。
+各タグの内容で特定できない項目がある場合は、"NOASSERTION”を記載します。
 
 ### L1.1　SPDX Version
 （説明を追記要）

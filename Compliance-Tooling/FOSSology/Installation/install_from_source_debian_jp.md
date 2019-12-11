@@ -27,7 +27,7 @@ FOSSology (https://www.fossology.org/) には、
 
 
 |Item|Description|
-|:---:|:---:|
+|---|---|
 |OS |Debian GNU/Linux 9.6 (stretch) <br> Debian GNU/Linux 10 (buster) <br>Ubuntu 18.04.1 LTS (Bionic Beaver)|
 |Network |Broadband access to the Internet|
 |CPU |Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz|

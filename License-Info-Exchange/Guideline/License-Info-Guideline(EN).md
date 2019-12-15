@@ -1,21 +1,35 @@
-# Guideline for Exchanging License Information between Organization
+# Guideline for SPDX Lite
 
-This document describes a procedure to create artifacts for exchaninging license information between organizations, to comply with oss license. In this document, the supposed product type is embedded systems.
+This document describes a procedure to create artifacts for exchaninging 'license information'(* ) between organizations, to comply with oss license, when organization exchange open source software (OSS) and other software packages. In this document, the 'SPDX Lite' is explained for the format in exchanging license information. The supposed product types are consumer products (embedded systems) that are widely distributed (sold) to end users. 
+
+(* )In this document, 'license information' is used for describing the whole set of the artifacts, software packages and other information that are required to be provided when distributing OSS. 
+
 
 ## Table of Contents
 
 1. The need of license information  
 1. Mandatory items as license information  
-1. How to get license information 
+1. How to collect data for license information 
 1. How to create license information
 1. Samples of license information  
+
 
 ## 1. The Need of License Information 
 
 Open Source Software (OSS) has become essential to modern software development. OSS can be freely used, modified, and distributed by anyone who complies with the associated license conditions. To comply with the terms and conditions of the license, license information of the OSS is required. 
 
+Regarding the shipment of a product that OSS is incorporated into, many companies are involved, such as a module company, a final product company and a sales company. To comply with OSS license for the product, all the companies in the supply chain are required to provide exact license information. Even if only one company fails to provide the proper license information, all the companies in the downstream of the supply chain cannot comply with OSS license. When everyone who engages in the supply chain understandands correctly, the OSS license compliance is achieved appropriately. 
+
 Please read "Open Source Software License Compliance General Public Guide", if you need more detail.
 https://github.com/OpenChain-Project/curriculum/tree/master/supplier-leaflet
+
+There are major two challenges for excanging license information between organizations.
+
+  * Regarding license information, there are many items, such as the name of OSS, the version of OSS, the origin of the source code and other various stuff. This complexity of license information may cause the difficulty for the staff to understand all the license information.
+  * Regarding the exchanged format, the format requested by a recipient may differ from those requested by other recipients depending on organizations. These differences may cause the diffculty for providers to create and manage many different formats.
+
+To overcome these challenges, this document defines the minimum and neccessary license information, so that anyone can easily create a simple and correct license information. This minimum and neccessary format is called the SPDX Lite. In the following section, the SPDX and the SPDX Lite are explained briefly. 
+
 
 #### SPDX
 

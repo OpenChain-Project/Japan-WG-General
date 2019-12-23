@@ -58,61 +58,68 @@ SPDX Liteは、必要な項目（タグ）について、手書き入力や人�
 ## 2. 必要なライセンス情報の項目
 
 SPDX Liteの項目と各項目の必要な理由を以下に記載します。
+"cardinality of SPDX"がMandatoryの項目はSPDXの仕様を満たすために必須な項目です。
 
 ### SPDX Liteの項目一覧
-| # | corresponding SPDX section no. | License Info. (tag) |
-|:-----|:----|:-----------------------|
-|L1.1  |2.1  | SPDX Version           |
-|L1.2  |2.2  | Data License           |
-|L1.3  |2.3  | SPDX Identifier        |
-|L1.4	 |2.4	 | Document Name	        | 
-|L1.5	 |2.5	 | SPDX Document Namespace| 
-|L1.6	 |2.8	 | Creator	              | 
-|L1.7  |2.9  | Created                |
-|L2.1	 |3.1	 | Package Name	          | 
-|L2.2	 |3.2	 | Package SPDX Identifier| 
-|L2.3	 |3.3	 | Package Version        | 
-|L2.4	 |3.4	 | Package File Name      | 
-|L2.5	 |3.7	 | Package Download Location | 
-|L2.6	 |3.8	 | Files Analyzed         | 
-|L2.7  |3.11 | Package Home Page      | 
-|L2.8	 |3.13 | Concluded License      | 
-|L2.9	 |3.15 | Declared License       | 
-|L2.10 |3.16 | Comments on License    | 
-|L2.11 |3.17 | Copyright Text         | 
-|L2.12 |3.20 | Package Comment        | 
-|L3.1	 |6.1	 | License Identifier     | 
-|L3.2	 |6.2	 | Extracted Text         | 
-|L3.3	 |6.3	 | License Name           | 
-|L3.4	 |6.5	 | License Comment        | 
+| # | corresponding SPDX section no. | License Info. (tag) | cardinality of SPDX |
+|:-----|:----|:-----------------------|:--------------|
+|L1.1  |2.1  | SPDX Version           |Mandatory, one |
+|L1.2  |2.2  | Data License           |Mandatory, one |
+|L1.3  |2.3  | SPDX Identifier        |Mandatory, one |
+|L1.4	 |2.4	 | Document Name	        | Mandatory, one |
+|L1.5	 |2.5	 | SPDX Document Namespace| Mandatory, one |
+|L1.6	 |2.8	 | Creator	              | Mandatory, one or many |
+|L1.7  |2.9  | Created                | Mandatory, one |
+|L2.1	 |3.1	 | Package Name	          | Mandatory, one |
+|L2.2	 |3.2	 | Package SPDX Identifier| Mandatory, one |
+|L2.3	 |3.3	 | Package Version        | Optional, one |
+|L2.4	 |3.4	 | Package File Name      | Optional, one |
+|L2.5	 |3.7	 | Package Download Location | Mandatory, one |
+|L2.6	 |3.8	 | Files Analyzed         | Optional, one |
+|L2.7  |3.11 | Package Home Page      | Optional, one |
+|L2.8	 |3.13 | Concluded License      | Mandatory, one |
+|L2.9	 |3.15 | Declared License       | Mandatory, one |
+|L2.10 |3.16 | Comments on License    | Optional, one |
+|L2.11 |3.17 | Copyright Text         | Mandatory, one |
+|L2.12 |3.20 | Package Comment        | Optional, one |
+|L3.1	 |6.1	 | License Identifier     | Conditional (mandatory, one) |
+|L3.2	 |6.2	 | Extracted Text         | Conditional (mandatory, one) |
+|L3.3	 |6.3	 | License Name           | Conditional (mandatory, one) |
+|L3.4	 |6.5	 | License Comment        | Conditional (mandatory, one) |
 
 各タグの内容で特定できない項目がある場合は、"NOASSERTION”を記載します。
 
 ### L1.1　SPDX Version
-（説明を追記要）
+SPDXの仕様のバージョンを記載します。
+本項目はSPDXのどの仕様に従っているかを特定するために利用します。
 
 ### L1.2　Data License
-（説明を追記要）
+SPDX Liteファイルのライセンスを記載します。
+SPDXの仕様に従うため本項目は“CC0-1.0”を記載します。
 
 ### L1.3　SPDX Identifier
-（説明を追記要）
+SPDX Liteファイルの識別子です。各SPDX Liteファイルで一意になるように決めてください。それ以外は提供する側で自由に決めて構いません。
 
 ### L1.4　Document Name
-（説明を追記要）
+SPDX Liteファイルのファイル名を記載します。
 
 ### L1.5　SPDX Document Namespace
-（説明を追記要）
+Uniform Resource Identifier（URI）を使用してSPDX Liteファイルの名前空間を記載します。
+本項目はSPDX Liteファイルを外部から参照するために利用します。
 
 ### L1.6　Creator
-（説明を追記要）
+SPDX Liteファイルの作成者を記載します。
+本項目は誰が (ツールの場合は、何が)作成したかを特定するために利用します。
+個人は「Creator: Person:」を記載します。
+組織は「Creator: Organization:」を記載します。
+ツールは「Creator: Tool:」を記載します。
 
 ### L1.7　Created
-（説明を追記要）
+SPDX Liteファイルを作成した日を記載します。
 
 ### L2.1　Package Name
 ソフトウェア パッケージの名称を記載します。
 本項目は使用しているソフトウェアを特定するために利用します。
-フィールド選択の背景・論拠:
 
 ### L2.2　Package SPDX Identifier
 ソフトウェア パッケージの識別子です。SPDX Liteファイルの中で一意になるように決めてください。それ以外は提供する側で自由に決めて構いません。本項目はソフトウェア パッケージの名称などだけでは区別できないパッケージを区別するために利用します。

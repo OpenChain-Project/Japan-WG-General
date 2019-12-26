@@ -39,14 +39,26 @@ https://spdx.org/
 
 #### SPDX Lite
 
-The SPDX specification defines the excellent format to exchange license information between organization. However, the format defined by the SPDX specification is not so easy for beginners to create and use it, due to the required data related to software package is huge. 
+The SPDX specification defines the excellent format to exchange license information between organizations. However, the format defined by the SPDX specification is not so easy for beginners to create and use it without the deep knowledge and tools, due to the required license information related to software package is huge and complex. Therefore, the SPDX Lite has been defined as the minimum format for the oss license compliance in the software supply chain. The fields in the SPDX Lite have been defined collecting from the actual business use cases, so that the SPDX Lite has been well defined to represent license information. The SPDX Lite file can be created and reviewed manually without tools.
 
-The SPDX Lite defines the subset that is the minimum requirement of the SPDX foramt. 
+The following is a sample of the SPDX Lite. The SPDX Lite format can be easily created by spread sheet.
 
-The following is a sample of the SPDX Lite.
-The SPDX Lite format can be easily created by spread sheet.
 
 ![spdx-lite](https://user-images.githubusercontent.com/21073492/59993340-ee596500-968a-11e9-8783-5cf9a95ee351.png)
+
+#### Relation between SPDX and SPDX Lite
+
+The fields of the SPDX Lite have been selected from the point of view of the manual creation and review, so that the SPDX Lite has defined the minimum format. All the mandatory fields in the SPDX are included in the SPDX Lite as mandatory. The SPDX Lite has the following features.
+
+  * It is very easy for beginners to understand. 
+  * It can be the starting point of oss license compliance. 
+  * The way describing license information and a software package one by one, which is not complex and is easy to read, enables manual review. 
+  * The compatibility between the SPDX and SPDX Lite enables the use of the same compliance tools.
+
+On the other hand, the SPDX can describe wider range of information in software packages.
+
+The use of the SPDX and the SPDX Lite can be selected by organizations in the software supply chain in each cases. 
+
 
 ## 2. Mandatory items as license information
 

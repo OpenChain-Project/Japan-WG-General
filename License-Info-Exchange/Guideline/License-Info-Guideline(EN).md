@@ -57,7 +57,7 @@ The fields of the SPDX Lite have been selected from the point of view of the man
 
 On the other hand, the SPDX can describe wider range of information in software packages.
 
-The use of the SPDX and the SPDX Lite can be selected by organizations in the software supply chain in each cases. 
+The use of the SPDX and the SPDX Lite can be selected in negotiation between organizations in the software supply chain in each cases. 
 
 
 ## 2. Mandatory items as license information
@@ -192,7 +192,22 @@ For items that can not be described, describe "NOASSERTION" and provide contact 
 
 ## 3. How to create license information materials manually
 
-The following explains how to manually write the required items in `SPDX-Lite`.
+It is important to describe license information as much as possible. The recipient of OSS  needs license information as much as possible for complying with OSS licenses. Even if you do not know exact information, it is recommended to describe license information with a comment to explain. 
+
+An SPDX or SPDX Lite file can be created by either a scanning tool or manual work. 
+
+### tools for creating license information files
+
+The Linux Foundation provides resources for tools.
+
+  * Japanese: https://www.linuxfoundation.jp/resources/open-source-guides/tools-managing-open-source-programs/ 
+  * English: https://www.linuxfoundation.org/resources/open-source-guides/tools-managing-open-source-programs/
+
+### manually creating license information files 
+
+In the following section, a sample procedure is explained. The procedure create a sample license information file for the software package "busybox-1.30.1". In this example, the software package file "busybox-1.30.1.tar.bz2" is assumed to be provided. 
+
+
 
 ### PackageName, PackageVersion, PackageFileName
 

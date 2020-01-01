@@ -5,7 +5,7 @@ This document describes a procedure to create artifacts for exchaninging 'licens
 (* )In this document, 'license information' is used for describing the whole set of the artifacts, software packages and other information that are required to be provided when distributing OSS. 
 
 
-## Table of Contents
+# Table of Contents
 
 1. The need of license information  
 1. Mandatory items as license information  
@@ -14,7 +14,7 @@ This document describes a procedure to create artifacts for exchaninging 'licens
 1. Samples of license information  
 
 
-## 1. The Need of License Information 
+# 1. The Need of License Information 
 
 Open Source Software (OSS) has become essential to modern software development. OSS can be freely used, modified, and distributed by anyone who complies with the associated license conditions. To comply with the terms and conditions of the license, license information of the OSS is required. 
 
@@ -31,13 +31,13 @@ There are major two challenges for excanging license information between organiz
 To overcome these challenges, this document defines the minimum and neccessary license information, so that anyone can easily create a simple and correct license information. This minimum and neccessary format is called the SPDX Lite. In the following section, the SPDX and the SPDX Lite are explained briefly. 
 
 
-#### SPDX
+### SPDX
 
 SPDX®（Software Package Data Exchange®） project, hosted by the Linux Foundation, has a standardized format for exchanging license information, such as software name, version, license and copyright text of software package.
 https://spdx.org/
 
 
-#### SPDX Lite
+### SPDX Lite
 
 The SPDX specification defines the excellent format to exchange license information between organizations. However, the format defined by the SPDX specification is not so easy for beginners to create and use it without the deep knowledge and tools, due to the required license information related to software package is huge and complex. Therefore, the SPDX Lite has been defined as the minimum format for the oss license compliance in the software supply chain. The fields in the SPDX Lite have been defined collecting from the actual business use cases, so that the SPDX Lite has been well defined to represent license information. The SPDX Lite file can be created and reviewed manually without tools.
 
@@ -46,7 +46,7 @@ The following is a sample of the SPDX Lite. The SPDX Lite format can be easily c
 
 ![spdx-lite](https://user-images.githubusercontent.com/21073492/59993340-ee596500-968a-11e9-8783-5cf9a95ee351.png)
 
-#### Relation between SPDX and SPDX Lite
+### Relation between SPDX and SPDX Lite
 
 The fields of the SPDX Lite have been selected from the point of view of the manual creation and review, so that the SPDX Lite has defined the minimum format. All the mandatory fields in the SPDX are included in the SPDX Lite as mandatory. The SPDX Lite has the following features.
 
@@ -60,11 +60,11 @@ On the other hand, the SPDX can describe wider range of information in software 
 The use of the SPDX and the SPDX Lite can be selected in negotiation between organizations in the software supply chain in each cases. 
 
 
-## 2. Mandatory items as license information
+# 2. Mandatory items as license information
 
 The following explains items of SPDX Lite and the necessary reasons for each item.
 
-### SPDX Lite Item List
+## SPDX Lite Item List
 
 | SPDX Lite section no. | corresponding SPDX section no. | License Info. | Tag  | 
 |:-------|:-------|:--------|:-------|
@@ -190,20 +190,20 @@ This item is used to supplement the license of the software being used.
 
 For items that can not be described, describe "NOASSERTION" and provide contact information that can be used to inquire about the software package being used.
 
-## 3. How to create license information materials manually
+# 3. How to create license information materials manually
 
 It is important to describe license information as much as possible. The recipient of OSS  needs license information as much as possible for complying with OSS licenses. Even if you do not know exact information, it is recommended to describe license information with a comment to explain. 
 
 An SPDX or SPDX Lite file can be created by either a scanning tool or manual work. 
 
-### tools for creating license information files
+## 3.1 tools for creating license information files
 
 The Linux Foundation provides resources for tools.
 
   * Japanese: https://www.linuxfoundation.jp/resources/open-source-guides/tools-managing-open-source-programs/ 
   * English: https://www.linuxfoundation.org/resources/open-source-guides/tools-managing-open-source-programs/
 
-### manually creating license information files 
+## 3.2 manually creating license information files 
 
 In the following section, a sample procedure is explained. The procedure create a sample license information file for the software package "busybox-1.30.1". In this example, the software package file "busybox-1.30.1.tar.bz2" is assumed to be provided. 
 
@@ -266,16 +266,16 @@ Write a common name of the license that is not on the SPDX list.
 - LicenseComment  
 Write comments if any. And if not, leave blank.
 
-## 4. Examples of creating license materials
+# 4. Examples of creating license materials
 
 In the software supply chain, the side that receives license information needs as much information as possible to comply with the license.  
 Therefore, it is recommended to describe as much license information as possible even if it is not clear for you. And in that case, you should show that it is not clear in the comments.
 
-### 4.1 an Example how to create the license information from only binary package
+## 4.1 an Example how to create the license information from only binary package
 
 `TBD`
 
-### 4.2 an Example how to create the license information from the source code
+## 4.2 an Example how to create the license information from the source code
 
 Using [busybox-1.30.1](https://git.busybox.net/busybox/tree/?h=1_30_stable) located at https://busybox.net/ as an example.
 
@@ -326,6 +326,6 @@ Leave blank because there are no modification.
 `blank`  
 Leave blank because there are no licenses not listed in the SPDX&reg; license list.
 
-## 5. More complicated examples
+# 5. Other complicated examples
 
 `TBD`

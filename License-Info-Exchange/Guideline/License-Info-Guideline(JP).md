@@ -371,6 +371,10 @@ SPDXライセンス リストに掲載されていないライセンスの場合
 
 ## 4. ライセンス情報のサンプル
 
+#### Microsoft ExcelによるSPDX Lite記入テンプレート
+SPDX LiteをMicrosoft Excelで手書き記入する場合のテンプレート
+https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange/SPDX-Lite-sample/SPDXLite-Template.xlsx
+
 #### OSS単独の構成
 例)SPDX tools https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt
 
@@ -378,13 +382,13 @@ SPDXライセンス リストに掲載されていないライセンスの場合
 受託開発の納品物で複数のOSSを利用している場合の記載例
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample2/SPDX-Lite-sample_20190920.xlsx
 
-その他の記載例
+#### その他の記載例
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample
 
 
 #### 組込み製品でOSSを活用している構成
 例)Linux kernelソースコードの入手先が変わる一例
-
+(サプライチェーンを下っていくに従って、「入手先」を記載変更する事例）
 
 #### サプライチェーンで受け渡す際の構成
 4社の受託開発の納品物で複数のOSSを利用している場合の記載例

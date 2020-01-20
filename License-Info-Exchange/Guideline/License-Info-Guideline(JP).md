@@ -57,7 +57,10 @@ SPDX Liteは、必要な項目（タグ）について、手書き入力や人�
 ## 2. 必要なライセンス情報の項目
 
 SPDX Liteの項目と各項目の必要な理由を以下に記載します。
-"cardinality of SPDX"がMandatoryの項目はSPDXの仕様を満たすために必須な項目です。
+
+"cardinality of SPDX"がMandatoryの項目はSPDXの仕様を満たすために必須な項目です。Optionalの項目は、SPDXの仕様としてはOptionalですが、SPDX Liteの仕様としては記載されることが必要です。Conditionalの項目については、SPDX Liteにおいても記載が任意の項目です。
+"cardinality of SPDX"で、manyと記載されている項目は、SPDXフォーマットからの変換などを行った場合に、同名称のタグが複数存在し得ることを示していますが、oneであれば、一つのSPDX Liteファイルの中に、同名称のタグは一つだけ存在することになります。
+
 
 ### SPDX Liteの項目一覧
 | # | corresponding SPDX section no. | License Info. (tag) | cardinality of SPDX |

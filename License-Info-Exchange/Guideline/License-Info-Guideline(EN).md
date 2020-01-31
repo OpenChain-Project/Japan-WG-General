@@ -9,7 +9,6 @@ This document describes a procedure to create artifacts for exchaninging 'licens
 
 1. The need of license information  
 1. Mandatory items as license information  
-1. How to collect data for license information 
 1. How to create license information
 1. Samples of license information  
 
@@ -68,93 +67,103 @@ The following explains items of SPDX Lite and the necessary reasons for each ite
 
 | SPDX Lite section no. | corresponding SPDX section no. | License Info. | Tag  | 
 |:-------|:-------|:--------|:-------|
-|L2.1	|3.1	|Package Name	| PackageName |
-|L2.2	|3.2	|Package SPDX Identifier	| SPDXID |
-|L2.3	|3.3	|Package Version	| PackageVersion |
-|L2.4	|3.4	|Package File Name	| PackageFileName	|
-|L2.5	|3.7	|Package Download Location 	| PackageDownloadLocation |
-|L2.6	|3.8	|Files Analyzed	|	FilesAnalyzed |
-|L2.7	|3.11	|Package Home Page	| PackageHomePage	|
-|L2.8	|3.13	|Concluded License	| PackageLicenseConcluded	||
-|L2.9	|3.15	|Declared License	| PackageLicenseDeclared	||
-|L2.10	|3.16	|Comments on License	| PackageLicenseComments	|
-|L2.11	|3.17	|Copyright Text	| PackageCopyrightText	||
-|	|	|	+ modification record| ExternalRef |
-|L3.1	|6.1	|License Identifier	| LicenseID	|
-|L3.2	|6.2	|Extracted Text	| ExtractedText	|
-|L3.3	|6.3	|License Name	| LicenseName	|
-|L3.4	|6.5	|License Comment	| LicenseComment	|
+|L1.1  |2.1  | SPDX Version           |Mandatory, one |
+|L1.2  |2.2  | Data License           |Mandatory, one |
+|L1.3  |2.3  | SPDX Identifier        |Mandatory, one |
+|L1.4	 |2.4	 | Document Name	        | Mandatory, one |
+|L1.5	 |2.5	 | SPDX Document Namespace| Mandatory, one |
+|L1.6	 |2.8	 | Creator	              | Mandatory, one or many |
+|L1.7  |2.9  | Created                | Mandatory, one |
+|L2.1	 |3.1	 | Package Name	          | Mandatory, one |
+|L2.2	 |3.2	 | Package SPDX Identifier| Mandatory, one |
+|L2.3	 |3.3	 | Package Version        | Optional, one |
+|L2.4	 |3.4	 | Package File Name      | Optional, one |
+|L2.5	 |3.7	 | Package Download Location | Mandatory, one |
+|L2.6	 |3.8	 | Files Analyzed         | Optional, one |
+|L2.7  |3.11 | Package Home Page      | Optional, one |
+|L2.8	 |3.13 | Concluded License      | Mandatory, one |
+|L2.9	 |3.15 | Declared License       | Mandatory, one |
+|L2.10 |3.16 | Comments on License    | Optional, one |
+|L2.11 |3.17 | Copyright Text         | Mandatory, one |
+|L2.12 |3.20 | Package Comment        | Optional, one |
+|L3.1	 |6.1	 | License Identifier     | Conditional (mandatory, one) |
+|L3.2	 |6.2	 | Extracted Text         | Conditional (mandatory, one) |
+|L3.3	 |6.3	 | License Name           | Conditional (mandatory, one) |
+|L3.4	 |6.5	 | License Comment        | Conditional (mandatory, one) |
 
-### Package Name
 
-Describe the name of the software package.
-This item is used to identify the software used.
+If you do not know a value of fields, write "NOASSERTION".
 
-### Package SPDX Identifier
+### L1.1　SPDX Version
+This field is the version number of the SPDX specification. This value identifies the SPDX specification that is used in an SPDX Lite file.
 
-Describe the identifier that makes the software package unique in the SPDX Lite file.
-This item is used to distinguish different versions of the same software package.
+### L1.2　Data License
+This field is the license for an SPDX file. In an SPDX Lite case, the value is set "CC0-1.0".
 
-### Package Version
+### L1.3　SPDX Identifier
+This field is the identifier for an SPDX Lite file. The value is set a unique number in each SPDX file.
 
-Describe the software package version.
-This item is used to identify the version of software used.
+### L1.4　Document Name
+This field is the name of an SPDX Lite file.
 
-### Package File Name
+### L1.5　SPDX Document Namespace
+This field is the document namespace of an SPDX Lite file. The namespace is written by Uniform Resource Identifier (URI). The namespace is used when the SPDX Lite file is referenced externally.
 
-Describe the actual file name of the software package.
-This item is used to identify the actual file of the software being used.
-This item is necessary because Package Name and the actual file may not be related due to the difference in the name.
+### L1.6　Creator
+This field is the creator of an SPDX Lite file. This field identifies who created the SPDX Lite file. If the SPDX Lite file was created by an individual, indicate the person's name. If the SPDX Lite file was created on behalf of a company or organization, indicate the entity name. If the SPDX Lite file was created using a software tool, indicate the name and version for that tool. If multiple participants or tools were involved, use multiple instances of this field. Person name or organization name may be designated as “anonymous” if appropriate.
 
-### Package Download Location
+”Person: person name” and optional “(email)”
+"Organization: organization” and optional “(email)”
+"Tool: toolidentifierversion”
 
-Describe where to obtain the software package.
-This item is used to obtain the same software as the software being used.
+### L1.7　Created
+This field is the date when the SPDX Lite file was created.
 
-### Files Analyzed
+### L2.1　Package Name
+This field is the name of the software package. This field identifies the software used.
 
-Show "false" when creating SPDX Lite file manually.
+### L2.2　Package SPDX Identifier
+This field is the identifier that makes the software package unique in the SPDX Lite file. Software package is referenced by this field. This field distinguishes uniquely the package from the same software package. The uniqueness of the identifier is ensured by the creator.
 
-### Package Home Page
+### L2.3　Package Version
+This field is the software package version. This field identifies the version of software.
 
-Describe the home page of the software package.
-This item is used to obtain community information such as vulnerability information of the software being used.
+### L2.4　Package File Name
+This field is the actual file name of the software package. This item is used to identify the actual file of the software being used. This item is necessary because Package Name and the actual file may not be related due to the difference in the name.
 
-### Concluded License
+### L2.5　Package Download Location
+This field is the location where the software package was obtained. This field is used to obtain the same software being used.
 
-Describe the license that the creator of the SPDX Lite file concludes that it applies to the software package.
-If the Concluded License is different from the Declared License, you should provide a description on the Comments on License.
-For NOASSERTION, it is better to describe in Comments on License.
-This item is used to identify the license of the software being used.
+### L2.6　Files Analyzed
+This field indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document. Write "false" when creating SPDX Lite file manually.
+
+### L2.7　Package Home Page
+This field is the home page of the software package. This field is used to obtain community information such as vulnerability information of the software being used.
+(Note the difference between this field and L2.5 Package Download Location)
+
+### L2.8　Concluded License
+This is the license that the creator of the SPDX Lite file concludes that it applies to the software package. If the Concluded License is different from the Declared License, you should provide a description on the Comments on License. For NOASSERTION, it is better to describe in Comments on License. This field identifies the license of the software being used.
 
 In addition, it is recommended to describe the license name to be described according to the Identifier of SPDX License List at the following URL.
 https://spdx.org/licenses/
 
-### Declared License
-
-Describe the license declared by the creator of the software package.
-If the Concluded License is different from the Declared License, you should provide a description on the Comments on License.
-For NOASSERTION, it is better to describe in Comments on License.
-This item is used to identify the license of the software being used.
+### L2.9　Declared License
+This is the license declared by the creator of the software package. If the Concluded License is different from the Declared License, you should provide a description on the Comments on License. For NOASSERTION, it is better to describe in Comments on License.This field identifies the license of the software being used.
 
 In addition, it is recommended to describe the license name to be described according to the Identifier of SPDX License List at the following URL.
 https://spdx.org/licenses/
 
-### Comments on License
+### L2.10　Comments on License
+This field is the reason for the creator of the SPDX Lite file to conclude the information related to the license and the license. This field is used to supplement the license of the software being used.
 
-Describe the reason for the creator of the SPDX Lite file to conclude the information related to the license and the license.
-This item is used to supplement the license of the software being used.
+Also, describe either the dynamic link or static link for the software being used.If the compile option excludes the specific license of the software you are using, the compile option will be described in this item. Certain licenses affect other things depending on how the software is linked. Therefore, this item is used to specify how to link software.
 
-Also, describe either the dynamic link or static link for the software being used.
-If the compile option excludes the specific license of the software you are using, the compile option will be described in this item.
-Certain licenses affect other things depending on how the software is linked. Therefore, this item is used to specify how to link software.
 
-### Copyright Text
-
-Describe the copyright information of the software package.
-If it is difficult to extract all copyright information, we will provide the source code together.
+### L2.11　Copyright Text
+This field is the copyright information of the software package. If it is difficult to extract all copyright information, we will provide the source code together.
 
 Certain licenses require that you provide copyright information at the time of distribution. This item is used to identify the copyright information of the software being used.
+
 
 ### modification record
 

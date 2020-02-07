@@ -378,9 +378,12 @@ SPDXライセンス リストに掲載されていないライセンスの場合
 SPDX LiteをMicrosoft Excelで手書き記入する場合のテンプレート
 https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange/SPDX-Lite-sample/SPDXLite-Template.xlsx
 
+
 このテンプレートに記載されている「SPDX Section no.」は、本guidelineで「corresponding SPDX section no.」と記載されているSPDX仕様書上のsection番号に対応しています。
-このテンプレートには、入力先として二つのシートが用意されています。SPDX Liteファイル毎の情報を記載するシート(*)と、対象となるソフトウェアパッケージ毎のライセンス情報を記載するシート、両方への記載が必要です。
-(*)概ね、記載変更の必要がないため、別個のシートとして独立したテンプレートにしています。
+
+このテンプレートには、入力先として二つのシートが用意されています。SPDX Liteファイル毎の情報を記載するシート(* )と、対象となるソフトウェアパッケージ毎のライセンス情報を記載するシート、両方への記載が必要です。
+
+(* )概ね、記載変更の必要がないため、別個のシートとして独立したテンプレートにしています。
 
 #### OSS単独の構成
 例)SPDX tools https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt

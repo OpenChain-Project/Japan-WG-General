@@ -174,8 +174,6 @@ ModificationRecord can be used to indicate modification of the OSS or use of a p
 The SPDX specification does not have ModificationRecord, this is original in SDPX Lite.
 Some OSS licenses have the obligations when the OSS is modified, therefore the indication of modification is useful for recipients to comply with the obligations.
 
-ソフトウェア　パッケージが、『「Package Download Location」に記載された入手先からダウンロードしたソフトウェアそのものと、それに対するパッチファイル』が、それぞれ別個のSPDX Liteファイルで分離管理され、コンパイル段階でパッチが適用されているならば、ソフトウェア　パッケージとして提供されるコンパイル前のソフトウェアは、改変されておらず"false"として記載されることになります。
-
 (2)CompileOptions
 CompileOptions is used to indicate the compile option during the build process.
 Compile option can be used to choose OSS modules in binary code, and each OSS module may have a different licese each other, therefore the compile option can affect the license of the binary code.

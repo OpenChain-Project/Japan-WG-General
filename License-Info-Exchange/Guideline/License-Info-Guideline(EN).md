@@ -164,40 +164,42 @@ This field is the copyright information of the software package. If it is diffic
 
 Certain licenses require that you provide copyright information at the time of distribution. This item is used to identify the copyright information of the software being used.
 
+### L2.12　PackageComment
+This field can be used to have free comments, and is useful to provide additional information regarding the package. The recommended ussage is:  
 
-### modification record
+(1)ModificationRecord
+If the software package has been changed, ModificationRecord is set to ”true”.
+If the software package has not been changed, ModificationRecord is set to ”false”.
+ModificationRecord can be used to indicate modification of the OSS or use of a part of OSS.
+The SPDX specification does not have ModificationRecord, this is original in SDPX Lite.
+Some OSS licenses have the obligations when the OSS is modified, therefore the indication of modification is useful for recipients to comply with the obligations.
 
-Write "true" if the software package has been modified.
-If the software package has not been modified, "false" is described.
+ソフトウェア　パッケージが、『「Package Download Location」に記載された入手先からダウンロードしたソフトウェアそのものと、それに対するパッチファイル』が、それぞれ別個のSPDX Liteファイルで分離管理され、コンパイル段階でパッチが適用されているならば、ソフトウェア　パッケージとして提供されるコンパイル前のソフトウェアは、改変されておらず"false"として記載されることになります。
 
-In order to make your own modifications to the OSS source code or to judge that the OSS source code has been partially modified, "true" is described.
+(2)CompileOptions
+CompileOptions is used to indicate the compile option during the build process.
+Compile option can be used to choose OSS modules in binary code, and each OSS module may have a different licese each other, therefore the compile option can affect the license of the binary code.
 
-This item does not exist in SPDX. This item is unique to SPDX Lite.
-Certain licenses have licensing terms that you must follow when modifying the software. Therefore, this item is used to specify software modifications.
+(3) Any other sub-tags
+Any sub-tugs can be written in PackageCommnet field.
+For example, the following tag is useful.
 
-### License Identifier
+##### LinkMethodology
+For some licenses, a way of link between modules can affect the covered range of the licenses. Information such as, dynamic link and static link is helpful for recipients to identify the covered range.
 
-For licenses not listed in the SPDX License List, enter a unique identifier.
-This item is used to identify the license of the software being used.
 
-### Extracted Text
+### L3.1　License Identifier
+For a license not listed in the SPDX License List, this field is used to write a unique identifier. This item is used to identify the license of the software being used.
 
-If the license is not listed in the SPDX License List, enter the license terms.
-This item is used to supplement the license of the software being used.
+### L3.2　Extracted Text
+For a license is not listed in the SPDX License List, this field is used to provide the license terms. This field is used to supplement the license of the software being used.
 
-### License Name
+### L3.3　License Name
+For a license is not listed in the SPDX License List, this field is used to provide the license name. This field is used to identify the license name of the software being used.
 
-SPDX license For licenses not listed, enter the license name.
-This item is used to identify the license name of the software being used.
+### L3.4　License Comment
+For a license is not listed in the SPDX License List, this field is used to provide additional information of the license. This field is used to supplement the license of the software being used.
 
-### License Comment
-
-SPDX License For licenses not listed, provide information related to the license.
-This item is used to supplement the license of the software being used.
-
-### Remarks
-
-For items that can not be described, describe "NOASSERTION" and provide contact information that can be used to inquire about the software package being used.
 
 # 3. How to create license information materials manually
 

@@ -9,7 +9,7 @@ This document describes a procedure to create artifacts for exchaninging 'licens
 
 1. The need of license information  
 1. Mandatory items as license information  
-1. How to create license information
+1. How to create license information files
 1. Samples of license information  
 
 
@@ -199,7 +199,7 @@ For a license is not listed in the SPDX License List, this field is used to prov
 For a license is not listed in the SPDX License List, this field is used to provide additional information of the license. This field is used to supplement the license of the software being used.
 
 
-# 3. How to create license information materials manually
+# 3. How to create license information files
 
 It is important to describe license information as much as possible. The recipient of OSS  needs license information as much as possible for complying with OSS licenses. Even if you do not know exact information, it is recommended to describe license information with a comment to explain. 
 
@@ -216,6 +216,31 @@ The Linux Foundation provides resources for tools.
 
 In the following section, a sample procedure is explained. The procedure create a sample license information file for the software package "busybox-1.30.1". In this example, the software package file "busybox-1.30.1.tar.bz2" is assumed to be provided. 
 
+#### L1.1 SPDX Version
+-> SPDX-2.1
+This field is set to "SPDX-2.1".
+
+#### L1.2 Data License
+-> "CC0-1.0" or "Copyright company-name"
+This field is used to identify the copyright holder ot the license information file.
+
+#### L1.3 SPDX Identifier
+-> SPDXRef-0
+This field is set to a unique indentifier in the SPDX Lite files. When SPDX Lite files are combined by a recipient, it is required for the recipient to make this field as a unique identifier.
+
+#### L1.4 Document Name
+-> SPDX_Lite_busybox-1.30.1_"Date"
+It is reccomended to keep the same text of the file name.
+
+#### L1.5 SPDX Document Namespace
+->
+
+#### L1.6 Creator
+-> "tool that created the file" or "mail address of the person who created the file"
+A recipient of the file may inquire using this information.
+
+#### L1.7 Created
+-> YYYY-MM-DD (for example,2020-08-10)
 
 
 ### PackageName, PackageVersion, PackageFileName

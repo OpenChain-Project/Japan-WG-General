@@ -218,18 +218,22 @@ In the following section, a sample procedure is explained. The procedure create 
 
 #### L1.1 SPDX Version
 -> SPDX-2.1
+
 This field is set to "SPDX-2.1".
 
 #### L1.2 Data License
 -> "CC0-1.0" or "Copyright company-name"
+
 This field is used to identify the copyright holder ot the license information file.
 
 #### L1.3 SPDX Identifier
 -> SPDXRef-0
+
 This field is set to a unique indentifier in the SPDX Lite files. When SPDX Lite files are combined by a recipient, it is required for the recipient to make this field as a unique identifier.
 
 #### L1.4 Document Name
 -> SPDX_Lite_busybox-1.30.1_"Date"
+
 It is reccomended to keep the same text of the file name.
 
 #### L1.5 SPDX Document Namespace
@@ -237,10 +241,25 @@ It is reccomended to keep the same text of the file name.
 
 #### L1.6 Creator
 -> "tool that created the file" or "mail address of the person who created the file"
+
 A recipient of the file may inquire using this information.
 
 #### L1.7 Created
 -> YYYY-MM-DD (for example,2020-08-10)
+
+#### L2.1 Package Name
+-> busybox
+
+It is recommended to identify the official name used in a readme file.
+
+#### L2.2 Package SPDX Identifier
+-> SPDXRef-1
+
+This field is set to a unique indentifier in the license information files. When SPDX Lite files are combined by a recipient, it is required for the recipient to make this field as a unique identifier.
+
+
+#### L2.3 Package Version
+-> 1.30.1
 
 
 ### PackageName, PackageVersion, PackageFileName

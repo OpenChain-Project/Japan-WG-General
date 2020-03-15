@@ -319,66 +319,49 @@ Write a common name of the license that is not on the SPDX list.
 - LicenseComment  
 Write comments if any. And if not, leave blank.
 
-# 4. Examples of creating license materials
+## 4. Some samples of a license information file
 
-In the software supply chain, the side that receives license information needs as much information as possible to comply with the license.  
-Therefore, it is recommended to describe as much license information as possible even if it is not clear for you. And in that case, you should show that it is not clear in the comments.
+#### SPDX Lite Template in a Microsoft Excel format
+SPDX Lite templates in a Microsoft Excel format: 
 
-## 4.1 an Example how to create the license information from only binary package
+https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange/SPDX-Lite-sample/SPDXLite-Template.xlsx
 
-`TBD`
+In this sample, "SPDX Section no." is "corresponding SPDX section no." in this guideline. 
 
-## 4.2 an Example how to create the license information from the source code
+This template gives two sheets. The first one is a sheet for Package layer fields, and the second one is a sheet for File layer fields(* ).
 
-Using [busybox-1.30.1](https://git.busybox.net/busybox/tree/?h=1_30_stable) located at https://busybox.net/ as an example.
+(* ) The sheet for File layer fields is separated from the sheet for the Package layer fields, because some fields are not needed to change frequently. 
 
-- PackageName  
-`busybox`  
-Judged from [README](https://git.busybox.net/busybox/tree/README?h=1_30_stable) file.
+#### A simple example (contains only OSS) 
+Example)SPDX tools 
 
-- SPDXID  
-`SPDXRef-1`  
-Filled arbitrary string.
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt
 
-- PackageVersion  
-`1.30.1`  
-Judged from [Makefile](https://git.busybox.net/busybox/tree/Makefile?h=1_30_stable) file.
+#### An example in the case where a supplier uses OSSs
+An example in the case where a supplier uses OSSs
 
-- PackageFileName  
-`busybox-1.30.1.tar.bz2`  
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample2/SPDX-Lite-sample_20190920.xlsx
 
-- PackageDownloadLocation  
-`https://busybox.net/downloads/busybox-1.30.1.tar.bz2`  
+#### Another example
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample
 
-- FilesAnalyzed  
-`false`  
 
-- PackageHomePage  
-`https://busybox.net/about.html`  
+#### An example of an embedded system 
+Example) The origin of the source code of the Linux kernel changes in the supply chain.
+(In the supply chain, each supplier changes the origin of the source code.)
 
-- PackageLicenseConcluded  
-`GPL-2.0-only`  
-Judged from [LICENSE](https://git.busybox.net/busybox/tree/LICENSE?h=1_30_stable) file.
+#### An example in the supply chain
+An example that there are four suppliers in the supply chain, and SPDX Lite files from the suppliers are combined to one SPDX Lite file.
 
-- PackageLicenseDeclared  
-`GPL-2.0-only`  
-Judged from [LICENSE](https://git.busybox.net/busybox/tree/LICENSE?h=1_30_stable) file.
+![SupplyChain](./SupplyChain-en.png)
 
-- PackageLicenseComments  
-`blank`  
+SPDX-Lite file
 
-- PackageCopyrightText  
-`NOASSERTION`  
-Since busybox has many different copyright notices, provide source code together with NOASSERTION.
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3
 
-- ModificationStatus  
-`false`  
-Leave blank because there are no modification.
+The combined file from four compaines' OSS information.
 
-- License Identifier, Extracted Text, License Name, License Comment  
-`blank`  
-Leave blank because there are no licenses not listed in the SPDX&reg; license list.
+https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample3/spdx_lite_sample_all.xlsx
 
-# 5. Other complicated examples
 
-`TBD`
+

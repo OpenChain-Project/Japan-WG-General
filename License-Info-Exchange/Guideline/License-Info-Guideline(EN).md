@@ -7,13 +7,13 @@ This document describes a procedure to create artifacts for exchaninging 'licens
 
 # Table of Contents
 
-1. The need of license information  
-1. Mandatory items as license information  
-1. How to create license information files
-1. Samples of license information  
+1. The need of a license information file
+1. Mandatory items for a license information file
+1. How to create a license information file
+1. Samples of a license information file
 
 
-# 1. The Need of License Information 
+# 1. The Need of a License Information file
 
 Open Source Software (OSS) has become essential to modern software development. OSS can be freely used, modified, and distributed by anyone who complies with the associated license conditions. To comply with the terms and conditions of the license, license information of the OSS is required. 
 
@@ -59,7 +59,7 @@ On the other hand, the SPDX can describe wider range of information in software 
 The use of the SPDX and the SPDX Lite can be selected in negotiation between organizations in the software supply chain in each cases. 
 
 
-# 2. Mandatory items as license information
+# 2. Mandatory items for a license information file
 
 The following explains items of SPDX Lite and the necessary reasons for each item.
 
@@ -199,7 +199,7 @@ For a license is not listed in the SPDX License List, this field is used to prov
 For a license is not listed in the SPDX License List, this field is used to provide additional information of the license. This field is used to supplement the license of the software being used.
 
 
-# 3. How to create license information files
+# 3. How to create a license information file
 
 It is important to describe license information as much as possible. The recipient of OSS  needs license information as much as possible for complying with OSS licenses. Even if you do not know exact information, it is recommended to describe license information with a comment to explain. 
 
@@ -343,7 +343,7 @@ For example, the following tag is useful.
 
 ## 4. Some samples of a license information file
 
-#### SPDX Lite Template in a Microsoft Excel format
+### SPDX Lite Template in a Microsoft Excel format
 SPDX Lite templates in a Microsoft Excel format: 
 
 https://github.com/OpenChain-Project/Japan-WG-General/tree/master/License-Info-Exchange/SPDX-Lite-sample/SPDXLite-Template.xlsx
@@ -354,25 +354,25 @@ This template gives two sheets. The first one is a sheet for Package layer field
 
 (* ) The sheet for File layer fields is separated from the sheet for the Package layer fields, because some fields are not needed to change frequently. 
 
-#### A simple example (contains only OSS) 
+### A simple example (contains only OSS) 
 Example)SPDX tools 
 
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt
 
-#### An example in the case where a supplier uses OSSs
+### An example in the case where a supplier uses OSSs
 An example in the case where a supplier uses OSSs
 
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/spreadsheet_sample2/SPDX-Lite-sample_20190920.xlsx
 
-#### Another example
+### Another example
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample
 
 
-#### An example of an embedded system 
+### An example of an embedded system 
 Example) The origin of the source code of the Linux kernel changes in the supply chain.
 (In the supply chain, each supplier changes the origin of the source code.)
 
-#### An example in the supply chain
+### An example in the supply chain
 An example that there are four suppliers in the supply chain, and SPDX Lite files from the suppliers are combined to one SPDX Lite file.
 
 ![SupplyChain](./SupplyChain-en.png)

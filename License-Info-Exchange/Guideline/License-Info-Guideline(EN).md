@@ -262,62 +262,84 @@ This field is set to a unique indentifier in the license information files. When
 -> 1.30.1
 
 
-### PackageName, PackageVersion, PackageFileName
+#### L2.4 Package File Name
+-> "busybox-1.30.1.tar.bz2" or "busybox-1.30.1_modified_by_companyname_date.tar.bz2"
 
-Obtain the target source code or the target software package.  
-And identify these from files such as "README" in the acquired source code.
+This field is set to the file name of the file.
+If the software was changed and the original source code and the patchs that contain
+the changes are provided, it is recommended to provide the SPDX Lite files of both the source code and the patches.
 
-### SPDXID
 
-Write any string that can be uniquely identified.
+#### L2.5 Package Download Location
+-> "https://busybox.net/downloads/busybox-1.30.1.tar.bz2" or "https://github.com/provider/package" or "NOASSERTION"
 
-### PackageDownloadLocation
 
-Identify the origin of the software.  
-If you obtained the software from a third party vendor etc, please get the information from that company.  
+#### L2.6 Files Analyzed
+-> false
 
-### FilesAnalyzed
+#### L2.7 Package Home Page
+-> https://busybox.net/about.html
 
-Just fill fixed value of `false` when creating manually.
+This field is set to the home page of the software. 
 
-### PackageHomePage
 
-Search the website for the software from the package name.  
-If you find more than one target website, please check based on the download location, version and its feature.  
+#### L2.8 Concluded License
+-> GPL-2.0-only
 
-### PackageLicenseConcluded, PackageLicenseDeclared
+It is recommended to use the Identifier in the SPDX License List.
 
-Check files such as "COPYING", "LICENSE" and "README" in the package or search license comments in source code header. If you can not find anything in the source code, please also check the website of the package.  
-And state the appropriate [SPDX-Short-Identifier](https://spdx.org/licenses/) you choose as a license.
+https://spdx.org/licenses/
 
-### PackageLicenseComments
 
-Write comments if any. And if not, leave blank.
+#### L2.9 Declared License
+-> GPL-2.0-only
 
-### PackageCopyrightText
+It is recommended to use the Identifier in the SPDX License List.
 
-Check files such as "COPYING", "LICENSE" and "README" in the package or search copyright text in source code header. And fill the copyright text here.
+https://spdx.org/licenses/
 
-### ModifiedStatus `TBD`
+#### L2.10 Comments on License
+-> NOASSERTION
 
-If the supplier has modified the original source code, write `true` here. If not, write `false`.
 
-### LicenseID, ExtractedText, LicenseName, LicenseComment
+#### L2.11 Copyright Text
+-> NOASSERTION
 
-Write information about licenses that are not found on the [SPDX&reg; License List](https://spdx.org/license-list).
-For details, please refer to `6.1 License Identifier` of [SPDX&reg; Specification](https://spdx.org/specifications).
 
-- LicenseID  
-Write any string that can be uniquely identified.
+### L2.12　Package Comment
+This field can be used to have free comments, and is useful to provide additional information regarding the package. The recommended ussage is:  
 
-- ExtractedText  
-Write a copy of the actual text of the license reference extracted from the package or file that is associated with the LicenseID.
+(1)ModificationRecord
+If the software package has been changed, ModificationRecord is set to ”true”.
+If the software package has not been changed, ModificationRecord is set to ”false”.
+ModificationRecord can be used to indicate modification of the OSS or use of a part of OSS.
+The SPDX specification does not have ModificationRecord, this is original in SDPX Lite.
+Some OSS licenses have the obligations when the OSS is modified, therefore the indication of modification is useful for recipients to comply with the obligations.
 
-- LicenseName  
-Write a common name of the license that is not on the SPDX list.
+(2)CompileOptions
+CompileOptions is used to indicate the compile option during the build process.
+Compile option can be used to choose OSS modules in binary code, and each OSS module may have a different licese each other, therefore the compile option can affect the license of the binary code.
 
-- LicenseComment  
-Write comments if any. And if not, leave blank.
+(3) Any other sub-tags
+Any sub-tugs can be written in PackageCommnet field.
+For example, the following tag is useful.
+
+
+### L3.1　License Identifier
+-> NOASSERTION or SPDXRef-LICENSE-00001
+
+
+### L3.2　Extracted Text
+-> NOASSERTION
+
+
+### L3.3　License Name
+-> NOASSERTION
+
+
+### L3.4　License Comment
+-> NOASSERTION
+
 
 ## 4. Some samples of a license information file
 

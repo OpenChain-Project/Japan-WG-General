@@ -219,8 +219,9 @@ The Linux Foundationが、ソフトウェア開発に関連する各種ツール
 例としてbusybox-1.30.1のライセンス情報を手作業で作成する手順を以下に記載します。 ここではbusybox-1.30.1のソースコードの「busybox-1.30.1.tar.bz2」が入手済みである事を想定します。
 
 #### L1.1 SPDX Version
--> SPDX-2.1
-この文書を作成している段階では、SPDX Liteは、SPDX 2.1で規定されるフォーマットに準じていますので、SPDX-2.1と記載します。
+-> SPDX-2.2
+
+この文書を作成している段階では、SPDX Liteは、SPDX 2.2 Appendix VIIIで規定されるフォーマットに準じていますので、SPDX-2.2と記載します。
 
 #### L1.2 Data License
 -> 「CC0-1.0」あるいは「Copyright このファイルを作成した会社」

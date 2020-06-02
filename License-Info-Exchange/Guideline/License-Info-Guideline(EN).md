@@ -217,16 +217,20 @@ The Linux Foundation provides resources for tools.
 In the following section, a sample procedure is explained. The procedure create a sample license information file for the software package "busybox-1.30.1". In this example, the software package file "busybox-1.30.1.tar.bz2" is assumed to be provided. 
 
 #### L1.1 SPDX Version
--> SPDX-2.1
 
-This field is set to "SPDX-2.1".
+-> SPDX-2.2
+
+This field is set to "SPDX-2.2" or later.
 
 #### L1.2 Data License
--> "CC0-1.0" or "Copyright company-name"
 
-This field is used to identify the copyright holder ot the license information file.
+-> "CC0-1.0" or "LicenseRef-Proprietary-COMPANY_NAME"
+
+This field is used to identify the copyright holder of the license information file.
+When you define your own License to the SPDX Lite you wrote, you must describe license as in the SPDX specification manner such as "LicenseRef-" prefix.
 
 #### L1.3 SPDX Identifier
+
 -> SPDXRef-0
 
 This field is set to a unique indentifier in the SPDX Lite files. When SPDX Lite files are combined by a recipient, it is required for the recipient to make this field as a unique identifier.
@@ -237,32 +241,41 @@ This field is set to a unique indentifier in the SPDX Lite files. When SPDX Lite
 It is reccomended to keep the same text of the file name.
 
 #### L1.5 SPDX Document Namespace
+
 ->
 
 #### L1.6 Creator
+
 -> "tool that created the file" or "mail address of the person who created the file"
 
 A recipient of the file may inquire using this information.
 
 #### L1.7 Created
+
 -> YYYY-MM-DD (for example,2020-08-10)
 
+You may use other date format which is valid on SPDX reference, such as "YYYY-MM-DDThh:mm:ssZ"
+
 #### L2.1 Package Name
+
 -> busybox
 
 It is recommended to identify the official name used in a readme file.
 
 #### L2.2 Package SPDX Identifier
+
 -> SPDXRef-1
 
 This field is set to a unique indentifier in the license information files. When SPDX Lite files are combined by a recipient, it is required for the recipient to make this field as a unique identifier.
 
 
 #### L2.3 Package Version
+
 -> 1.30.1
 
 
 #### L2.4 Package File Name
+
 -> "busybox-1.30.1.tar.bz2" or "busybox-1.30.1_modified_by_companyname_date.tar.bz2"
 
 This field is set to the file name of the file.
@@ -271,19 +284,23 @@ the changes are provided, it is recommended to provide the SPDX Lite files of bo
 
 
 #### L2.5 Package Download Location
+
 -> "https://busybox.net/downloads/busybox-1.30.1.tar.bz2" or "https://github.com/provider/package" or "NOASSERTION"
 
 
 #### L2.6 Files Analyzed
+
 -> false
 
 #### L2.7 Package Home Page
+
 -> https://busybox.net/about.html
 
 This field is set to the home page of the software. 
 
 
 #### L2.8 Concluded License
+
 -> GPL-2.0-only
 
 It is recommended to use the Identifier in the SPDX License List.
@@ -292,6 +309,7 @@ https://spdx.org/licenses/
 
 
 #### L2.9 Declared License
+
 -> GPL-2.0-only
 
 It is recommended to use the Identifier in the SPDX License List.
@@ -299,10 +317,12 @@ It is recommended to use the Identifier in the SPDX License List.
 https://spdx.org/licenses/
 
 #### L2.10 Comments on License
+
 -> NOASSERTION
 
 
 #### L2.11 Copyright Text
+
 -> NOASSERTION
 
 
@@ -326,18 +346,23 @@ For example, the following tag is useful.
 
 
 ### L3.1　License Identifier
--> NOASSERTION or SPDXRef-LICENSE-00001
 
+-> NOASSERTION, LicenseRef-BSD_modified-NotListed_in_SPDXLicenseList or LicenseRef-Proprietary-Some-COMPANY_NAME
+
+When you shuld define your own License Identifier, please describe as unique identifier with prefix "LicenseRef-".
 
 ### L3.2　Extracted Text
+
 -> NOASSERTION
 
 
 ### L3.3　License Name
+
 -> NOASSERTION
 
 
 ### L3.4　License Comment
+
 -> NOASSERTION
 
 
@@ -355,6 +380,7 @@ This template gives two sheets. The first one is a sheet for Package layer field
 (* ) The sheet for File layer fields is separated from the sheet for the Package layer fields, because some fields are not needed to change frequently. 
 
 ### A simple example (contains only OSS) 
+
 Example)SPDX tools 
 
 https://github.com/OpenChain-Project/Japan-WG-General/blob/master/License-Info-Exchange/SPDX-Lite-sample/SPDXtools-SPDXLite.txt

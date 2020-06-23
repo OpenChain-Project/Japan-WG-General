@@ -3,38 +3,94 @@
 Xは、章番号
 
 ## Overview
+
+
 ---------
 < Manage licenses compatible with the final product and clarify responsibility in the supply chain>
+
+下記を先行して記載を試みる
+
+下記の各アイテムを、タグ名(Field)に分解するところから
+
 ・ Product information ( Product name, product number, etc. )
+
 ・ Compatible license with final product or not
+
+下記についても、まずは、同Profile内で提案する
+
 ・ Who adopted the package
+
 ・ When adopted the package
+
 ・ Temporary adoption or using for Final Product
-  (If the package is temporary adoption)
+
+(If the package is temporary adoption)
+
    -The schedule of remove
+   
    -Who has the responsibility of remove
+
 ・Schedule of next report
+
+下記については、先送りの可能性も考慮
+
 <Functional Safety>
+
 ・ Who obtained certification
+
 ・ Information of authentication
+  
+  FuSaに関して、ガワだけ作って、後から成型、というのがＯＫか、あるいは、SPDX 3.0からドロップか要議論
+  
 <Clarification of who contributed to the community>
+
 ・ Who contributed to the community in the Supply Chain
+
 ・ The evidences of the contribution
-< Using Facets defined by "ClearlyDefined " for classification of compatibility with the final product >
-core - The files that go into making the release of the component.
-data - The files included in any data distribution of the component.
-dev - Files primarily used at development time (e.g., build utilities) and not distributed with the component
-docs - Documentation files.
-examples – Like docs, examples may be included in the main component release or separately.
-tests – Test files may include code, data and other artifacts.
+  
+  別Profileとすべきか
+  
+
 -----
+
+# X Product information fields
+
+## X.1 Product information field <a name="X.1"></a>
+
+### X.1.1 Description
+
+Identify the full name of the target product. The metadata for the SPDX version field is shown in Table XX1.
+
+Table XX1 — Metadata for the product information field
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | Yes |
+| Cardinality | 1..1 |
+| Format | Single line of text. |
+
+<br>
+
+### X.1.2 Intent
+
+The name of each package is an important conventional technical identifier to be maintained for each package.
+
+### X.1.3 Examples
+
+EXAMPLE 1 Tag: `ProductInformation:`
+
+```text
+ProductInformation: SPDX_hogehoge_COMPANYs_Product_Loutched_2112TBD
+```
+
+
 
 以下は、Licensing Profileからのコピー
 
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
-| [License Information](#license-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
+| [Product Information](#product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Reference](#license-reference) | [Document Root](2-base-profile.md#document-root) | No | 0..* |
 
 ## License Information

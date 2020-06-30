@@ -53,39 +53,194 @@ Xは、章番号
 
 -----
 
-# X Product information fields
+## Product information fields <a name="X.1"></a>
 
-## X.1 Product information field <a name="X.1"></a>
+### Entities
+| Entity | Parent | Required | Cardinality |
+| ------ | ------ | -------- | ----------- |
+| [Product Information](#product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
+| [Compatible License](#compatible-license) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Acceptable License For Limited Use](#acceptable-license-for-limited-use) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Expriation Date of Product Information](#expiration-date-of-product-information) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
 
-### X.1.1 Description
+## Product Information
 
-Identify the full name of the target product. The metadata for the SPDX version field is shown in Table XX1.
+Parent: Package, File, Snippet, or External Artifact
+
+Cardinality: upto 1 per Artifact
+
+### Fields
+| Field | Required | Cardinality |
+| ----- | -------- | ----------- |
+| [Product Name](#product-name-tag) | No | 0..1 |
+| [Product Identifier](#product-identifier-tag) | Yes | one |
+| [Product Version](#product-version-tag) | No | 0..* |
+
+### Product Name
+#### Purpose
+
+Identify the name of the target product. The metadata for the Product Name field is shown in Table XX1.
 
 Table XX1 — Metadata for the product information field
 
 | Attribute | Value |
 | --------- | ----- |
-| Required | Yes |
-| Cardinality | 1..1 |
+| Required | No |
+| Cardinality | 0..1 |
 | Format | Single line of text. |
 
 <br>
 
-### X.1.2 Intent
+#### Intent
 
-The name of each package is an important conventional technical identifier to be maintained for each package.
+Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
 
-### X.1.3 Examples
+#### Tag: `ProductName:`
 
-EXAMPLE 1 Tag: `ProductInformation:`
+Examples:
 
 ```text
-ProductInformation: SPDX_hogehoge_COMPANYs_Product_Loutched_2112TBD
+ProductName: ABC COMPANYs Product to be Launched at 20YYMM-TBD
 ```
 
 
+### Product Identifier
+#### Purpose
 
-以下は、Licensing Profileからのコピー
+Identify the target product even if the name of product not determined yet.
+
+Required: Yes
+
+Cardinality: One
+
+Data Format: ["DocumentRef-"`[idstring]`":"`[SPDXID]`] |
+
+ | `NONE` | `NOASSERTION`
+
+"DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
+document as described in [section 2.6](2-document-creation-information.md#2.6)
+`[idstring]` is a unique string containing letters, numbers, `.` and/or `-`
+
+`[NONE]`, if the file contains no target product information whatsoever; or
+
+`[NOASSERTION]`, if:
+
+(i) the SPDX file creator has made no attempt to determine this field; or
+(ii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
+
+<br>
+
+#### Intent
+
+Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
+
+#### Tag: `ProductIdentifier:`
+
+Examples:
+
+```text
+ProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
+```
+
+### Product Version
+
+#### Purpose
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | Single line of text. |
+
+#### Intent
+
+#### Tag: `ProductVersion:`
+
+## Compatible License
+
+Parent: Product Information, or External Artifact
+
+Cardinality: upto 1 per Artifact
+
+### Fields
+| Field | Required | Cardinality |
+| ----- | -------- | ----------- |
+| [Compatible License](#compatible-license-tag) | No | 0..* |
+
+### Compatible License
+
+#### Purpose
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | `[LicenseName]` |
+
+#### Intent
+
+#### Tag: `CompatibleLicense:`
+
+## Acceptable License For Limited Use
+
+Parent: Product Information, or External Artifact
+
+Cardinality: 0..*
+
+### Fields
+| Field | Required | Cardinality |
+| ----- | -------- | ----------- |
+| [Acceptable License For Limited Use](#acceptable-license-for-limited-use-tag) | No | 0..* |
+| [Acceptable License For What](#acceptable-license-for-what-tag) | No | 0..* |
+| [Acceptable License Inventory Deadline](#acceptable-license-inventory-deadline-tag) | No | 0..* |
+
+
+### Acceptable License For Limited Use
+
+#### Purpose
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | `[LicenseName]` |
+
+#### Intent
+
+#### Tag: `AcceptableLicenseForLimitedUse:`
+
+### Acceptable License For What
+
+#### Purpose
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | Single line of text.  |
+
+#### Intent
+
+#### Tag: `AcceptableLicenseForWhat:`
+
+### Acceptable License Inventory Deadline
+
+#### Purpose
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | Single line of text.  |
+
+#### Intent
+
+#### Tag: `AcceptableLicenseInventoryDeadLine:`
+
+
+
+
+# 以下は、Licensing Profileからのコピー
 
 ### Entities
 | Entity | Parent | Required | Cardinality |

@@ -39,9 +39,14 @@ Xは、章番号
 ・ Who obtained certification
 
 ・ Information of authentication
-  
+
   FuSaに関して、ガワだけ作って、後から成型、というのがＯＫか、あるいは、SPDX 3.0からドロップか要議論
-  
+  以下は、AGL IC-EGからの提案で、CommunityのFuSa(QM)関連の健全性情報がSPDXとして取り扱えると良い、という提案
+  URL情報をSPDXに埋め込むなどとして、Ruleの所在有無をトレースできるようにしたい、とのこと
+
+・ Contribution Rule
+・ Coding Rule and/or Style Guide
+
 <Clarification of who contributed to the community>
 
 ・ Who contributed to the community in the Supply Chain

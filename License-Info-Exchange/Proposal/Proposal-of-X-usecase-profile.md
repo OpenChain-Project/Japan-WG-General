@@ -6,7 +6,7 @@ Xは、章番号
 
 
 ---------
-< Manage licenses compatible with the final product and clarify responsibility in the supply chain>
+\< Manage licenses compatible with the final product and clarify responsibility in the supply chain\>
 
 下記を先行して記載を試みる
 
@@ -34,27 +34,32 @@ Xは、章番号
 
 下記については、先送りの可能性も考慮
 
-<Functional Safety>
+\<Functional Safety\>
 
 ・ Who obtained certification
 
 ・ Information of authentication
 
   FuSaに関して、ガワだけ作って、後から成型、というのがＯＫか、あるいは、SPDX 3.0からドロップか要議論
+  
   以下は、AGL IC-EGからの提案で、CommunityのFuSa(QM)関連の健全性情報がSPDXとして取り扱えると良い、という提案
   URL情報をSPDXに埋め込むなどとして、Ruleの所在有無をトレースできるようにしたい、とのこと
 
 ・ Contribution Rule
+
 ・ Coding Rule and/or Style Guide
 
-<Clarification of who contributed to the community>
+
+\<Clarification of who contributed to the community\>
 
 ・ Who contributed to the community in the Supply Chain
 
 ・ The evidences of the contribution
   
-  別Profileとすべきか
+  Fusa, Contribution責任は別Profileとすべきか要議論
   
+  
+  下記は、下流から上流への送付を前提とした記述が残っているので、要修正
 
 -----
 

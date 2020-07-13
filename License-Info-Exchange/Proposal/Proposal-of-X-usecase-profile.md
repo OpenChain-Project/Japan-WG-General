@@ -63,14 +63,13 @@ Xは、章番号
 
 -----
 
-## Product information fields <a name="X.1"></a>
+## License Compatibility For Prerequisite Product fields <a name="X.1"></a>
 
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
 | [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
-| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
 | [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
 
 ## Prerequisite Product Information
@@ -123,9 +122,7 @@ Required: Yes
 
 Cardinality: One
 
-Data Format: ["DocumentRef-"`[idstring]`":"`[SPDXID]`] |
-
- | `NONE` | `NOASSERTION`
+Data Format: ["DocumentRef-"`[idstring]`":"`[SPDXID]`] | `NONE` | `NOASSERTION`
 
 "DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
 document as described in [section 2.6](2-document-creation-information.md#2.6)
@@ -156,6 +153,9 @@ PrerequisiteProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
 
 #### Purpose
 
+Identify the version of the target product.
+
+
 | Attribute | Value |
 | --------- | ----- |
 | Required | No |
@@ -164,63 +164,66 @@ PrerequisiteProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
 
 #### Intent
 
+To describe license compatibility with the prerequisite product when it depend on the specific revision. 
+
 #### Tag: `PrerequisiteProductVersion:`
 
-## License Compatiblity For Prerequisite Product
+## License Compatibility For Prerequisite Product
 
-Parent: Product Information, or External Artifact
+Parent: Prerequisite Product Information, or External Artifact
 
-Cardinality: upto 1 per Artifact
 
-### Fields
+#### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequistie-product-tag) | No | 0..* |
+| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product-tag) | Yes | 1..1 |
+| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license-tag) | No | 0..* |
 
-### License Compatiblity For Prerequisite Product
+
+### License Compatibility For Prerequisite Product
 
 #### Purpose
+
+Identify compatibility of the license of the artifact compatible to prerequisite product.
 
 | Attribute | Value |
 | --------- | ----- |
 | Required | No |
-| Cardinality | 0..* |
-| Format | `[LicenseName]` |
+| Cardinality | 1..1 |
+| Format | ["DocumentRef-"`[idstring]`":"`[SPDXID]`] \| `NONE` \| `NOASSERTION`
 
 #### Intent
 
-#### Tag: `LicenseCompatiblityForPrerequisiteProduct:`
+To describe license compatibility with the prerequisite product when it used in the public or the market. 
 
-## Acceptable Usecase of the License
-
-Parent: Product Information, or External Artifact
-
-Cardinality: 0..*
-
-### Fields
-| Field | Required | Cardinality |
-| ----- | -------- | ----------- |
-| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license-tag) | No | 0..* |
-| [Acceptable License Inventory Deadline](#acceptable-license-inventory-deadline-tag) | No | 0..* |
-
+#### Tag: `LicenseCompatibilityForPrerequisiteProduct:`
 
 ### Acceptable Usecase of the License
 
+Parent: Prerequisite Product Information, or External Artifact
+
 #### Purpose
+
+Identify the acceptable usecase on the prerequisite product development based on license compatibility.
 
 | Attribute | Value |
 | --------- | ----- |
 | Required | No |
 | Cardinality | 0..* |
-| Format | `[LicenseName]` |
+| Format | Single line of text. |
 
 #### Intent
 
+To describe which development phase of the prerequisite product development are compatible for the license, such as "verification", "evaluation", etc.
+
 #### Tag: `AcceptableUsecaseOfTheLicense:`
+
 
 ### Acceptable License Inventory Deadline
 
 #### Purpose
+
+Identify the inventory deadline when the license of the artifact is acceptable on the specific development phase.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -228,7 +231,15 @@ Cardinality: 0..*
 | Cardinality | 0..* |
 | Format | Single line of text.  |
 
+#### Fields
+| Field | Required | Cardinality |
+| ----- | -------- | ----------- |
+| [Acceptable License Inventory Deadline](#acceptable-license-inventory-deadline-tag) | No | 0..* |
+
+
 #### Intent
+
+To describe final deadline to eliminate the artifact from the prerequisite product development environment, such as "Review for the mass production", "Preparation of final product build-up", "YYYY-MM-DDThh:mm:ssZ", etc.
 
 #### Tag: `AcceptableLicenseInventoryDeadLine:`
 

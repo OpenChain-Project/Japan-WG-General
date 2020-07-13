@@ -118,11 +118,11 @@ ProductName: ABC COMPANYs Product to be Launched at 20YYMM-TBD
 
 Identify the target product even if the name of product not determined yet.
 
-Required: Yes
-
-Cardinality: One
-
-Data Format: ["DocumentRef-"`[idstring]`":"`[SPDXID]`] | `NONE` | `NOASSERTION`
+| Attribute | Value |
+| --------- | ----- |
+| Required | Yes |
+| Cardinality | 1..1 |
+| Format | ["DocumentRef-"`[idstring]`":"`[SPDXID]`] \| `NONE` \| `NOASSERTION` |
 
 "DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
 document as described in [section 2.6](2-document-creation-information.md#2.6)

@@ -194,7 +194,6 @@ To describe any notice correspond to usage of Artifact, especially license compa
 In the case of description of license compatibility which depend on development phase of the prerequisite product development, it abl e to identfy with this field mentioned as "verification", "evaluation", etc.
 
 In other case, it use to describe specific notation such as some sort of advertizing closure correspond to Prerequsite Product. 
-広告条項などの個別具体的な条文が関わる場合も含む
 
 #### Tag: `AcceptableCondition:`
 

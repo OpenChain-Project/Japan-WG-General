@@ -15,68 +15,6 @@ On the other hand, each software package are used as in consumer's own will and 
 
 With this profile, software package supplyer able to describe detail license conditions or any requirements to use software package along with its prerequisite assumptions of the detail descriptions. And also it's able to focus those informations for specific usecase of specific downstream consumer with mention the prerequisite product and the expiration date. 
 
----------
-\< Manage licenses compatible with the final product and clarify responsibility in the supply chain\>
-
-下記を先行して記載を試みる
-
-下記の各アイテムを、タグ名(Field)に分解するところから
-
-・ Product information ( Product name, product number, etc. )
-
-・ Compatible license with final product or not
-
-下記についても、まずは、同Profile内で提案する
-
-・ Who adopted the package
-
-・ When adopted the package
-
-・ Temporary adoption or using for Final Product
-
-(If the package is temporary adoption)
-
-   -The schedule of remove
-   
-   -Who has the responsibility of remove
-
-・Schedule of next report
-
-
-下記については、先送りの可能性も考慮
-
-\<Quality Management\> \<Functional Safety\>
-どこに入れるか含めて、相談
-
-コミュニティの評価という側面を持つ
-
-・ Who obtained certification
-
-・ Information of authentication
-
-  FuSaに関して、ガワだけ作って、後から成型、というのがＯＫか、あるいは、SPDX 3.0からドロップか要議論
-  
-  以下は、AGL IC-EGからの提案で、CommunityのFuSa(QM)関連の健全性情報がSPDXとして取り扱えると良い、という提案
-  URL情報をSPDXに埋め込むなどとして、Ruleの所在有無をトレースできるようにしたい、とのこと
-
-・ Contribution Rule
-
-・ Coding Rule and/or Style Guide
-
-
-\<Clarification of who contributed to the community\>
-
-・ Who contributed to the community in the Supply Chain
-
-・ The evidences of the contribution
-  
-  Fusa, Contribution責任は別Profileとすべきか要議論
-  
-  
-  下記は、下流から上流への送付を前提とした記述が残っているので、要修正
-
------
-
 ## License Compatibility For Prerequisite Product fields <a name="X.1"></a>
 
 ### Entities

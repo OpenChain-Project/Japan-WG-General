@@ -1,9 +1,19 @@
 # X Usecase Profile
 
-Xは、章番号
+Note: X is the undetermined Section Number
+
+Profile name is still under discussion.
+
+Candidates: \<Prerequisite Product Policy Profile\>, \<Applicable Condition Profile\>, \<Artifact Policy Profile\>
 
 ## Overview
 
+When required license conditions or any requirements are changed dynamically such as in each development phase and in final product shipment to the public, software package supplyer need to tell its consumers detail conditions to be obey.
+Especially in the large scale development which operated via multi layer software supply chain through upstream to downstream, community to industorial company, license conditions must be carried through upstream side to downstream side along with the software package through such multi layer supply chain.
+
+On the other hand, each software package are used as in consumer's own will and purpose under the license condition. Even though the  software package supplyer able to notice detail usage and condition just their own prerequisite assumption.
+
+With this profile, software package supplyer able to describe detail license conditions or any requirements to use software package along with its prerequisite assumptions of the detail descriptions. And also it's able to focus those informations for specific usecase of specific downstream consumer with mention the prerequisite product and the expiration date. 
 
 ---------
 \< Manage licenses compatible with the final product and clarify responsibility in the supply chain\>
@@ -32,9 +42,13 @@ Xは、章番号
 
 ・Schedule of next report
 
+
 下記については、先送りの可能性も考慮
 
-\<Functional Safety\>
+\<Quality Management\> \<Functional Safety\>
+どこに入れるか含めて、相談
+
+コミュニティの評価という側面を持つ
 
 ・ Who obtained certification
 
@@ -68,9 +82,9 @@ Xは、章番号
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
-| [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
-| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
-| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | one |
+| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
+| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) |  [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
 
 ## Prerequisite Product Information
 
@@ -121,8 +135,10 @@ Identify the target product even if the name of product not determined yet.
 | Attribute | Value |
 | --------- | ----- |
 | Required | Yes |
-| Cardinality | 1..1 |
+| Cardinality | One |
 | Format | ["DocumentRef-"`[idstring]`":"`[SPDXID]`] \| `NONE` \| `NOASSERTION` |
+
+where:
 
 "DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
 document as described in [section 2.6](2-document-creation-information.md#2.6)
@@ -189,8 +205,28 @@ Identify compatibility of the license of the artifact compatible to prerequisite
 | Attribute | Value |
 | --------- | ----- |
 | Required | No |
-| Cardinality | 1..1 |
-| Format | ["DocumentRef-"`[idstring]`":"`[SPDXID]`] \| `NONE` \| `NOASSERTION`
+| Cardinality | 0..1 |
+| Format | `<SPDX License Expression>` \| ["DocumentRef-"`[idstring]`":"`[SPDXID]`] \| `NONE` \| `NOASSERTION` |
+
+where:
+
+`<SPDX License Expression>` is a valid SPDX License Expression
+as defined in [Appendix IV](appendix-IV-SPDX-license-expressions.md).
+
+"DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
+document as described in [section 2.6](2-document-creation-information.md#2.6)
+`[idstring]` is a unique string containing letters, numbers, `.` and/or `-`
+
+`[NONE]`, if the file contains no target product information whatsoever; or
+
+`[NOASSERTION]`, if:
+
+(i) the SPDX file creator has made no attempt to determine this field; or
+(ii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
+
+<br>
+
+
 
 #### Intent
 
@@ -198,13 +234,13 @@ To describe license compatibility with the prerequisite product when it used in 
 
 #### Tag: `LicenseCompatibilityForPrerequisiteProduct:`
 
-### Acceptable Usecase of the License
+### Acceptable Condition 
 
 Parent: Prerequisite Product Information, or External Artifact
 
 #### Purpose
 
-Identify the acceptable usecase on the prerequisite product development based on license compatibility.
+Identify the acceptable usecase or acceptable license condition on the prerequisite product development.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -214,16 +250,21 @@ Identify the acceptable usecase on the prerequisite product development based on
 
 #### Intent
 
-To describe which development phase of the prerequisite product development are compatible for the license, such as "verification", "evaluation", etc.
+To describe any notice correspond to usage of Artifact, especially license compatibility, conditions to ovey license terms and/or usecase limitations under the conditions for development of prerequisite product.
 
-#### Tag: `AcceptableUsecaseOfTheLicense:`
+In the case of description of license compatibility which depend on development phase of the prerequisite product development, it abl e to identfy with this field mentioned as "verification", "evaluation", etc.
+
+In other case, to describe  
+広告条項などの個別具体的な条文が関わる場合も含む
+
+#### Tag: `AcceptableCondition:`
 
 
-### Acceptable License Inventory Deadline
+### Acceptable Artifact Inventory Deadline
 
 #### Purpose
 
-Identify the inventory deadline when the license of the artifact is acceptable on the specific development phase.
+Identify the inventory deadline when the license/condition of the artifact is acceptable on the specific development phase.
 
 | Attribute | Value |
 | --------- | ----- |

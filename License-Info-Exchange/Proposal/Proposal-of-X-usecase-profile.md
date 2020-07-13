@@ -68,12 +68,12 @@ Xは、章番号
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
-| [Product Information](#product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
-| [Compatible License](#compatible-license) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
-| [Acceptable License For Limited Use](#acceptable-license-for-limited-use) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
-| [Expriation Date of Product Information](#expiration-date-of-product-information) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
+| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
+| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) | [Artifact](2-base-profile.md#artifact) ([Product Information](X-usecase-profile.md#product-information)) | No | 0..* |
 
-## Product Information
+## Prerequisite Product Information
 
 Parent: Package, File, Snippet, or External Artifact
 
@@ -82,14 +82,14 @@ Cardinality: upto 1 per Artifact
 ### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Product Name](#product-name-tag) | No | 0..1 |
-| [Product Identifier](#product-identifier-tag) | Yes | one |
-| [Product Version](#product-version-tag) | No | 0..* |
+| [Prerequisite Product Name](#prerequisite-product-name-tag) | No | 0..1 |
+| [Prerequisite Product Identifier](#prerequisite-product-identifier-tag) | Yes | one |
+| [Prerequisite Product Version](#prerequisite-product-version-tag) | No | 0..* |
 
-### Product Name
+### Prerequisite Product Name
 #### Purpose
 
-Identify the name of the target product. The metadata for the Product Name field is shown in Table XX1.
+Identify the name of the target product that used as the prerequisite for license compatibility assumption. The metadata for the Product Name field is shown in Table XX1.
 
 Table XX1 — Metadata for the product information field
 
@@ -105,7 +105,7 @@ Table XX1 — Metadata for the product information field
 
 Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
 
-#### Tag: `ProductName:`
+#### Tag: `PrerequisiteProductName:`
 
 Examples:
 
@@ -114,7 +114,7 @@ ProductName: ABC COMPANYs Product to be Launched at 20YYMM-TBD
 ```
 
 
-### Product Identifier
+### Prerequisite Product Identifier
 #### Purpose
 
 Identify the target product even if the name of product not determined yet.
@@ -144,15 +144,15 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 
 Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
 
-#### Tag: `ProductIdentifier:`
+#### Tag: `PrerequisiteProductIdentifier:`
 
 Examples:
 
 ```text
-ProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
+PrerequisiteProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
 ```
 
-### Product Version
+### Prerequisite Product Version
 
 #### Purpose
 
@@ -164,9 +164,9 @@ ProductIdentifier: DocumentRef-spdx-tool-1.2:SPDXRef-5
 
 #### Intent
 
-#### Tag: `ProductVersion:`
+#### Tag: `PrerequisiteProductVersion:`
 
-## Compatible License
+## License Compatiblity For Prerequisite Product
 
 Parent: Product Information, or External Artifact
 
@@ -175,9 +175,9 @@ Cardinality: upto 1 per Artifact
 ### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Compatible License](#compatible-license-tag) | No | 0..* |
+| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequistie-product-tag) | No | 0..* |
 
-### Compatible License
+### License Compatiblity For Prerequisite Product
 
 #### Purpose
 
@@ -189,9 +189,9 @@ Cardinality: upto 1 per Artifact
 
 #### Intent
 
-#### Tag: `CompatibleLicense:`
+#### Tag: `LicenseCompatiblityForPrerequisiteProduct:`
 
-## Acceptable License For Limited Use
+## Acceptable Usecase of the License
 
 Parent: Product Information, or External Artifact
 
@@ -200,12 +200,11 @@ Cardinality: 0..*
 ### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Acceptable License For Limited Use](#acceptable-license-for-limited-use-tag) | No | 0..* |
-| [Acceptable License For What](#acceptable-license-for-what-tag) | No | 0..* |
+| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license-tag) | No | 0..* |
 | [Acceptable License Inventory Deadline](#acceptable-license-inventory-deadline-tag) | No | 0..* |
 
 
-### Acceptable License For Limited Use
+### Acceptable Usecase of the License
 
 #### Purpose
 
@@ -217,21 +216,7 @@ Cardinality: 0..*
 
 #### Intent
 
-#### Tag: `AcceptableLicenseForLimitedUse:`
-
-### Acceptable License For What
-
-#### Purpose
-
-| Attribute | Value |
-| --------- | ----- |
-| Required | No |
-| Cardinality | 0..* |
-| Format | Single line of text.  |
-
-#### Intent
-
-#### Tag: `AcceptableLicenseForWhat:`
+#### Tag: `AcceptableUsecaseOfTheLicense:`
 
 ### Acceptable License Inventory Deadline
 
@@ -250,6 +235,7 @@ Cardinality: 0..*
 
 
 
+# From Here: Not modified yet.
 # 以下は、Licensing Profileからのコピー
 
 ### Entities
@@ -257,6 +243,8 @@ Cardinality: 0..*
 | ------ | ------ | -------- | ----------- |
 | [Product Information](#product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Reference](#license-reference) | [Document Root](2-base-profile.md#document-root) | No | 0..* |
+
+
 
 ## License Information
 

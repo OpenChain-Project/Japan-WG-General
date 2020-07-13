@@ -15,12 +15,10 @@ On the other hand, each software package are used as in consumer's own will and 
 
 With this profile, software package supplyer able to describe detail license conditions or any requirements to use software package along with its prerequisite assumptions of the detail descriptions. And also it's able to focus those informations for specific usecase of specific downstream consumer with mention the prerequisite product and the expiration date. 
 
-## License Compatibility For Prerequisite Product fields <a name="X.1"></a>
-
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
-| [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | one |
+| [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
 | [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) |  [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
 
@@ -34,7 +32,7 @@ Cardinality: upto 1 per Artifact
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
 | [Prerequisite Product Name](#prerequisite-product-name-tag) | No | 0..1 |
-| [Prerequisite Product Identifier](#prerequisite-product-identifier-tag) | Yes | one |
+| [Prerequisite Product Identifier](#prerequisite-product-identifier-tag) | Yes | 1..1 |
 | [Prerequisite Product Version](#prerequisite-product-version-tag) | No | 0..* |
 
 ### Prerequisite Product Name
@@ -61,7 +59,7 @@ Describe target product to be identified with this "usecase" profile to manage L
 Examples:
 
 ```text
-ProductName: ABC COMPANYs Product to be Launched at 20YYMM-TBD
+ProductName: <text>ABC COMPANYs Product to be Launched at 20YYMM-TBD</text>
 ```
 
 
@@ -130,8 +128,9 @@ Parent: Prerequisite Product Information, or External Artifact
 #### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product-tag) | Yes | 1..1 |
-| [Acceptable Usecase of the License](#acceptable-usecase-of-the-license-tag) | No | 0..* |
+| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product-tag) | No | 0..* |
+| [Acceptable Condition](#acceptable-condition) | No | 0..* |
+| [Acceptable Artifact Inventory Deadline](#acceptable-artifact-inventory-deadline ) | No | 0..* |
 
 
 ### License Compatibility For Prerequisite Product
@@ -160,6 +159,7 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 `[NOASSERTION]`, if:
 
 (i) the SPDX file creator has made no attempt to determine this field; or
+
 (ii) the SPDX file creator has intentionally provided no information (no meaning should be implied by doing so).
 
 <br>
@@ -169,6 +169,7 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 #### Intent
 
 To describe license compatibility with the prerequisite product when it used in the public or the market. 
+Especially software package had multiple license, it able to use identify the specific license to be apply on prerequisite product.
 
 #### Tag: `LicenseCompatibilityForPrerequisiteProduct:`
 
@@ -192,10 +193,18 @@ To describe any notice correspond to usage of Artifact, especially license compa
 
 In the case of description of license compatibility which depend on development phase of the prerequisite product development, it abl e to identfy with this field mentioned as "verification", "evaluation", etc.
 
-In other case, to describe  
+In other case, it use to describe specific notation such as some sort of advertizing closure correspond to Prerequsite Product. 
 広告条項などの個別具体的な条文が関わる場合も含む
 
 #### Tag: `AcceptableCondition:`
+
+
+Examples:
+
+```text
+AcceptableCondition: <text>evaluation | coding | verificatoin</text>
+AcceptableCondition: <text>Concluded License had Advirtizing Closure on the final Products</text>
+```
 
 
 ### Acceptable Artifact Inventory Deadline
@@ -210,18 +219,16 @@ Identify the inventory deadline when the license/condition of the artifact is ac
 | Cardinality | 0..* |
 | Format | Single line of text.  |
 
-#### Fields
-| Field | Required | Cardinality |
-| ----- | -------- | ----------- |
-| [Acceptable License Inventory Deadline](#acceptable-license-inventory-deadline-tag) | No | 0..* |
-
 
 #### Intent
 
 To describe final deadline to eliminate the artifact from the prerequisite product development environment, such as "Review for the mass production", "Preparation of final product build-up", "YYYY-MM-DDThh:mm:ssZ", etc.
 
-#### Tag: `AcceptableLicenseInventoryDeadLine:`
+#### Tag: `AcceptableArtifactInventoryDeadLine:`
 
+```text
+AcceptableArtifactInventoryDeadline: <text>This software must use for software verification only due to license condition of [Prerequisite Product]</text>
+```
 
 ## Expriation Date of Usecase Information
 
@@ -231,6 +238,8 @@ Parent: Prerequisite Product Information, or External Artifact
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
 | [Expriation Date of Usecase Information](#expiration-date-of-usecase-information-tag) | No | 0..1 |
+| [Usecase Information Are Valid For](#usecase-information-are-valid-for) | No | 0..1 |
+
 
 ### Expriation Date of Usecase Information
 
@@ -248,63 +257,20 @@ Identify the period of the usecase information is in effect.
 
 
 
+### Usecase Information Are Valid For
 
-# From Here: Not modified yet.
-# 以下は、Licensing Profileからのコピー
---------------------------------------------
-### Entities
-| Entity | Parent | Required | Cardinality |
-| ------ | ------ | -------- | ----------- |
-| [Product Information](#product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
-| [License Reference](#license-reference) | [Document Root](2-base-profile.md#document-root) | No | 0..* |
-
-
-
-## License Information
-
-Parent: Package, File, Snippet, or External Artifact
-Cardinality: 1 per Artifact
-
-### Fields
-| Field | Required | Cardinality |
-| ----- | -------- | ----------- |
-| [Discovered License](#discovered-license) | Yes | 1..1 |
-| [Declared License](#declared-license) | Yes | 1..1 |
-| [Concluded License](#concluded-license) | Yes | 1..1 |
-| [Distributed License](#distributed-license) | Yes | 1..1 |
-| [Copyright Text](#copyright-text) | Yes | 1..1 |
-
-### Discovered License
 #### Purpose
 
-#### Intent
-Here, the intent is to provide the license information actually in the file, as compared to the Concluded License field.
+Identify conditions of usecase information is in effect.
 
-**4.6.3** Cardinality: Mandatory, one or many.
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | Single line of text. |
 
-**4.6.4** Data Format: `<SPDX License Expression>` |
+#### Tag: `UsecaseInformationAreValidFor:`
 
- ["DocumentRef-"`[idstring]`":"]"LicenseRef-"`[idstring]` |
-
- | `NONE` | `NOASSERTION`
-
-where:
-
-`<SPDX License Expression>` is a valid SPDX License Expression
-
-as defined in [Appendix IV](appendix-IV-SPDX-license-expressions.md).
-
-"DocumentRef-"`[idstring]`: is an optional reference to an external SPDX
-
-document as described in [section 2.6](2-document-creation-information.md#2.6)
-
-`[idstring]` is a unique string containing letters, numbers, `.` and/or `-`
-
-**4.6.5** Tag: `LicenseInfoInFile:`
-
-Example:
-
-    LicenseInfoInFile: GPL-2.0-only
-    LicenseInfoInFile: LicenseRef-2
-
-**4.6.6** RDF: Property `spdx:licenseInfoInFile` in class `spdx:File`
+```text
+UsecaseInformationAreValidFor: <text>This license compatibility descriptions are valid only when this software package combind with [Prerequisite Product]</text>
+```

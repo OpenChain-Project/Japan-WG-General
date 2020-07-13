@@ -244,11 +244,35 @@ To describe final deadline to eliminate the artifact from the prerequisite produ
 #### Tag: `AcceptableLicenseInventoryDeadLine:`
 
 
+## Expriation Date of Usecase Information
+
+Parent: Prerequisite Product Information, or External Artifact
+
+#### Fields
+| Field | Required | Cardinality |
+| ----- | -------- | ----------- |
+| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information-tag) | No | 0..1 |
+
+### Expriation Date of Usecase Information
+
+#### Purpose
+
+Identify the period of the usecase information is in effect.
+
+| Attribute | Value |
+| --------- | ----- |
+| Required | No |
+| Cardinality | 0..* |
+| Format | `[Date]`  |
+
+#### Tag: `ExpriationDateOfUsecaseInformation:`
+
+
 
 
 # From Here: Not modified yet.
 # 以下は、Licensing Profileからのコピー
-
+--------------------------------------------
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |

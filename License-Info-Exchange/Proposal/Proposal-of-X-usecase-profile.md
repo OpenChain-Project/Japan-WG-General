@@ -1,4 +1,4 @@
-# X Usecase Profile
+# X Usage Profile
 
 Note: X is the undetermined Section Number
 

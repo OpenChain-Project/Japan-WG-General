@@ -178,4 +178,6 @@ $ sudo systemctl enable fossology
 ```
 最後にシステム全体を再起動して、FOSSologyが立ち上がることを確認する。
 
-以上
+---
+OpenChain Japan WG - This document is licensed under Creative Commons CC0 1.0 Universal.
+

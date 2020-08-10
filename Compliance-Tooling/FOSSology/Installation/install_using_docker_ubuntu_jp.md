@@ -6,7 +6,7 @@
 - VagrantとVirtualBoxを使う
 - ソースコードからインストールする
   
-の3つの主なインストール方法がある。この文書は、これらのうちDockerを使ってインストールする方法について、その手順を示すことを目的とする。Docker を使う方法では、Docker image 単体ではスキャンした結果の保存が保証されないため、データベースをコンテナの外部に用意することが[推奨](https://github.com/fossology/fossology/blob/master/README.md#user-content-docker)されている。また、FOSSologyは、アップロードされたデータをファイルシステム上のリポジトリに格納する。このリポジトリは、ソフトウェアパッケージをアップロードするにつれて次第に大きくなっていく。個人プロジェクト用途の小規模なシステムでは数Gバイト、大規模なシステムでは数百G〜数Tバイトにもなり得る。このリポジトリは独立したマウントポイントとすることが[推奨](https://github.com/fossology/fossology/wiki/Configuration-and-Tuning)されている。そこで本文書では、Docker container 上の FOSSology から host OS 上の PostgreSQL データベースおよび上記リポジトリ用ディレクトリにアクセスするようにインストールする手順を紹介する。
+の3つの主なインストール方法がある。この文書は、これらのうちDockerを使ってインストールする方法について、その手順を示すことを目的とする。Docker を使う方法では、Docker イメージ単体ではスキャンした結果の保存が保証されないため、データベースをコンテナの外部に用意することが[推奨](https://github.com/fossology/fossology/blob/master/README.md#user-content-docker)されている。また、FOSSologyは、アップロードされたデータをファイルシステム上のリポジトリに格納する。このリポジトリは、ソフトウェアパッケージをアップロードするにつれて次第に大きくなっていく。個人プロジェクト用途の小規模なシステムでは数Gバイト、大規模なシステムでは数百G〜数Tバイトにもなり得る。このリポジトリは独立したマウントポイントとすることが[推奨](https://github.com/fossology/fossology/wiki/Configuration-and-Tuning)されている。そこで本文書では、Docker container 上の FOSSology から host OS 上の PostgreSQL データベースおよび上記リポジトリ用ディレクトリにアクセスするようにインストールする手順を紹介する。
 
 ## 目次
 
@@ -16,6 +16,7 @@
 1. PostgreSQLのインストールと設定
 1.  リポジトリ用ディレクトリの作成
 1. FOSSologyの実行とシステム起動時に自動的に実行するための設定
+1. Docker イメージの更新
 
 ## 1. テスト環境
 
@@ -216,6 +217,33 @@ $ sudo systemctl enable docker-fossology.service
 ```
 
 最後にシステムを再起動して、FOSSology が起動していることを確認する。
+
+## 7 Docker イメージの更新
+
+### 7.1 Docker イメージの取得
+
+```
+$ docker pull fossology/fossology
+```
+取得した Docker イメージの確認。新しい方のイメージの TAG が latest となる。
+```
+$ docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+fossology/fossology   latest              c495f03ae95e        3 days ago          644MB
+fossology/fossology   <none>              74467f7793ed        3 weeks ago         644MB
+hello-world           latest              bf756fb1ae65        7 months ago        13.3kB
+```
+### 7.2 起動中のコンテナの削除
+
+起動中のコンテナを強制削除する。このコマンドの "FOSSology" は、6.2 項の docker run コマンドで指定したコンテナ名である。
+```
+$ docker rm -f FOSSology
+FOSSology
+```
+### 7.3 取得したコンテナの起動
+```
+$ docker run -d --name=FOSSology -v /srv/fossology:/srv/fossology --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
+```
 
 ---
 OpenChain Japan WG - This document is licensed under Creative Commons CC0 1.0 Universal.

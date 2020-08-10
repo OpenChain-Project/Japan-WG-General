@@ -14,7 +14,7 @@ With this profile, software package supplyer able to describe detail license con
 | ------ | ------ | -------- | ----------- |
 | [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
-| [Expriation Condition of Usage Information](#expiration-condition-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
+| [Expiration Condition Of Usage Information](#expiration-condition-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
 
 ## Prerequisite Product Information
 
@@ -224,18 +224,18 @@ To describe final deadline to eliminate the artifact from the prerequisite produ
 AcceptableArtifactInventoryDeadline: <text>This software must use for software verification only due to license condition of [Prerequisite Product]</text>
 ```
 
-## Expriation Condition of Usage Information
+## Expiration Condition Of Usage Information
 
 Parent: Prerequisite Product Information, or External Artifact
 
 #### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Expriation Date of Usage Information](#expiration-date-of-usage-information) | No | 0..1 |
+| [Expiration Date Of Usage Information](#expiration-date-of-usage-information) | No | 0..1 |
 | [Usage Information Are Valid For](#usage-information-are-valid-for) | No | 0..1 |
 
 
-### Expriation Date of Usage Information
+### Expiration Date Of Usage Information
 
 #### Purpose
 
@@ -247,7 +247,7 @@ Identify the period of the usage information is in effect.
 | Cardinality | 0..* |
 | Format | `[Date]`  |
 
-#### Tag: `ExpriationDateOfUsageInformation:`
+#### Tag: `ExpirationDateOfUsageInformation:`
 
 
 

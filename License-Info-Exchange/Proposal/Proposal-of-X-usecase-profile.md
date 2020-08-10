@@ -123,7 +123,7 @@ Parent: Prerequisite Product Information, or External Artifact
 ### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product) | No | 0..* |
+| [License Compatibility For Prerequisite Product](#license-compatibility-for-prerequisite-product) | No | 0..* |
 | [Acceptable Condition](#acceptable-condition) | No | 0..* |
 | [Acceptable Artifact Inventory Deadline](#acceptable-artifact-inventory-deadline ) | No | 0..* |
 
@@ -186,7 +186,7 @@ Identify the acceptable usage or acceptable license condition on the prerequisit
 
 To describe any notice correspond to usage of Artifact, especially license compatibility, conditions to ovey license terms and/or usage limitations under the conditions for development of prerequisite product.
 
-In the case of description of license compatibility which depend on development phase of the prerequisite product development, it abl e to identfy with this field mentioned as "verification", "evaluation", etc.
+In the case of description of license compatibility which depend on development phase of the prerequisite product development, it able to identfy with this field mentioned as "verification", "evaluation", etc.
 
 In other case, it use to describe specific notation such as some sort of advertizing closure correspond to Prerequsite Product. 
 
@@ -197,7 +197,7 @@ Examples:
 
 ```text
 AcceptableCondition: <text>evaluation | coding | verificatoin</text>
-AcceptableCondition: <text>Concluded License had Advirtizing Closure on the final Products</text>
+AcceptableCondition: <text>Concluded License of this software package had Advirtizing Closure, and it must obey on the Final Products</text>
 ```
 
 

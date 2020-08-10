@@ -1,26 +1,20 @@
-# X Usage Profile
-
-Note: X is the undetermined Section Number
-
-Profile name is still under discussion.
-
-Candidates: \<Prerequisite Product Policy Profile\>, \<Applicable Condition Profile\>, \<Artifact Policy Profile\>
+# 4 Usage Profile
 
 ## Overview
 
-When required license conditions or any requirements are changed dynamically such as in each development phase and in final product shipment to the public, software package supplyer need to tell its consumers detail conditions to be obey.
+While required license conditions or any requirements for software packages are changed dynamically, such as in each development phase transition or in the final product shipment to the public, software package supplyer need to tell its consumers detail conditions to be obey.
 Especially in the large scale development which operated via multi layer software supply chain through upstream to downstream, community to industorial company, license conditions must be carried through upstream side to downstream side along with the software package through such multi layer supply chain.
 
-On the other hand, each software package are used as in consumer's own will and purpose under the license condition. Even though the  software package supplyer able to notice detail usage and condition just their own prerequisite assumption.
+On the other hand, each software package are used as in consumer's own will and purpose under the license condition. Even though the software package supplyer able to notice detail usage and condition just their own prerequisite assumption.
 
-With this profile, software package supplyer able to describe detail license conditions or any requirements to use software package along with its prerequisite assumptions of the detail descriptions. And also it's able to focus those informations for specific usecase of specific downstream consumer with mention the prerequisite product and the expiration date. 
+With this profile, software package supplyer able to describe detail license conditions or any requirements to use software package along with its prerequisite assumptions of the detail descriptions. And also it's able to focus those information in the SPDX for specific usage of specific downstream consumer with mention the prerequisite product and the expiration date. 
 
 ### Entities
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
 | [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
-| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
-| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information) |  [Prerequisite Product Information](X-usecase-profile.md#prerequisite-product-information) | No | 0..* |
+| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
+| [Expriation Date of Usage Information](#expiration-date-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
 
 ## Prerequisite Product Information
 
@@ -32,15 +26,15 @@ Cardinality: upto 1 per Artifact
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
 | [Prerequisite Product Name](#prerequisite-product-name-tag) | No | 0..1 |
-| [Prerequisite Product Identifier](#prerequisite-product-identifier-tag) | Yes | 1..1 |
-| [Prerequisite Product Version](#prerequisite-product-version-tag) | No | 0..* |
+| [Prerequisite Product Identifier](#prerequisite-product-identifier) | Yes | 1..1 |
+| [Prerequisite Product Version](#prerequisite-product-version) | No | 0..* |
 
 ### Prerequisite Product Name
 #### Purpose
 
-Identify the name of the target product that used as the prerequisite for license compatibility assumption. The metadata for the Product Name field is shown in Table XX1.
+Identify the name of the target product that used as the prerequisite for license compatibility assumption. The metadata for the Product Name field is shown in Table 4.1.
 
-Table XX1 — Metadata for the product information field
+Table 4.1 — Metadata for the product information field
 
 | Attribute | Value |
 | --------- | ----- |
@@ -52,7 +46,7 @@ Table XX1 — Metadata for the product information field
 
 #### Intent
 
-Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
+Describe target product to be identified with this "usage" profile to manage Lisence Information of software packages to be integrated. 
 
 #### Tag: `PrerequisiteProductName:`
 
@@ -91,7 +85,8 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 
 #### Intent
 
-Describe target product to be identified with this "usecase" profile to manage Lisence Information of software packages to be integrated. 
+Describe target product to be identified with this "usage" profile to manage Lisence Information of software packages to be integrated. 
+Even if the name of the prerequisite product is not defined yet, or being changed in later phase, to be used as to trace this "usage" profile description through the history.
 
 #### Tag: `PrerequisiteProductIdentifier:`
 
@@ -120,15 +115,15 @@ To describe license compatibility with the prerequisite product when it depend o
 
 #### Tag: `PrerequisiteProductVersion:`
 
+
 ## License Compatibility For Prerequisite Product
 
 Parent: Prerequisite Product Information, or External Artifact
 
-
-#### Fields
+### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product-tag) | No | 0..* |
+| [License Compatibility For Prerequisite Prodcut](#license-compatibility-for-prerequisite-product) | No | 0..* |
 | [Acceptable Condition](#acceptable-condition) | No | 0..* |
 | [Acceptable Artifact Inventory Deadline](#acceptable-artifact-inventory-deadline ) | No | 0..* |
 
@@ -137,7 +132,7 @@ Parent: Prerequisite Product Information, or External Artifact
 
 #### Purpose
 
-Identify compatibility of the license of the artifact compatible to prerequisite product.
+Identify the compatibility of the license of the artifact compatible to the prerequisite product.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -169,7 +164,7 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 #### Intent
 
 To describe license compatibility with the prerequisite product when it used in the public or the market. 
-Especially software package had multiple license, it able to use identify the specific license to be apply on prerequisite product.
+Especially software package had multiple license, it able to use identify the specific license to be apply on the prerequisite product.
 
 #### Tag: `LicenseCompatibilityForPrerequisiteProduct:`
 
@@ -179,7 +174,7 @@ Parent: Prerequisite Product Information, or External Artifact
 
 #### Purpose
 
-Identify the acceptable usecase or acceptable license condition on the prerequisite product development.
+Identify the acceptable usage or acceptable license condition on the prerequisite product development.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -189,7 +184,7 @@ Identify the acceptable usecase or acceptable license condition on the prerequis
 
 #### Intent
 
-To describe any notice correspond to usage of Artifact, especially license compatibility, conditions to ovey license terms and/or usecase limitations under the conditions for development of prerequisite product.
+To describe any notice correspond to usage of Artifact, especially license compatibility, conditions to ovey license terms and/or usage limitations under the conditions for development of prerequisite product.
 
 In the case of description of license compatibility which depend on development phase of the prerequisite product development, it abl e to identfy with this field mentioned as "verification", "evaluation", etc.
 
@@ -229,22 +224,22 @@ To describe final deadline to eliminate the artifact from the prerequisite produ
 AcceptableArtifactInventoryDeadline: <text>This software must use for software verification only due to license condition of [Prerequisite Product]</text>
 ```
 
-## Expriation Date of Usecase Information
+## Expriation Date of Usage Information
 
 Parent: Prerequisite Product Information, or External Artifact
 
 #### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Expriation Date of Usecase Information](#expiration-date-of-usecase-information-tag) | No | 0..1 |
-| [Usecase Information Are Valid For](#usecase-information-are-valid-for) | No | 0..1 |
+| [Expriation Date of Usage Information](#expiration-date-of-usage-information-tag) | No | 0..1 |
+| [Usage Information Are Valid For](#usage-information-are-valid-for) | No | 0..1 |
 
 
-### Expriation Date of Usecase Information
+### Expriation Date of Usage Information
 
 #### Purpose
 
-Identify the period of the usecase information is in effect.
+Identify the period of the usage information is in effect.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -252,15 +247,15 @@ Identify the period of the usecase information is in effect.
 | Cardinality | 0..* |
 | Format | `[Date]`  |
 
-#### Tag: `ExpriationDateOfUsecaseInformation:`
+#### Tag: `ExpriationDateOfUsageInformation:`
 
 
 
-### Usecase Information Are Valid For
+### Usage Information Are Valid For
 
 #### Purpose
 
-Identify conditions of usecase information is in effect.
+Identify conditions of usage information is in effect.
 
 | Attribute | Value |
 | --------- | ----- |
@@ -268,8 +263,8 @@ Identify conditions of usecase information is in effect.
 | Cardinality | 0..* |
 | Format | Single line of text. |
 
-#### Tag: `UsecaseInformationAreValidFor:`
+#### Tag: `UsageInformationAreValidFor:`
 
 ```text
-UsecaseInformationAreValidFor: <text>This license compatibility descriptions are valid only when this software package combind with [Prerequisite Product]</text>
+UsageInformationAreValidFor: <text>This license compatibility descriptions are valid only when this software package combind with [Prerequisite Product]</text>
 ```

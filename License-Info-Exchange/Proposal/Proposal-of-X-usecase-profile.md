@@ -13,7 +13,7 @@ With this profile, software package supplyer able to describe detail license con
 | Entity | Parent | Required | Cardinality |
 | ------ | ------ | -------- | ----------- |
 | [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
-| [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
+| [License Constraint With Prerequisite Product](#license-constraint-with-prerequisite-product) | [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
 | [Expiration Condition Of Usage Information](#expiration-condition-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
 
 ## Prerequisite Product Information
@@ -116,7 +116,7 @@ To describe license compatibility with the prerequisite product when it depend o
 #### Tag: `PrerequisiteProductVersion:`
 
 
-## License Compatibility For Prerequisite Product
+## License Constraint With Prerequisite Product
 
 Parent: Prerequisite Product Information, or External Artifact
 

@@ -14,7 +14,7 @@ With this profile, software package supplyer able to describe detail license con
 | ------ | ------ | -------- | ----------- |
 | [Prerequisite Product Information](#prerequisite-product-information) | [Artifact](2-base-profile.md#artifact) ([Package](2-base-profile.md#package), [File](2-base-profile.md#file), [Snippet](2-base-profile.md#snippet)) | Yes | 1..1 |
 | [License Compatiblity For Prerequisite Product](#license-compatibility-for-prerequisite-product) | [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
-| [Expriation Date of Usage Information](#expiration-date-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
+| [Expriation Condition of Usage Information](#expiration-condition-of-usage-information) |  [Prerequisite Product Information](#prerequisite-product-information) | No | 0..* |
 
 ## Prerequisite Product Information
 
@@ -25,7 +25,7 @@ Cardinality: upto 1 per Artifact
 ### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Prerequisite Product Name](#prerequisite-product-name-tag) | No | 0..1 |
+| [Prerequisite Product Name](#prerequisite-product-name) | No | 0..1 |
 | [Prerequisite Product Identifier](#prerequisite-product-identifier) | Yes | 1..1 |
 | [Prerequisite Product Version](#prerequisite-product-version) | No | 0..* |
 
@@ -46,7 +46,7 @@ Table 4.1 — Metadata for the product information field
 
 #### Intent
 
-Describe target product to be identified with this "usage" profile to manage Lisence Information of software packages to be integrated. 
+Describe target product to be identified with this "usage profile" to manage Lisence Information of the artifact to be integrated. 
 
 #### Tag: `PrerequisiteProductName:`
 
@@ -85,8 +85,8 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 
 #### Intent
 
-Describe target product to be identified with this "usage" profile to manage Lisence Information of software packages to be integrated. 
-Even if the name of the prerequisite product is not defined yet, or being changed in later phase, to be used as to trace this "usage" profile description through the history.
+Describe target product to be identified with this "usage profile" to manage Lisence Information of the artifact to be integrated. 
+Even if the name of the prerequisite product is not defined yet, or being changed in later phase, to be used as to trace this "usage profile" description through the history.
 
 #### Tag: `PrerequisiteProductIdentifier:`
 
@@ -164,7 +164,7 @@ document as described in [section 2.6](2-document-creation-information.md#2.6)
 #### Intent
 
 To describe license compatibility with the prerequisite product when it used in the public or the market. 
-Especially software package had multiple license, it able to use identify the specific license to be apply on the prerequisite product.
+Especially the artifact had multiple license, it able to use identify the specific license to be apply when the artifact combined with the prerequisite product.
 
 #### Tag: `LicenseCompatibilityForPrerequisiteProduct:`
 
@@ -224,14 +224,14 @@ To describe final deadline to eliminate the artifact from the prerequisite produ
 AcceptableArtifactInventoryDeadline: <text>This software must use for software verification only due to license condition of [Prerequisite Product]</text>
 ```
 
-## Expriation Date of Usage Information
+## Expriation Condition of Usage Information
 
 Parent: Prerequisite Product Information, or External Artifact
 
 #### Fields
 | Field | Required | Cardinality |
 | ----- | -------- | ----------- |
-| [Expriation Date of Usage Information](#expiration-date-of-usage-information-tag) | No | 0..1 |
+| [Expriation Date of Usage Information](#expiration-date-of-usage-information) | No | 0..1 |
 | [Usage Information Are Valid For](#usage-information-are-valid-for) | No | 0..1 |
 
 

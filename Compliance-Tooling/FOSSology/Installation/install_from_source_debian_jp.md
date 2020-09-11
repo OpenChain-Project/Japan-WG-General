@@ -115,9 +115,9 @@ autovacuum = on
 
 ```
 max_execution_time = 300
-memory_limit = 512M
-post_max_size = 2048M
-upload_max_filesize = 2048M
+memory_limit = 702M
+post_max_size = 701M
+upload_max_filesize = 700M
 ```
 
 ### 5.3 Apache の設定

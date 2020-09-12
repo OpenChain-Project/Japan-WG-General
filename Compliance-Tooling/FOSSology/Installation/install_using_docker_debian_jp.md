@@ -218,7 +218,7 @@ $ sudo systemctl enable docker-fossology.service
 
 最後にシステムを再起動して、FOSSology が起動していることを確認する。
 
-## 7 Docker イメージの更新
+## 7. Docker イメージの更新
 
 ### 7.1 Docker イメージの取得
 
@@ -243,6 +243,18 @@ FOSSology
 ### 7.3 取得したコンテナの起動
 ```
 $ docker run -d --name=FOSSology -v /srv/fossology:/srv/fossology --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
+```
+### 7.4 不要なイメージの削除
+
+停止しているコンテナをすべて削除する。
+```
+$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+```
+不要なイメージを削除する。
+```
+$ docker rmi $(docker images -f "dangling=true" -q)
 ```
 
 ---

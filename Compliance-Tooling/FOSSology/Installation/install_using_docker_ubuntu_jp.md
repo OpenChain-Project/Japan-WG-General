@@ -33,8 +33,7 @@
 
 システムに Apache HTTP サーバがインストールされている場合は、これを停止する。
 ```
-$ cd /etc/init.d
-$ sudo ./apache2 stop
+$ sudo /etc/init.d/apache2 stop
 $ sudo systemctl disable apache2
 ```
 
@@ -166,8 +165,7 @@ autovacuum = on
 ## 5. リポジトリ用ディレクトリの作成
 
 ```
-$ cd /srv
-$ sudo mkdir fossology
+$ sudo mkdir /srv/fossology
 ```
 
 ## 6. FOSSologyの実行とシステム起動時に自動的に実行するための設定

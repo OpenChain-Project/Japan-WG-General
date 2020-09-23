@@ -178,7 +178,10 @@ $ docker pull fossology/fossology
 
 ### 6.2 FOSSology の実行
 ```
-$ docker run -d --name=FOSSology -v /srv/fossology:/srv/fossology --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
+$ docker run -d --name=FOSSology \
+    -v /srv/fossology:/srv/fossology \
+    -v /etc/localtime:/etc/localtime:ro \
+    --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
 ```
 
 Webブラウザから http://HOST_IP_ADDRESS/repo/ にアクセスして、FOSSology が起動していることを確認する。
@@ -240,7 +243,10 @@ FOSSology
 ```
 ### 7.3 取得したコンテナの起動
 ```
-$ docker run -d --name=FOSSology -v /srv/fossology:/srv/fossology --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
+$ docker run -d --name=FOSSology \
+    -v /srv/fossology:/srv/fossology \
+    -v /etc/localtime:/etc/localtime:ro \
+    --network="host" -e FOSSOLOGY_DB_HOST="127.0.0.1" fossology/fossology
 ```
 ### 7.4 不要なイメージの削除
 

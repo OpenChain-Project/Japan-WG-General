@@ -241,7 +241,7 @@ hello-world           latest              bf756fb1ae65        7 months ago      
 $ docker rm -f FOSSology
 FOSSology
 ```
-### 7.3 取得したコンテナの起動
+### 7.3 コンテナの起動
 ```
 $ docker run -d --name=FOSSology \
     -v /srv/fossology:/srv/fossology \

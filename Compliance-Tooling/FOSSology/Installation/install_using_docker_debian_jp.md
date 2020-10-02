@@ -33,7 +33,7 @@
 
 システムに Apache HTTP サーバがインストールされている場合は、これを停止する。
 ```
-$ sudo /etc/init.d/apache2 stop
+$ sudo systemctl stop apache2
 $ sudo systemctl disable apache2
 ```
 

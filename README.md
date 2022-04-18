@@ -1,4 +1,4 @@
-This repository is archived. Please see [OpenChain-JWG repository](https://github.com/OpenChain-Project/OpenChain-JWG) for newest information./このリポジトリはアーカイブ化されました。最新の情報は[OpenChain-JWGリポジトリ](https://github.com/OpenChain-Project/OpenChain-JWG)を参照してください。
+This repository is archived. Please see [OpenChain-JWG repository](https://github.com/OpenChain-Project/OpenChain-JWG) for newest information. / このリポジトリはアーカイブ化されました。最新の情報は[OpenChain-JWGリポジトリ](https://github.com/OpenChain-Project/OpenChain-JWG)を参照してください。
 
 # Japan-WG-General
 General Repo for Japan WG
